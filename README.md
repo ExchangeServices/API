@@ -1,4 +1,4 @@
 API
 ===
 
-Application programming Interface
+Application Programming Interface
