@@ -455,7 +455,6 @@
             <xs:enumeration value="OtherGroup" />
             <xs:enumeration value="EducationGroup" />
             <xs:enumeration value="ContactGroup" />
-            <xs:enumeration value="GradeAuthority" />
 	    <xs:enumeration value="SchoolUnit" />
 	    <xs:enumeration value="Department" />
 	    <xs:enumeration value="DepartmentGroup" />
