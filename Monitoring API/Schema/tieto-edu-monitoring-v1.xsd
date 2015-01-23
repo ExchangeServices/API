@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/monitoring/v1"
+            xmlns="http://open.tieto.com/edu/monitoring/v1"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for abcense and presence. 
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="monitoring">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="absenceevent"/>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="presenceevent"/>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="absenceaccumulation"/>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="presenceaccumulation"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="absenceevent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="reason" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Valid" />
+              <xs:enumeration value="Invalid" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="presenceevent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="absenceaccumulation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="hours" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="minutes" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="reason" minOccurs="1" maxOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Valid" />
+              <xs:enumeration value="Invalid" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="presenceaccumulation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="hours" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="minutes" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="student">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="name" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
