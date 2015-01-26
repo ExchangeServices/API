@@ -1,4 +1,4 @@
 API
 ===
 
-Application Programming Interface
+Software Developemnt Kit (SDK) for Lifecare API containing documentation, XML schemas and examples.   
