@@ -3,38 +3,53 @@
             xmlns="http://open.tieto.com/edu/organization/v1"
             xmlns:xs="http://www.w3.org/2001/XMLSchema"
             elementFormDefault="qualified">
-  <xs:annotation>
-    <xs:documentation>
-      Tieto Education - XML schema for extensions to IMS Enterprise definition of group in an organization.
-      Version: 1.0
-    </xs:documentation>
-  </xs:annotation>
+    <xs:annotation>
+        <xs:documentation>
+            Tieto Education - XML schema for extensions to IMS Enterprise definition of group in an organization.
+            Version: 1.0
+        </xs:documentation>
+    </xs:annotation>
 
-  <xs:element name="groupextension">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="period" type="xs:string" minOccurs="0" />
-		    <xs:element name="coursecode" type="xs:string" minOccurs="0" />
-		    <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
-		    <xs:element name="point" type="xs:string" minOccurs="0" />
-		    <xs:element name="hours" type="xs:string" minOccurs="0" />
-		    <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
-		    <xs:element name="mixedschoolyear" type="xs:string" minOccurs="0" />
-		    <xs:element name="scbcode" type="xs:string" minOccurs="0" />	
-		    <xs:element name="csncode" type="xs:string" minOccurs="0" />
-        <xs:element name="schoolcode" type="xs:string" minOccurs="0" />
-		    <xs:element name="governedby" type="xs:string" minOccurs="0" />
-		    <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
-		    <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
-		    <xs:element name="phone" type="xs:string" minOccurs="0" />
-		    <xs:element name="pcode" type="xs:string" minOccurs="0" />
-		    <xs:element name="street" type="xs:string" minOccurs="0" />
-		    <xs:element name="locality" type="xs:string" minOccurs="0" />
-		    <xs:element name="web" type="xs:string" minOccurs="0" />
-		    <xs:element name="schooltype" type="xs:string" minOccurs="0" />
-		    <xs:element name="grouptype" type="xs:string" minOccurs="0" />
-        <xs:element name="timestamp" type="xs:string" minOccurs="0" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+    <xs:element name="groupextension">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="coursecode" type="xs:string" minOccurs="0" />
+                <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
+                <xs:element name="point" type="xs:string" minOccurs="0" />
+                <xs:element name="hours" type="xs:string" minOccurs="0" />
+                <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
+                <xs:element name="csncode" type="xs:string" minOccurs="0" />
+                <xs:element name="governedby" type="xs:string" minOccurs="0" />
+                <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+                <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
+                <xs:element name="phone" type="xs:string" minOccurs="0" />
+                <xs:element name="pcode" type="xs:string" minOccurs="0" />
+                <xs:element name="street" type="xs:string" minOccurs="0" />
+                <xs:element name="locality" type="xs:string" minOccurs="0" />
+                <xs:element name="web" type="xs:string" minOccurs="0" />
+                <xs:element name="schooltype" type="xs:string" minOccurs="0" />
+                <xs:element name="groupusage" type="xs:string" minOccurs="0" />
+                <xs:element name="timestamp" type="xs:string" minOccurs="0" />
+                <xs:element name="languagecode" type="xs:string" minOccurs="0" />
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="period" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="period">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute default="1" name="type">
+                    </xs:attribute>
+                    <xs:attribute default="1" name="start">
+                    </xs:attribute>
+                    <xs:attribute default="1" name="end">
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
