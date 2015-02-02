@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<gradeoutcome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://open.tieto.com/edu/outcome/v1">
+  <coursegrade>
+    <schoolname>Balderskolan</schoolname>
+    <course>
+      <code>MAT01</code>
+      <name>Mattematik A</name>
+      <points>50</points>
+    </course>
+    <date>2015-02-02</date>
+    <grade>MVG</grade>
+    <student>
+      <id>9203121234</id>
+      <name>Linus Oskarsson</name>
+    </student>
+    <assessor>
+      <id>12345689</id>
+      <name>David Nillson</name>
+    </assessor>
+  </coursegrade>
+  <coursegrade>
+    <schoolname>Balderskolan</schoolname>
+    <course>
+      <code>ENG01</code>
+      <name>Engelska A</name>
+      <points>100</points>
+    </course>
+    <date>2015-02-02</date>
+    <grade>VG</grade>
+    <student>
+      <id>9203121234</id>
+      <name>Linus Oskarsson</name>
+    </student>
+    <assessor>
+      <id>12345689</id>
+      <name>David Nillson</name>
+    </assessor>
+  </coursegrade>
+  <coursegrade>
+    <schoolname>Balderskolan</schoolname>
+    <course>
+      <code>ENG01</code>
+      <name>Engelska A</name>
+      <points>100</points>
+    </course>
+    <date>2015-02-02</date>
+    <grade>MVG</grade>
+    <student>
+      <id>9203121234</id>
+      <name>Linus Oskarsson</name>
+    </student>
+    <assessor>
+      <id>12345689</id>
+      <name>David Nillson</name>
+    </assessor>
+  </coursegrade>
+</gradeoutcome>

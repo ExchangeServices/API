@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<monitoring xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://open.tieto.com/edu/monitoring/v1">
+  <absenceaccumulation>
+    <student>
+      <id>6602156742</id>
+      <name>Olle Eriksson</name>
+    </student>
+    <hours>1</hours>
+    <minutes>20</minutes>
+    <start>2015-02-02T11:38:40.4274694+01:00</start>
+    <end>2015-02-03T11:38:40.4274694+01:00</end>
+    <code>MAT1C</code>
+    <reason>Invalid</reason>
+  </absenceaccumulation>
+  <absenceaccumulation>
+    <student>
+      <id>6602156742</id>
+      <name>Olle Eriksson</name>
+    </student>
+    <hours>0</hours>
+    <minutes>40</minutes>
+    <start>2015-02-02T11:38:40.4274694+01:00</start>
+    <end>2015-02-03T11:38:40.4274694+01:00</end>
+    <code>ENG1A</code>
+    <reason>Invalid</reason>
+  </absenceaccumulation>
+  <absenceaccumulation>
+    <student>
+      <id>89802156742</id>
+      <name>Berit Andersson</name>
+    </student>
+    <hours>1</hours>
+    <minutes>30</minutes>
+    <start>2015-02-02T11:38:40.4274694+01:00</start>
+    <end>2015-02-03T11:38:40.4274694+01:00</end>
+    <code>ENG1A</code>
+    <reason>Invalid</reason>
+  </absenceaccumulation>
+</monitoring>
