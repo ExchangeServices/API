@@ -56,9 +56,32 @@
   </xs:element>
   <xs:element name="email" type="xs:string" />
   <xs:element name="extension">
-    <xs:complexType mixed="true">
+    <xs:complexType>
       <xs:sequence>
-        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" />
+        <xs:element name="privacy" type="xs:string" minOccurs="0" />
+        <xs:element name="emailwork" type="xs:string" minOccurs="0" />
+        <xs:element name="populationkeycode" type="xs:string" minOccurs="0" />
+        <xs:element name="populationcityarea" type="xs:string" minOccurs="0" />
+        <xs:element name="populationcityadmin" type="xs:string" minOccurs="0" />
+        <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+        <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
+        <xs:element name="nativelanguage" type="xs:string" minOccurs="0" />
+        <xs:element name="programcode" type="xs:string" minOccurs="0" />
+        <xs:element name="employmentstart" type="xs:string" minOccurs="0" />
+        <xs:element name="employmentend" type="xs:string" minOccurs="0" />
+        <xs:element name="signature" type="xs:string" minOccurs="0" />
+        <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="timestamp" type="xs:string" minOccurs="0" />
+        <xs:element name="altadr" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="street" type="xs:string" />
+              <xs:element name="pcode" type="xs:string" />
+              <xs:element name="locality" type="xs:string" />
+              <xs:element name="extadd" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
