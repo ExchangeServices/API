@@ -94,7 +94,7 @@
         <xs:element minOccurs="0" maxOccurs="1" ref="systemrole" />
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="institutionrole" />
         <xs:element minOccurs="0" maxOccurs="1" ref="datasource" />
-        <xs:element minOccurs="0" maxOccurs="1" ref="extension" />
+        <xs:element minOccurs="0" maxOccurs="1" type="personextension" name="extension"/>
       </xs:sequence>
       <xs:attribute name="recstatus">
         <xs:simpleType>
@@ -271,7 +271,7 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="relationship" />
         <xs:element minOccurs="0" maxOccurs="1" ref="groupmembers" />
         <xs:element minOccurs="0" maxOccurs="1" ref="datasource" />
-        <xs:element minOccurs="0" maxOccurs="1" ref="extension" />
+        <xs:element minOccurs="0" maxOccurs="1" type="groupextension" name="extension" />
       </xs:sequence>
       <xs:attribute name="recstatus">
         <xs:simpleType>
@@ -423,7 +423,7 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="finalresult" />
         <xs:element minOccurs="0" maxOccurs="1" ref="email" />
         <xs:element minOccurs="0" maxOccurs="1" ref="datasource" />
-        <xs:element minOccurs="0" maxOccurs="1" ref="extension" />
+        <xs:element minOccurs="0" maxOccurs="1" type="membershipextension" name="extension" />
       </xs:sequence>
       <xs:attribute name="recstatus">
         <xs:simpleType>
@@ -527,4 +527,80 @@
   <xs:element name="max" type="xs:string" />
   <xs:element name="min" type="xs:string" />
   <xs:element name="result" type="xs:string" />
+
+  <xs:complexType name="personextension">
+    <xs:sequence>
+      <xs:element name="privacy" type="xs:string" minOccurs="0" />
+      <xs:element name="emailwork" type="xs:string" minOccurs="0" />
+      <xs:element name="populationkeycode" type="xs:string" minOccurs="0" />
+      <xs:element name="populationcityarea" type="xs:string" minOccurs="0" />
+      <xs:element name="populationcityadmin" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
+      <xs:element name="nativelanguage" type="xs:string" minOccurs="0" />
+      <xs:element name="programcode" type="xs:string" minOccurs="0" />
+      <xs:element name="employmentstart" type="xs:string" minOccurs="0" />
+      <xs:element name="employmentend" type="xs:string" minOccurs="0" />
+      <xs:element name="signature" type="xs:string" minOccurs="0" />
+      <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="timestamp" type="xs:string" minOccurs="0" />
+      <xs:element name="altadr" type="altadr" minOccurs="0"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="altadr">
+    <xs:sequence>
+      <xs:element name="street" type="xs:string" />
+      <xs:element name="pcode" type="xs:string" />
+      <xs:element name="locality" type="xs:string" />
+      <xs:element name="extadd" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="groupextension">
+    <xs:sequence>
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" />
+      <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
+      <xs:element name="point" type="xs:string" minOccurs="0" />
+      <xs:element name="hours" type="xs:string" minOccurs="0" />
+      <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
+      <xs:element name="csncode" type="xs:string" minOccurs="0" />
+      <xs:element name="governedby" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
+      <xs:element name="phone" type="xs:string" minOccurs="0" />
+      <xs:element name="pcode" type="xs:string" minOccurs="0" />
+      <xs:element name="street" type="xs:string" minOccurs="0" />
+      <xs:element name="locality" type="xs:string" minOccurs="0" />
+      <xs:element name="web" type="xs:string" minOccurs="0" />
+      <xs:element name="schooltype" type="xs:string" minOccurs="0" />
+      <xs:element name="groupusage" type="xs:string" minOccurs="0" />
+      <xs:element name="timestamp" type="xs:string" minOccurs="0" />
+      <xs:element name="languagecode" type="xs:string" minOccurs="0" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="period" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="period">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute default="1" name="type">
+          </xs:attribute>
+          <xs:attribute default="1" name="start">
+          </xs:attribute>
+          <xs:attribute default="1" name="end">
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="membershipextension">
+    <xs:sequence>
+      <xs:element name="timestamp" type="xs:string" minOccurs="0" />
+      <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
 </xs:schema>
