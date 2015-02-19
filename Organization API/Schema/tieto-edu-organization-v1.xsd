@@ -532,12 +532,10 @@
     <xs:sequence>
       <xs:element name="privacy" type="xs:string" minOccurs="0" />
       <xs:element name="emailwork" type="xs:string" minOccurs="0" />
-      <xs:element name="populationkeycode" type="xs:string" minOccurs="0" />
-      <xs:element name="populationcityarea" type="xs:string" minOccurs="0" />
-      <xs:element name="populationcityadmin" type="xs:string" minOccurs="0" />
+      <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
       <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
       <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
-      <xs:element name="nativelanguage" type="xs:string" minOccurs="0" />
+      <xs:element name="nativelanguage" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="programcode" type="xs:string" minOccurs="0" />
       <xs:element name="employmentstart" type="xs:string" minOccurs="0" />
       <xs:element name="employmentend" type="xs:string" minOccurs="0" />
@@ -578,6 +576,7 @@
       <xs:element name="timestamp" type="xs:string" minOccurs="0" />
       <xs:element name="languagecode" type="xs:string" minOccurs="0" />
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="period" />
+      <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
