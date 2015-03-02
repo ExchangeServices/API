@@ -24,6 +24,10 @@ Version: 1.0.1
 	been renamed to "geographickeycode"
 	- the person extensions "populationcityarea" 
 	and "populationcityadmin" has been removed.
+	- period type is now an enum type
+	- added Years period
+	- added subject code and subject name as 
+	attributes for class
 	- miscellaneous improvements in the 
 	documentation
  
