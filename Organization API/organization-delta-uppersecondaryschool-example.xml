@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<enterprise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://open.tieto.com/edu/organization/v1">
+  <properties>
+    <comments>2015-03-13 10:00:00 - 2015-03-13 12:00:00</comments>
+    <datasource>LSM, GY</datasource>
+    <type>Delta</type>
+    <datetime>2015-03-13 10:56:52</datetime>
+  </properties>
+  <person recstatus="2">
+    <sourcedid>
+      <source>GY</source>
+      <id />
+    </sourcedid>
+    <userid useridtype="GUID"></userid>
+    <userid useridtype="PID" />
+    <name>
+      <fn>Devilal Chouidhari</fn>
+      <n>
+        <family>Chouidhari</family>
+        <given>Devilal</given>
+      </n>
+    </name>
+    <demographics>
+      <gender>Unknown</gender>
+      <bday />
+    </demographics>
+    <email>ida.karlsson@hem.com</email>
+    <tel teltype="Voice">12336</tel>
+    <tel teltype="Mobile">070-6666666</tel>
+    <tel teltype="Work">0910-654321</tel>
+    <adr>
+      <street>Gata 11</street>
+      <locality>SKELLEFTEÅ</locality>
+      <pcode>931 00</pcode>
+    </adr>
+    <systemrole systemroletype="None" />
+    <institutionrole primaryrole="Yes" institutionroletype="Contact" />
+    <datasource>SKV</datasource>
+    <extension>
+      <privacy>None</privacy>
+      <emailwork />
+      <geographickeycode />
+      <municipalitycode />
+      <municipalityname />
+      <nativelanguage />
+      <programcode />
+      <employmentstart />
+      <employmentend />
+      <signature />
+      <schoolunitcode />
+      <timestamp>2014-09-19</timestamp>
+      <altadr>
+        <street />
+        <pcode />
+        <locality />
+        <extadd />
+      </altadr>
+    </extension>
+  </person>
+  <person recstatus="2">
+    <sourcedid>
+      <source>GY</source>
+      <id>{9CFE66B4-DCB4-4EF1-A88A-4D097A365DC9}</id>
+    </sourcedid>
+    <userid useridtype="GUID">{9CFE66B4-DCB4-4EF1-A88A-4D097A365DC9}</userid>
+    <userid useridtype="PID">19100101TF12</userid>
+    <name>
+      <fn>Bengt Testkontakt</fn>
+      <n>
+        <family>Testkontakt</family>
+        <given>Bengt</given>
+      </n>
+    </name>
+    <demographics>
+      <gender>Male</gender>
+      <bday>1910-01-01</bday>
+    </demographics>
+    <email />
+    <tel teltype="Voice"></tel>
+    <tel teltype="Mobile"></tel>
+    <tel teltype="Work"></tel>
+    <adr>
+      <street />
+      <locality />
+      <pcode />
+    </adr>
+    <systemrole systemroletype="None" />
+    <institutionrole primaryrole="Yes" institutionroletype="Contact" />
+    <datasource>SKV</datasource>
+    <extension>
+      <privacy>None</privacy>
+      <emailwork />
+      <geographickeycode />
+      <municipalitycode />
+      <municipalityname />
+      <nativelanguage />
+      <programcode />
+      <employmentstart />
+      <employmentend />
+      <signature />
+      <schoolunitcode />
+      <timestamp>2015-03-13</timestamp>
+      <altadr>
+        <street />
+        <pcode />
+        <locality />
+        <extadd />
+      </altadr>
+    </extension>
+  </person>
+  <person recstatus="2">
+    <sourcedid>
+      <source>GY</source>
+      <id>{D1B7C890-C04F-4C78-A21F-0088F3F63C99}</id>
+    </sourcedid>
+    <userid useridtype="GUID">{D1B7C890-C04F-4C78-A21F-0088F3F63C99}</userid>
+    <userid useridtype="PID">19791024TF83</userid>
+    <name>
+      <fn>HCWWEBUILD SuperAdmin</fn>
+      <n>
+        <family>SuperAdmin</family>
+        <given>HCWWEBUILD</given>
+      </n>
+    </name>
+    <demographics>
+      <gender>Female</gender>
+      <bday>1979-10-24</bday>
+    </demographics>
+    <email />
+    <tel teltype="Voice"></tel>
+    <tel teltype="Mobile"></tel>
+    <tel teltype="Work"></tel>
+    <adr>
+      <extadd />
+      <street />
+      <locality>BENGTSTAD</locality>
+      <pcode />
+    </adr>
+    <systemrole systemroletype="None" />
+    <institutionrole primaryrole="Yes" institutionroletype="Staff" />
+    <datasource>SKV</datasource>
+    <extension>
+      <privacy>None</privacy>
+      <emailwork />
+      <geographickeycode />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <nativelanguage />
+      <programcode />
+      <employmentstart />
+      <employmentend />
+      <signature>791024TF83</signature>
+      <schoolunitcode />
+      <timestamp>2015-03-13</timestamp>
+      <altadr>
+        <street />
+        <pcode />
+        <locality />
+        <extadd />
+      </altadr>
+    </extension>
+  </person>
+  <person recstatus="2">
+    <sourcedid>
+      <source>GY</source>
+      <id>{9632C714-20AA-4C8C-AC11-2E476BA21396}</id>
+    </sourcedid>
+    <userid useridtype="GUID">{9632C714-20AA-4C8C-AC11-2E476BA21396}</userid>
+    <userid useridtype="PID">19611024TF83</userid>
+    <name>
+      <fn>HCWWEBUILD System administrator</fn>
+      <n>
+        <family>System administrator</family>
+        <given>HCWWEBUILD</given>
+      </n>
+    </name>
+    <demographics>
+      <gender>Female</gender>
+      <bday>1961-10-24</bday>
+    </demographics>
+    <email />
+    <tel teltype="Voice"></tel>
+    <tel teltype="Mobile"></tel>
+    <tel teltype="Work"></tel>
+    <adr>
+      <extadd />
+      <street />
+      <locality>PLACEMENT CITY</locality>
+      <pcode />
+    </adr>
+    <systemrole systemroletype="None" />
+    <institutionrole primaryrole="Yes" institutionroletype="Staff" />
+    <datasource>SKV</datasource>
+    <extension>
+      <privacy>None</privacy>
+      <emailwork />
+      <geographickeycode />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <nativelanguage />
+      <programcode />
+      <employmentstart />
+      <employmentend />
+      <signature>611024TF83</signature>
+      <schoolunitcode />
+      <timestamp>2015-03-13</timestamp>
+      <altadr>
+        <street />
+        <pcode />
+        <locality />
+        <extadd />
+      </altadr>
+    </extension>
+  </person>
+  <person recstatus="2">
+    <sourcedid>
+      <source>GY</source>
+      <id>{6FBC9F85-B63B-40B0-8418-C9ABBAC1AEE2}</id>
+    </sourcedid>
+    <userid useridtype="GUID">{6FBC9F85-B63B-40B0-8418-C9ABBAC1AEE2}</userid>
+    <userid useridtype="PID">19601024TF83</userid>
+    <name>
+      <fn>HCWWEBUILD System administrator</fn>
+      <n>
+        <family>System administrator</family>
+        <given>HCWWEBUILD</given>
+      </n>
+    </name>
+    <demographics>
+      <gender>Female</gender>
+      <bday>1960-10-24</bday>
+    </demographics>
+    <email />
+    <tel teltype="Voice"></tel>
+    <tel teltype="Mobile"></tel>
+    <tel teltype="Work"></tel>
+    <adr>
+      <extadd />
+      <street />
+      <locality>PLACEMENT CITY</locality>
+      <pcode />
+    </adr>
+    <systemrole systemroletype="None" />
+    <institutionrole primaryrole="Yes" institutionroletype="Staff" />
+    <datasource>SKV</datasource>
+    <extension>
+      <privacy>None</privacy>
+      <emailwork />
+      <geographickeycode />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <nativelanguage />
+      <programcode />
+      <employmentstart />
+      <employmentend />
+      <signature>601024TF83</signature>
+      <schoolunitcode />
+      <timestamp>2015-03-13</timestamp>
+      <altadr>
+        <street />
+        <pcode />
+        <locality />
+        <extadd />
+      </altadr>
+    </extension>
+  </person>
+  <group recstatus="1">
+    <sourcedid>
+      <source>GY</source>
+      <id>{51836695-14AD-4EC1-B3E8-F8F08D9D9529}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>HCWWEBUILDs Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{51836695-14AD-4EC1-B3E8-F8F08D9D9529}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-13</timestamp>
+    </extension>
+  </group>
+  <group recstatus="1">
+    <sourcedid>
+      <source>GY</source>
+      <id>{8335970E-0B22-403F-BB6C-42FFBC1397FA}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>HCWWEBUILDs Other unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{8335970E-0B22-403F-BB6C-42FFBC1397FA}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-13</timestamp>
+    </extension>
+  </group>
+  <group recstatus="1">
+    <sourcedid>
+      <source>GY</source>
+      <id>{51836695-14AD-4EC1-B3E8-F8F08D9D9529}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>HCWWEBUILDs Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{51836695-14AD-4EC1-B3E8-F8F08D9D9529}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-13</timestamp>
+    </extension>
+  </group>
+  <group recstatus="1">
+    <sourcedid>
+      <source>GY</source>
+      <id>{8335970E-0B22-403F-BB6C-42FFBC1397FA}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>HCWWEBUILDs Other unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{8335970E-0B22-403F-BB6C-42FFBC1397FA}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-13</timestamp>
+    </extension>
+  </group>
+  <group recstatus="1">
+    <sourcedid>
+      <source>GY</source>
+      <id>{7B552907-AAF4-41AF-8CAB-DB91774C3229}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Class</typevalue>
+    </grouptype>
+    <description>
+      <short>NV2A</short>
+    </description>
+    <timeframe>
+      <begin>0001-01-01</begin>
+      <end>0001-01-01</end>
+    </timeframe>
+    <extension>
+      <schoolyear />
+      <timestamp>2015-03-13</timestamp>
+    </extension>
+  </group>
+  <group recstatus="1">
+    <sourcedid>
+      <source>GY</source>
+      <id>-MyCourse</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Course</typevalue>
+    </grouptype>
+    <description>
+      <short>MyCourse</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <coursecode>MyCourse</coursecode>
+      <subjectcode>MAT</subjectcode>
+      <subjectname>Matematik</subjectname>
+      <hours />
+      <timestamp>2015-03-13</timestamp>
+    </extension>
+  </group>
+  <membership>
+    <sourcedid>
+      <source>GY</source>
+      <id>{51836695-14AD-4EC1-B3E8-F8F08D9D9529}</id>
+    </sourcedid>
+    <member>
+      <sourcedid>
+        <source>GY</source>
+        <id>{7B552907-AAF4-41AF-8CAB-DB91774C3229}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="Class">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-03-13</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+  </membership>
+  <membership>
+    <sourcedid>
+      <source>GY</source>
+      <id>-MyCourse</id>
+    </sourcedid>
+    <member>
+      <sourcedid>
+        <source>GY</source>
+        <id>{06B15315-47CC-4737-A173-59FDC57C19FD}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role recstatus="1" roletype="Student">
+        <status>Active</status>
+        <timeframe>
+          <begin>2014-12-01</begin>
+          <end>2015-06-01</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-03-13</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source>GY</source>
+        <id>{06B15315-47CC-4737-A173-59FDC57C19FD}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role recstatus="1" roletype="Student">
+        <status>Active</status>
+        <timeframe>
+          <begin>2014-12-01</begin>
+          <end>2015-06-01</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-03-13</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+  </membership>
+  <membership>
+    <sourcedid>
+      <source>GY</source>
+      <id>{7B552907-AAF4-41AF-8CAB-DB91774C3229}</id>
+    </sourcedid>
+    <member>
+      <sourcedid>
+        <source>GY</source>
+        <id>{06B15315-47CC-4737-A173-59FDC57C19FD}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role recstatus="1" roletype="Student">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-03-13</timestamp>
+          <schoolyear>1</schoolyear>
+        </extension>
+      </role>
+    </member>
+  </membership>
+</enterprise>
