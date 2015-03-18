@@ -28,7 +28,13 @@ Version: 1.0.1
 	- added Years period
 	- added subject code and subject name as 
 	attributes for class
+	- a new roletype ("Principal") has been added,
+	for principals. 
+	- added a new group extension called id.
+	- changed name for the service parameter
+	"SchoolUnitId" to "UnitId"
 	- miscellaneous improvements in the 
 	documentation
+	- read-only columns for person and unit updated
  
 

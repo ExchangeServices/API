@@ -467,7 +467,8 @@
             <xs:enumeration value="ContactGroup" />
             <xs:enumeration value="GradeAuthority" />
 	          <xs:enumeration value="Department" />
-	          <xs:enumeration value="DepartmentGroup" />
+            <xs:enumeration value="DepartmentGroup" />
+            <xs:enumeration value="Principal" />
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
@@ -557,6 +558,7 @@
 
   <xs:complexType name="groupextension">
     <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0" />
       <xs:element name="coursecode" type="xs:string" minOccurs="0" />
       <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
       <xs:element name="subjectname" type="xs:string" minOccurs="0" />
