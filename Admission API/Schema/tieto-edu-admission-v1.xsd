@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/admission/v1"
+            xmlns="http://open.tieto.com/edu/admission/v1"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for import of external students and education costs
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="external">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="type">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Placements" />
+              <xs:enumeration value="Costs" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element type="student"  minOccurs="0" maxOccurs="unbounded" name="students"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="student">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element type="unit" minOccurs="1" maxOccurs="1" name="school" />
+      <xs:element type="program" minOccurs="0" maxOccurs="1" name="program"/>
+      <xs:element type="educationcosts" minOccurs="0" maxOccurs="1" name="costs" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="program">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>        
+      <xs:element name="profile" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="variant" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="begin" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType  name="educationcosts">
+    <xs:sequence>
+      <xs:element name="price" type="xs:float" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="unit">
+    <xs:sequence>
+      <xs:element name="schoolunitcode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="address" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="city" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="phone" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="municipalitycode" type="xs:string" minOccurs="1" />
+      <xs:element name="governedby">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Municipal" />
+            <xs:enumeration value="State" />
+            <xs:enumeration value="Public" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>        
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
