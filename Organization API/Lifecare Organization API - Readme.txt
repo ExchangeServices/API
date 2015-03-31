@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 1.0.1
+Version: 1.0.2
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -36,5 +36,14 @@ Version: 1.0.1
 	- miscellaneous improvements in the 
 	documentation
 	- read-only columns for person and unit updated
- 
+ 	- added schoolunitcode as membershipextension. 
+	It is used in unit-principal relations
+	- removed school type from sourcedid.source
+	- removed schoolunitcode from "principal person"
+	- added a person extension called "status"
+	- changed restrictions for service parameters
+	for dates.
+
+ 1.0.2	Following changes has been done:
+	- added a new type of group called "MentorGroup"
 

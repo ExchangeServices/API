@@ -469,6 +469,7 @@
 	          <xs:enumeration value="Department" />
             <xs:enumeration value="DepartmentGroup" />
             <xs:enumeration value="Principal" />
+            <xs:enumeration value="MentorGroup" />
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
@@ -541,9 +542,10 @@
       <xs:element name="employmentstart" type="xs:string" minOccurs="0" />
       <xs:element name="employmentend" type="xs:string" minOccurs="0" />
       <xs:element name="signature" type="xs:string" minOccurs="0" />
-      <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
-      <xs:element name="timestamp" type="xs:string" minOccurs="0" />
-      <xs:element name="altadr" type="altadr" minOccurs="0"></xs:element>
+      <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" />
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="altadr" type="altadr" minOccurs="0" />
+      <xs:element name="status" type="personstatus" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
   
@@ -555,6 +557,14 @@
       <xs:element name="extadd" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+
+  <xs:simpleType name="personstatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Deceased" />
+      <xs:enumeration value="Emigrated" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:complexType name="groupextension">
     <xs:sequence>
@@ -576,7 +586,7 @@
       <xs:element name="web" type="xs:string" minOccurs="0" />
       <xs:element name="schooltype" type="xs:string" minOccurs="0" />
       <xs:element name="groupusage" type="xs:string" minOccurs="0" />
-      <xs:element name="timestamp" type="xs:string" minOccurs="0" />
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
       <xs:element name="languagecode" type="xs:string" minOccurs="0" />
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="period" />
       <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
@@ -608,8 +618,9 @@
 
   <xs:complexType name="membershipextension">
     <xs:sequence>
-      <xs:element name="timestamp" type="xs:string" minOccurs="0" />
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
       <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
+      <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
