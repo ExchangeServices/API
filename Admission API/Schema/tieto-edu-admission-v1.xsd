@@ -40,6 +40,7 @@
       <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>        
       <xs:element name="profile" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="variant" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="schoolyear" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="begin" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
       <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
