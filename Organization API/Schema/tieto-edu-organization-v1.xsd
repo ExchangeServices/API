@@ -584,7 +584,7 @@
       <xs:element name="street" type="xs:string" minOccurs="0" />
       <xs:element name="locality" type="xs:string" minOccurs="0" />
       <xs:element name="web" type="xs:string" minOccurs="0" />
-      <xs:element name="schooltype" type="xs:string" minOccurs="0" />
+      <xs:element name="schooltype" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
       <xs:element name="groupusage" type="xs:string" minOccurs="0" />
       <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
       <xs:element name="languagecode" type="xs:string" minOccurs="0" />
