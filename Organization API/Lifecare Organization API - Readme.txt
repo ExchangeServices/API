@@ -46,4 +46,9 @@ Version: 1.0.2
 
  1.0.2	Following changes has been done:
 	- added a new type of group called "MentorGroup"
+	- the groupextension "schooltype" now contains
+	all school types at unit.
+	- added "programprofile" and "programvariant" as
+	personextensions.
+ 	- updated delta export use cases.
 
