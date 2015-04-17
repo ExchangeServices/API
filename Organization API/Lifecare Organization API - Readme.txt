@@ -51,4 +51,6 @@ Version: 1.0.2
 	- added "programprofile" and "programvariant" as
 	personextensions.
  	- updated delta export use cases.
+	- updated description of person id format
+
 
