@@ -52,5 +52,7 @@ Version: 1.0.2
 	personextensions.
  	- updated delta export use cases.
 	- updated description of person id format
+	- updated organization exemple diagrams in
+	technical specification.
 
 
