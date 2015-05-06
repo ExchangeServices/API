@@ -622,7 +622,7 @@
     <xs:sequence>
       <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
       <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
-      <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" />
+      <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 

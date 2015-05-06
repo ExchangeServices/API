@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 1.0.2
+Version: 1.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -54,5 +54,10 @@ Version: 1.0.2
 	- updated description of person id format
 	- updated organization exemple diagrams in
 	technical specification.
+
+1.0.3	Following changes has been done:
+	- changed type for the membership extension 
+	"schoolunitcode". "schoolunitcode" is now an
+	array of strings. 
 
 
