@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" 
+                  xmlns:wsa10="http://www.w3.org/2005/08/addressing" 
+                  xmlns:tns="http://tieto.com/V1/Message/" 
+                  xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" 
+                  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+                  xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" 
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" 
+                  xmlns:i0="http://tieto.com/V1/Message" 
+                  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+                  xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" 
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" 
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" 
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" 
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+                  name="Message" 
+                  targetNamespace="http://tieto.com/V1/Message/" 
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tieto.com/V1/Message/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/HCW.Welfare.Common.MessageGateway.Contracts.V1.DataContracts" />
+      <xs:element name="SendMessage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="domain" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/HCW.Welfare.Common.MessageGateway.Contracts.V1.DataContracts" minOccurs="0" name="message" nillable="true" type="q1:Message" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SendMessageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SendMessageResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HCW.Welfare.Common.MessageGateway.Contracts.V1.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/HCW.Welfare.Common.MessageGateway.Contracts.V1.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xs:complexType name="Message">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Attachments" nillable="true" type="q1:ArrayOfArrayOfstring" />
+          <xs:element minOccurs="0" name="Encoding" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Recipients" nillable="true" type="q2:ArrayOfstring" />
+          <xs:element minOccurs="0" name="Sender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Message" nillable="true" type="tns:Message" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfArrayOfstring">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfArrayOfstring" nillable="true" type="tns:ArrayOfArrayOfstring" />
+      <xs:complexType name="ArrayOfstring">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/HCW.Welfare.Common.MessageGateway.Contracts.V1.FaultContracts" 
+               elementFormDefault="qualified" 
+               targetNamespace="http://schemas.datacontract.org/2004/07/HCW.Welfare.Common.MessageGateway.Contracts.V1.FaultContracts" 
+               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="urn:HCW.Welfare.Common.ServiceModel.V2" />
+      <xs:complexType name="MessageServiceFault">
+        <xs:complexContent mixed="false">
+          <xs:extension xmlns:q1="urn:HCW.Welfare.Common.ServiceModel.V2" base="q1:FaultContract">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="MessageServiceFault" nillable="true" type="tns:MessageServiceFault" />
+    </xs:schema>
+    <xs:schema xmlns:tns="urn:HCW.Welfare.Common.ServiceModel.V2" elementFormDefault="qualified" targetNamespace="urn:HCW.Welfare.Common.ServiceModel.V2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="FaultContract">
+        <xs:sequence>
+          <xs:element name="ErrorId" type="xs:int" />
+          <xs:element name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element name="CorrelationId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FaultContract" nillable="true" type="tns:FaultContract" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IMessageGateway_SendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IMessageGateway_SendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageGateway_SendMessage_MessageServiceFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/HCW.Welfare.Common.MessageGateway.Contracts.V1.FaultContracts" name="detail" element="q1:MessageServiceFault" />
+  </wsdl:message>
+  <wsdl:portType name="IMessageGateway">
+    <wsdl:operation name="SendMessage">
+      <wsdl:input wsaw:Action="http://tieto.com/V1/Message/IMessageGateway/SendMessage" message="tns:IMessageGateway_SendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tieto.com/V1/Message/IMessageGateway/SendMessageResponse" message="tns:IMessageGateway_SendMessage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tieto.com/V1/Message/IMessageGateway/SendMessageMessageServiceFaultFault" name="MessageServiceFaultFault" message="tns:IMessageGateway_SendMessage_MessageServiceFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMessageGateway" type="tns:IMessageGateway">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tieto.com/V1/Message/IMessageGateway/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MessageServiceFaultFault">
+        <soap:fault use="literal" name="MessageServiceFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Message">
+    <wsdl:port name="BasicHttpBinding_IMessageGateway" binding="tns:BasicHttpBinding_IMessageGateway">
+      <soap:address location="http://localhost:51159/LES/Message/V1/Message.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

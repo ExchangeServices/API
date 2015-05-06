@@ -1,0 +1,2016 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<enterprise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://open.tieto.com/edu/organization/v1">
+  <properties>
+    <datasource>LSM, GY</datasource>
+    <type>Units</type>
+    <datetime>2015-04-14 14:28:51</datetime>
+  </properties>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{A36677A0-B6AC-44F7-A2F7-1846F5B82E93}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Adams Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{A36677A0-B6AC-44F7-A2F7-1846F5B82E93}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-12T15:18:24.886</timestamp>
+      <period type="Year" start="2014-12-01" end="2015-06-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{0F76E0D4-D176-46DE-965C-B846FD35B889}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Adams Other unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{0F76E0D4-D176-46DE-965C-B846FD35B889}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-12T15:17:51.555</timestamp>
+      <period type="Year" start="2014-12-01" end="2015-06-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{0552F998-E3F9-4B66-97C5-C517F0C3AFDE}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Anderstorp</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{0552F998-E3F9-4B66-97C5-C517F0C3AFDE}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>2482</municipalitycode>
+      <municipalityname>Skellefteå</municipalityname>
+      <phone />
+      <pcode />
+      <street>Nyg 1</street>
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-01-26T10:40:41.373</timestamp>
+      <period type="Year" start="2014-08-19" end="2015-06-12">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{E2FEB237-0038-45E8-A853-EE1B852D949B}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>PleaseDontTouch</short>
+    </description>
+    <timeframe>
+      <begin>2014-08-18</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{E2FEB237-0038-45E8-A853-EE1B852D949B}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>1381</municipalitycode>
+      <municipalityname>Laholm</municipalityname>
+      <phone>111122</phone>
+      <pcode>931 31</pcode>
+      <street>Box 123</street>
+      <locality>SKELLEFTEÅ </locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-11-05T14:07:41.811</timestamp>
+      <period type="Year" start="2014-08-19" end="2015-06-12">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{D28FBBEB-AE83-43FC-9399-B3EC5579ED81}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Anders Testskola</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{D28FBBEB-AE83-43FC-9399-B3EC5579ED81}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>2506</municipalitycode>
+      <municipalityname>Arjeplog</municipalityname>
+      <phone />
+      <pcode>912 34</pcode>
+      <street>Gatan1</street>
+      <locality>STADEN</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>KV</schooltype>
+      <schooltype>SF</schooltype>
+      <schooltype>SV</schooltype>
+      <schooltype>UP</schooltype>
+      <schooltype>YH</schooltype>
+      <timestamp>2014-09-02T14:00:08.541</timestamp>
+      <period type="Year" start="2014-08-01" end="2015-06-15">14/15</period>
+      <period type="Years" start="2014-08-01" end="2016-06-03">14/16</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{A15D0C6C-31FB-4289-BF00-715D3E0482C4}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>API-Skolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{A15D0C6C-31FB-4289-BF00-715D3E0482C4}</id>
+      <csncode>12312</csncode>
+      <governedby>Municipal</governedby>
+      <municipalitycode>1984</municipalitycode>
+      <municipalityname>Arboga</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <timestamp>2014-09-29T09:13:46.917</timestamp>
+      <period type="Year" start="2014-08-01" end="2015-06-30">14/15</period>
+      <period start="2014-08-18" end="2014-12-19">HT14</period>
+      <period start="2015-01-05" end="2015-06-12">VT15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{06B7ABE4-2C50-4693-8C9B-D2EDBDF931B6}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Avslutade</short>
+    </description>
+    <timeframe>
+      <begin>2005-05-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{06B7ABE4-2C50-4693-8C9B-D2EDBDF931B6}</id>
+      <csncode>333</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-244000</phone>
+      <pcode>323 51</pcode>
+      <street>Skolgatan 17</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2008-10-14T00:00:02.654</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{DE95EAB5-1A81-4A86-A0FC-EC09DD466348}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Balderskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{DE95EAB5-1A81-4A86-A0FC-EC09DD466348}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>2412</municipalitycode>
+      <municipalityname />
+      <phone>0910 2382929</phone>
+      <pcode>934 32</pcode>
+      <street>Skellefteå</street>
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-07T14:13:00.935</timestamp>
+      <period type="Year" start="2014-07-01" end="2015-06-30">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{50524EB9-D6B7-41B6-8177-9DC57F48EFA4}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Bureå Gymnasieskola</short>
+    </description>
+    <timeframe>
+      <begin>2014-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{50524EB9-D6B7-41B6-8177-9DC57F48EFA4}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>2482</municipalitycode>
+      <municipalityname>Skellefteå</municipalityname>
+      <phone>0910-735000</phone>
+      <pcode>931 01</pcode>
+      <street>Bureå 2</street>
+      <locality>SKELLEFTEÅ</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <timestamp>2014-10-13T11:01:17.317</timestamp>
+      <period type="Year" start="2014-08-06" end="2015-06-10">14/15</period>
+      <period type="Year" start="2014-08-11" end="2015-06-12">JockesTest</period>
+      <period type="Years" start="2014-12-12" end="2014-12-31">Kortper</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{BC803474-4770-44B0-B448-AECA693F1AAE}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Börjes gymnasieskola</short>
+    </description>
+    <timeframe>
+      <begin>2013-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{BC803474-4770-44B0-B448-AECA693F1AAE}</id>
+      <csncode>32456</csncode>
+      <governedby />
+      <municipalitycode>0380</municipalitycode>
+      <municipalityname>Uppsala</municipalityname>
+      <phone>0703082584</phone>
+      <pcode>342345</pcode>
+      <street>Mönsterbyvägen 34</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>SF</schooltype>
+      <timestamp>2014-06-10T12:42:20.682</timestamp>
+      <period type="Year" start="2013-08-01" end="2014-06-30">13/14</period>
+      <period type="Year" start="2014-08-02" end="2015-06-14">14/15</period>
+      <period start="2014-08-01" end="2014-12-31">HT-14</period>
+      <period start="2015-01-01" end="2015-06-15">VT-15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{D8E67156-399B-47C2-849C-3ACAB37219E5}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Demoskolan</short>
+    </description>
+    <timeframe>
+      <begin>2015-02-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{D8E67156-399B-47C2-849C-3ACAB37219E5}</id>
+      <csncode />
+      <governedby>Municipal</governedby>
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-02-26T10:03:02.582</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{C909693A-C5ED-4516-AB52-EFAF1F4013DB}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Extern kommun</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{C909693A-C5ED-4516-AB52-EFAF1F4013DB}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>0006</municipalitycode>
+      <municipalityname>Övriga utländska medborgare</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <schooltype>SF</schooltype>
+      <timestamp>2014-11-13T15:52:39.426</timestamp>
+      <period type="Year" start="2014-09-01" end="2015-07-01">2014/2015</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{611D766A-2A1B-4253-9860-63DEABB95CFE}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Extern betygsskola</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{611D766A-2A1B-4253-9860-63DEABB95CFE}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode />
+      <municipalityname />
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>KV</schooltype>
+      <schooltype>SF</schooltype>
+      <schooltype>SV</schooltype>
+      <schooltype>YH</schooltype>
+      <timestamp>1999-01-01T00:00:00</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{4B5A4556-0B26-44F9-ACD5-D69AF89B9D7C}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>HCWWEBUILDs Other unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{4B5A4556-0B26-44F9-ACD5-D69AF89B9D7C}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-17T12:54:06.083</timestamp>
+      <period type="Year" start="2014-12-01" end="2015-06-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{EA13F405-CF30-4C75-A01B-ED49E4C9C035}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Höderskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{EA13F405-CF30-4C75-A01B-ED49E4C9C035}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>2412</municipalitycode>
+      <municipalityname />
+      <phone>0910 2382929</phone>
+      <pcode>934 32</pcode>
+      <street>Skellefteå</street>
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-07T17:18:20.988</timestamp>
+      <period type="Year" start="2014-07-01" end="2015-06-30">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{254AA28C-0C44-4AC1-B5E0-66EB360AA189}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Hersbyskolan</short>
+    </description>
+    <timeframe>
+      <begin>2005-05-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{254AA28C-0C44-4AC1-B5E0-66EB360AA189}</id>
+      <csncode>333</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-244000</phone>
+      <pcode>324 59</pcode>
+      <street>Storkvägen 1</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2008-02-19T00:00:02.654</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{D5559099-A227-4E48-B6D1-C369C1D41EE0}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Husaskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{D5559099-A227-4E48-B6D1-C369C1D41EE0}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone />
+      <pcode>324 73</pcode>
+      <street>Studiegränd</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <schooltype>SF</schooltype>
+      <timestamp>2009-06-10T00:00:02.654</timestamp>
+      <period type="Year" start="2013-08-12" end="2014-06-05">13/14</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{F75A032C-8B64-483A-8D57-6A0A4424DB95}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Jenss Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{F75A032C-8B64-483A-8D57-6A0A4424DB95}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-01-14T17:17:24.933</timestamp>
+      <period type="Year" start="2014-10-01" end="2015-04-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{EB4323E3-92F8-400B-BD06-3A4EDF80B7E8}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Joakims Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{EB4323E3-92F8-400B-BD06-3A4EDF80B7E8}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-10-28T16:03:00.437</timestamp>
+      <period type="Year" start="2014-07-01" end="2015-01-01">14/15</period>
+      <period type="Year" start="2015-02-03" end="2015-08-03">15/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{3A529C09-E574-4767-A4B6-8D6715D7B30E}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Johans Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{3A529C09-E574-4767-A4B6-8D6715D7B30E}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-13T22:20:34.943</timestamp>
+      <period type="Year" start="2013-08-01" end="2014-06-10">13/14</period>
+      <period type="Year" start="2015-02-13" end="2016-02-13">15/16</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{44D815A2-21FE-4CD5-9AF9-1CA846F3FB6D}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Jörgens Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{44D815A2-21FE-4CD5-9AF9-1CA846F3FB6D}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-11-12T08:23:14.649</timestamp>
+      <period type="Year" start="2014-08-01" end="2015-02-01">14/15</period>
+      <period type="Year" start="2015-03-03" end="2015-09-03">15/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{59E4873E-945B-478A-8575-425CE6450A41}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Kalleskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{59E4873E-945B-478A-8575-425CE6450A41}</id>
+      <csncode>1234</csncode>
+      <governedby />
+      <municipalitycode>2482</municipalitycode>
+      <municipalityname>Skellefteå</municipalityname>
+      <phone />
+      <pcode>931 20</pcode>
+      <street>Gatan 33</street>
+      <locality>SKELLEFTEÅ</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-10-10T11:05:11.204</timestamp>
+      <period start="2014-10-20" end="2014-10-31">Test 2014</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{32C551C8-F261-446C-A48D-BCE0B7CF1350}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Kaplanskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{32C551C8-F261-446C-A48D-BCE0B7CF1350}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>2482</municipalitycode>
+      <municipalityname>Skellefteå</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-11-06T13:53:02.647</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{318BDAF8-2628-4C64-B73B-840A214EE1FB}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>John Bauerskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{318BDAF8-2628-4C64-B73B-840A214EE1FB}</id>
+      <csncode>3679</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-247570</phone>
+      <pcode>324 71</pcode>
+      <street>Studiecentrum</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-09-12T14:29:38.301</timestamp>
+      <period type="Year" start="2000-08-16" end="2001-06-08">00/01</period>
+      <period type="Year" start="2001-08-16" end="2002-06-07">01/02</period>
+      <period type="Year" start="2002-08-15" end="2003-06-06">02/03</period>
+      <period type="Year" start="2003-08-21" end="2004-06-11">03/04</period>
+      <period type="Year" start="2004-08-19" end="2005-06-10">04/05</period>
+      <period type="Year" start="2005-08-25" end="2006-06-16">05/06</period>
+      <period type="Year" start="2006-08-24" end="2007-06-15">06/07</period>
+      <period type="Year" start="2007-08-27" end="2008-06-13">07/08</period>
+      <period type="Year" start="2008-08-20" end="2009-06-12">08/09</period>
+      <period type="Year" start="2009-08-20" end="2010-06-11">09/10</period>
+      <period type="Year" start="2010-08-18" end="2011-06-10">10/11</period>
+      <period type="Year" start="2011-08-22" end="2012-06-15">11/12</period>
+      <period type="Year" start="2012-08-22" end="2013-06-14">12/13</period>
+      <period type="Year" start="2013-08-19" end="2014-06-13">13/14</period>
+      <period type="Year" start="2014-08-18" end="2015-06-12">14/15</period>
+      <period type="Year" start="1993-07-16" end="1994-07-15">93/94</period>
+      <period type="Year" start="1994-07-16" end="1995-07-15">94/95</period>
+      <period type="Year" start="1995-07-16" end="1996-07-15">95/96</period>
+      <period type="Year" start="1996-07-16" end="1997-07-15">96/97</period>
+      <period type="Year" start="1997-07-16" end="1998-07-15">97/98</period>
+      <period type="Year" start="1998-07-16" end="1999-07-15">98/99</period>
+      <period type="Year" start="1999-08-16" end="2000-07-15">99/00</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{92840012-1DC7-41E4-843B-2EF0FB1781D4}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Kents Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{92840012-1DC7-41E4-843B-2EF0FB1781D4}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-02-17T16:34:01.355</timestamp>
+      <period type="Year" start="2014-11-01" end="2015-05-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{37A0A4DB-575A-4D56-88EE-1F2A53DBC62B}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Kentasgymnasium</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{37A0A4DB-575A-4D56-88EE-1F2A53DBC62B}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode />
+      <municipalityname />
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 99</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-24T14:36:05.065</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{2415BC9C-E14D-4B45-A399-63A369E2F3B3}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Kickis gymnasieskola</short>
+    </description>
+    <timeframe>
+      <begin>2000-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{2415BC9C-E14D-4B45-A399-63A369E2F3B3}</id>
+      <csncode>45335</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>1234455</phone>
+      <pcode>123 44</pcode>
+      <street>Skolgatan 3</street>
+      <locality>MÖNSTERBY</locality>
+      <web>http://kommun.se</web>
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>YH</schooltype>
+      <timestamp>2015-01-18T14:14:02.775</timestamp>
+      <period type="Year" start="2013-08-12" end="2014-06-13">13/14</period>
+      <period type="Year" start="2014-08-11" end="2015-06-12">14/15</period>
+      <period type="Years" start="2014-08-11" end="2016-06-12">14-16</period>
+      <period type="Years" start="2014-08-10" end="2017-06-12">14-17</period>
+      <period start="2014-08-11" end="2014-12-19">HT14</period>
+      <period start="2015-01-01" end="2015-06-12">VT15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{0CC0DC01-56E7-485D-B2BA-C5C3085B23D5}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Kristinaskolan</short>
+    </description>
+    <timeframe>
+      <begin>1979-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{0CC0DC01-56E7-485D-B2BA-C5C3085B23D5}</id>
+      <csncode>433</csncode>
+      <governedby />
+      <municipalitycode>2034</municipalitycode>
+      <municipalityname>Orsa</municipalityname>
+      <phone>035-247709</phone>
+      <pcode>325 79</pcode>
+      <street>Lärcentrum</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>KV</schooltype>
+      <schooltype>SF</schooltype>
+      <schooltype>SV</schooltype>
+      <schooltype>UP</schooltype>
+      <schooltype>YH</schooltype>
+      <timestamp>2015-03-04T09:25:02.999</timestamp>
+      <period start="2006-01-01" end="2006-06-30">VT-06</period>
+      <period start="2010-01-01" end="2010-06-30">VT-10</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{AAF5A1AD-BBCC-446D-A0D2-BAE1A0FB6735}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Ågestaskolan, Externa kommuner</short>
+    </description>
+    <timeframe>
+      <begin>2005-05-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{AAF5A1AD-BBCC-446D-A0D2-BAE1A0FB6735}</id>
+      <csncode>333</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-244000</phone>
+      <pcode>326 71</pcode>
+      <street>Box 68</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <timestamp>2014-01-20T09:28:26.711</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{955FD12A-2BF3-4CE2-ABFE-6ABE1C439718}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>LSM Pune Testskola</short>
+    </description>
+    <timeframe>
+      <begin>2013-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{955FD12A-2BF3-4CE2-ABFE-6ABE1C439718}</id>
+      <csncode>56789</csncode>
+      <governedby />
+      <municipalitycode>0380</municipalitycode>
+      <municipalityname>Uppsala</municipalityname>
+      <phone />
+      <pcode>342 34</pcode>
+      <street>Mönsterbyvägen 34</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>KV</schooltype>
+      <schooltype>SF</schooltype>
+      <schooltype>YH</schooltype>
+      <timestamp>2015-02-24T05:22:29.864</timestamp>
+      <period type="Year" start="2013-06-01" end="2014-05-31">13-14</period>
+      <period type="Year" start="2014-06-01" end="2015-04-01">14-15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{B7D0AB9F-1442-4090-9640-F918569EDCB7}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Löftesskolan</short>
+    </description>
+    <timeframe>
+      <begin>2011-12-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{B7D0AB9F-1442-4090-9640-F918569EDCB7}</id>
+      <csncode>333</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-247048</phone>
+      <pcode>387 25</pcode>
+      <street>Hoppets väg 39</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2011-12-07T00:00:02.654</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{420DF75E-9F64-4A56-843D-82A0483364B1}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Lugnetskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{420DF75E-9F64-4A56-843D-82A0483364B1}</id>
+      <csncode>3634</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-247084</phone>
+      <pcode>324 49</pcode>
+      <street>Vretgatan 68</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2005-11-23T00:00:02.654</timestamp>
+      <period type="Year" start="2002-08-16" end="2003-06-06">02/03</period>
+      <period type="Year" start="2003-08-21" end="2004-06-11">03/04</period>
+      <period type="Year" start="2004-08-19" end="2005-06-10">04/05</period>
+      <period type="Year" start="2005-08-24" end="2006-06-16">05/06</period>
+      <period type="Year" start="2006-08-24" end="2007-06-15">06/07</period>
+      <period type="Year" start="2007-08-27" end="2008-06-13">07/08</period>
+      <period type="Year" start="2008-08-20" end="2009-06-12">08/09</period>
+      <period type="Year" start="2009-08-20" end="2010-06-11">09/10</period>
+      <period type="Year" start="2010-08-18" end="2011-06-10">10/11</period>
+      <period type="Year" start="2011-08-22" end="2012-06-15">11/12</period>
+      <period type="Year" start="2012-08-21" end="2013-06-14">12/13</period>
+      <period type="Year" start="2013-08-19" end="2014-06-13">13/14</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{C2C4CC8F-BEAD-4890-9A5B-0A40B7BE3AA4}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Monicaskolan</short>
+    </description>
+    <timeframe>
+      <begin>2013-11-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{C2C4CC8F-BEAD-4890-9A5B-0A40B7BE3AA4}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>2482</municipalitycode>
+      <municipalityname>Skellefteå</municipalityname>
+      <phone />
+      <pcode>999 99</pcode>
+      <street>Skolgatan 5</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <timestamp>2015-01-14T11:18:06.556</timestamp>
+      <period type="Year" start="2014-08-18" end="2015-06-05">14/15</period>
+      <period start="2014-08-18" end="2014-12-19">HT-14</period>
+      <period start="2015-01-07" end="2015-06-05">VT-15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{CB1B1E28-8A07-427A-B66E-1AC8FA9C867B}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass Other unit2</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{CB1B1E28-8A07-427A-B66E-1AC8FA9C867B}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-08T14:00:14.715</timestamp>
+      <period type="Year" start="2015-01-01" end="2015-07-01">15/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{87BC2BD7-5657-43EA-AEA6-51DA626E09A4}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass Placement unitNew</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{87BC2BD7-5657-43EA-AEA6-51DA626E09A4}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-09T14:33:18.612</timestamp>
+      <period type="Year" start="2013-08-01" end="2014-06-10">13/14</period>
+      <period type="Year" start="2015-03-09" end="2016-03-09">15/16</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{83D1500D-C7CC-4E9F-AB58-6D2820AE256B}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass AUTH</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{83D1500D-C7CC-4E9F-AB58-6D2820AE256B}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-11-12T11:39:28.583</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{385CB706-011C-498C-B8CA-69A94BDFF847}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass UNAUTH</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{385CB706-011C-498C-B8CA-69A94BDFF847}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-11-12T11:39:28.955</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{793C0ABB-417A-4FB0-9176-C94BDAB4DA7F}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass Other unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{793C0ABB-417A-4FB0-9176-C94BDAB4DA7F}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-14T08:45:23.759</timestamp>
+      <period type="Year" start="2015-01-01" end="2015-07-01">15/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{1E8E9659-7532-4EB2-BC36-A10B4449C0A7}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{1E8E9659-7532-4EB2-BC36-A10B4449C0A7}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode />
+      <municipalityname />
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 99</street>
+      <locality>PLACEMENT CITY2</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-17T16:16:45.483</timestamp>
+      <period type="Years" start="2014-08-25" end="2015-06-05">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{F983D1D8-B996-47E7-AB37-B07EA338A3B3}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass Placement unit2</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{F983D1D8-B996-47E7-AB37-B07EA338A3B3}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-09T10:49:29.857</timestamp>
+      <period type="Year" start="2015-01-01" end="2015-07-01">15/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{F97877FD-274E-456E-A625-AE5E4022FE44}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Niklass Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{F97877FD-274E-456E-A625-AE5E4022FE44}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-14T08:45:18.499</timestamp>
+      <period type="Year" start="2015-01-01" end="2015-07-01">15/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{748AF9AD-3DE4-435E-AF2A-0645D3CA54D7}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Nopphamats Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{748AF9AD-3DE4-435E-AF2A-0645D3CA54D7}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-02-27T15:19:53.469</timestamp>
+      <period type="Year" start="2014-11-01" end="2015-05-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{A3006BED-C8B6-481C-87E8-F27660FB9F31}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Nopphamats Other unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{A3006BED-C8B6-481C-87E8-F27660FB9F31}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-02-27T15:19:54.938</timestamp>
+      <period type="Year" start="2014-11-01" end="2015-05-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{B2331388-53C9-44EB-BDD5-3E3AE34A5A68}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Nyenhet</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{B2331388-53C9-44EB-BDD5-3E3AE34A5A68}</id>
+      <csncode>12345</csncode>
+      <governedby>Municipal</governedby>
+      <municipalitycode>2480</municipalitycode>
+      <municipalityname>Umeå</municipalityname>
+      <phone />
+      <pcode>930 30</pcode>
+      <street>gatan 44</street>
+      <locality>UMEÅ</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-26T08:20:08.863</timestamp>
+      <period type="Year" start="2015-01-01" end="2015-06-01">VT2015</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{28A41DAF-35E6-4674-9240-39F30AA41B83}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Olofs Other unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{28A41DAF-35E6-4674-9240-39F30AA41B83}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-04T08:31:38.051</timestamp>
+      <period type="Year" start="2014-12-01" end="2015-06-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{5E2C05D3-3F48-4EBB-B6CF-7246D7CCD7EE}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Olofssonskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{5E2C05D3-3F48-4EBB-B6CF-7246D7CCD7EE}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode />
+      <municipalityname />
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 2</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-20T14:33:52.885</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{B32D9F64-A35E-499D-8EC9-05969C8AD00E}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Olofssonskolan2</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{B32D9F64-A35E-499D-8EC9-05969C8AD00E}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode />
+      <municipalityname />
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 2</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-24T14:17:21.086</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{EED0AEE7-75E1-4AAD-8612-F632B77151A2}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Olofs Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{EED0AEE7-75E1-4AAD-8612-F632B77151A2}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-04T08:31:35.056</timestamp>
+      <period type="Year" start="2014-12-01" end="2015-06-01">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{E755A932-1F77-43BD-ADD6-A5B5C91F634D}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Holgerskolan</short>
+    </description>
+    <timeframe>
+      <begin>1990-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{E755A932-1F77-43BD-ADD6-A5B5C91F634D}</id>
+      <csncode>3696</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-247270</phone>
+      <pcode>324 01</pcode>
+      <street>Nordlandergatan 32</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2005-11-23T00:00:02.654</timestamp>
+      <period type="Year" start="2000-08-16" end="2001-06-08">00/01</period>
+      <period type="Year" start="2001-08-16" end="2002-06-07">01/02</period>
+      <period type="Year" start="2002-08-15" end="2003-06-06">02/03</period>
+      <period type="Year" start="2003-08-21" end="2004-06-11">03/04</period>
+      <period type="Year" start="2004-08-19" end="2005-06-10">04/05</period>
+      <period type="Year" start="2005-08-24" end="2006-06-16">05/06</period>
+      <period type="Year" start="2006-08-24" end="2007-06-15">06/07</period>
+      <period type="Year" start="2007-08-27" end="2008-06-13">07/08</period>
+      <period type="Year" start="2008-08-20" end="2009-06-12">08/09</period>
+      <period type="Years" start="2009-08-20" end="2010-06-11">09/10</period>
+      <period type="Year" start="2010-08-18" end="2011-06-10">10/11</period>
+      <period type="Year" start="2011-08-22" end="2012-06-15">11/12</period>
+      <period type="Year" start="2012-08-22" end="2013-06-14">12/13</period>
+      <period type="Year" start="2013-08-19" end="2014-06-13">13/14</period>
+      <period type="Year" start="2014-08-18" end="2015-06-12">14/15</period>
+      <period type="Year" start="1993-07-16" end="1994-07-15">93/94</period>
+      <period type="Year" start="1994-07-16" end="1995-07-15">94/95</period>
+      <period type="Year" start="1995-07-16" end="1996-07-15">95/96</period>
+      <period type="Year" start="1996-07-16" end="1997-07-15">96/97</period>
+      <period type="Year" start="1997-07-16" end="1998-07-15">97/98</period>
+      <period type="Year" start="1998-07-16" end="1999-07-15">98/99</period>
+      <period type="Year" start="1999-07-16" end="2000-07-15">99/00</period>
+      <period type="Years" start="2013-01-01" end="2016-01-01">APL-period</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{B2E4F9E5-0DEE-456C-B815-5F84F1D08954}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Roberts Placement unit</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{B2E4F9E5-0DEE-456C-B815-5F84F1D08954}</id>
+      <csncode>12345</csncode>
+      <governedby />
+      <municipalitycode>0000</municipalitycode>
+      <municipalityname>Kommun okänd</municipalityname>
+      <phone />
+      <pcode>931 99</pcode>
+      <street>Kanalgatan 5</street>
+      <locality>PLACEMENT CITY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-11-04T17:53:02.835</timestamp>
+      <period type="Year" start="2014-08-01" end="2015-02-01">14/15</period>
+      <period type="Year" start="2015-03-03" end="2015-09-03">15/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{815E81BD-3956-44A8-BE44-F064840D2B9D}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Robert testar2</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{815E81BD-3956-44A8-BE44-F064840D2B9D}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>1984</municipalitycode>
+      <municipalityname>Arboga</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-24T13:38:28.466</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{62F3FBCF-95A0-4405-A413-988CA46F0FF3}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Jenningsskolan</short>
+    </description>
+    <timeframe>
+      <begin>1997-06-30</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{62F3FBCF-95A0-4405-A413-988CA46F0FF3}</id>
+      <csncode>3398</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-247048</phone>
+      <pcode>324 40</pcode>
+      <street>Skolgatan 67</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <schooltype>KV</schooltype>
+      <schooltype>SF</schooltype>
+      <schooltype>UP</schooltype>
+      <timestamp>2009-02-20T00:00:02.654</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{C406F052-6325-4365-B9A7-78C5F7152D8C}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Selenium Int School</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{C406F052-6325-4365-B9A7-78C5F7152D8C}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>KV</schooltype>
+      <schooltype>SF</schooltype>
+      <schooltype>YH</schooltype>
+      <timestamp>2015-04-14T14:18:16.095</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{7B32FEA9-56D4-4CBA-B86D-9E03E4EC9613}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Skräpenheten</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{7B32FEA9-56D4-4CBA-B86D-9E03E4EC9613}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>1443</municipalitycode>
+      <municipalityname>Bollebygd</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2014-06-17T09:23:31.304</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{7BFBCAB9-EF9E-4C5A-B12A-6CC4DD171462}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Skräpenheten</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{7BFBCAB9-EF9E-4C5A-B12A-6CC4DD171462}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>1784</municipalitycode>
+      <municipalityname>Arvika</municipalityname>
+      <phone />
+      <pcode />
+      <street />
+      <locality />
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <timestamp>2014-05-22T10:26:00.804</timestamp>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{2F17031E-7AF7-4AF4-9AAA-ED5B449DD231}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Språkcentrum</short>
+    </description>
+    <timeframe>
+      <begin>2010-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{2F17031E-7AF7-4AF4-9AAA-ED5B449DD231}</id>
+      <csncode>21313</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>18188</phone>
+      <pcode>123 12</pcode>
+      <street>Storgatan 4</street>
+      <locality>MÖNSTERBY</locality>
+      <web>http://www.stockholm.se/</web>
+      <schooltype>GY</schooltype>
+      <timestamp>2014-10-10T14:39:21.333</timestamp>
+      <period type="Year" start="2014-08-11" end="2015-06-12">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{F4CEE588-1CCF-484A-A7B2-3B4C81C50C58}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Forslundaskolan</short>
+    </description>
+    <timeframe>
+      <begin>1990-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{F4CEE588-1CCF-484A-A7B2-3B4C81C50C58}</id>
+      <csncode>3712</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-247100</phone>
+      <pcode>324 00</pcode>
+      <street>Studiecentrum</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GS</schooltype>
+      <schooltype>GY</schooltype>
+      <schooltype>KV</schooltype>
+      <schooltype>SF</schooltype>
+      <schooltype>SV</schooltype>
+      <schooltype>UP</schooltype>
+      <schooltype>YH</schooltype>
+      <timestamp>2005-11-23T00:00:02.654</timestamp>
+      <period type="Year" start="2000-08-16" end="2001-06-08">00/01</period>
+      <period type="Year" start="2001-08-16" end="2002-06-07">01/02</period>
+      <period type="Year" start="2002-08-15" end="2003-06-06">02/03</period>
+      <period type="Year" start="2003-08-21" end="2004-06-11">03/04</period>
+      <period type="Year" start="2004-08-19" end="2005-06-10">04/05</period>
+      <period type="Year" start="2005-08-24" end="2006-06-16">05/06</period>
+      <period type="Year" start="2006-08-24" end="2007-06-15">06/07</period>
+      <period type="Year" start="2007-08-27" end="2008-06-13">07/08</period>
+      <period type="Year" start="2008-08-20" end="2009-06-12">08/09</period>
+      <period type="Year" start="2009-08-20" end="2010-06-11">09/10</period>
+      <period type="Year" start="2010-08-18" end="2011-06-10">10/11</period>
+      <period type="Year" start="2011-08-22" end="2012-06-15">11/12</period>
+      <period type="Year" start="2012-08-22" end="2013-06-14">12/13</period>
+      <period type="Year" start="2013-08-01" end="2014-06-13">13/14</period>
+      <period type="Year" start="2014-08-25" end="2015-06-06">14/15</period>
+      <period type="Years" start="2014-11-04" end="2014-11-08">5</period>
+      <period type="Year" start="1993-07-16" end="1994-07-15">93/94</period>
+      <period type="Year" start="1994-07-16" end="1995-07-15">94/95</period>
+      <period type="Year" start="1995-07-16" end="1996-07-15">95/96</period>
+      <period type="Year" start="1996-07-16" end="1997-07-15">96/97</period>
+      <period type="Year" start="1997-07-16" end="1998-07-15">97/98</period>
+      <period type="Year" start="1998-07-16" end="1999-07-15">98/99</period>
+      <period type="Year" start="1999-07-16" end="2000-07-15">99/00</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{3B45E2D8-7057-4D31-B9D5-A501C5939861}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Strandenskolan</short>
+    </description>
+    <timeframe>
+      <begin></begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{3B45E2D8-7057-4D31-B9D5-A501C5939861}</id>
+      <csncode />
+      <governedby />
+      <municipalitycode>2412</municipalitycode>
+      <municipalityname />
+      <phone>0910 2382929</phone>
+      <pcode>934 32</pcode>
+      <street>Skellefteå</street>
+      <locality />
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-04-10T09:15:24.186</timestamp>
+      <period type="Year" start="2014-07-01" end="2015-06-30">14/15</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{59A24576-FE9B-482B-8740-C1B121274E77}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Grade Overview, Do not Touch</short>
+    </description>
+    <timeframe>
+      <begin>0001-01-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{59A24576-FE9B-482B-8740-C1B121274E77}</id>
+      <csncode>3721</csncode>
+      <governedby />
+      <municipalitycode>0180</municipalitycode>
+      <municipalityname>Stockholm</municipalityname>
+      <phone>035-247150</phone>
+      <pcode>324 00</pcode>
+      <street>Kanalgatan 92</street>
+      <locality>MÖNSTERBY</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2008-10-21T00:00:02.654</timestamp>
+      <period type="Year" start="2000-07-16" end="2001-07-15">00/01</period>
+      <period type="Year" start="2001-08-16" end="2002-06-07">01/02</period>
+      <period type="Year" start="2002-08-15" end="2003-06-06">02/03</period>
+      <period type="Year" start="2003-08-21" end="2004-06-11">03/04</period>
+      <period type="Year" start="2004-08-19" end="2005-06-10">04/05</period>
+      <period type="Year" start="2005-08-24" end="2006-06-16">05/06</period>
+      <period type="Year" start="2006-08-24" end="2007-06-15">06/07</period>
+      <period type="Year" start="2007-08-27" end="2008-06-13">07/08</period>
+      <period type="Year" start="2008-08-20" end="2009-06-12">08/09</period>
+      <period type="Year" start="2009-08-20" end="2010-06-11">09/10</period>
+      <period type="Year" start="2010-08-18" end="2011-06-10">10/11</period>
+      <period type="Year" start="2011-08-22" end="2012-06-15">11/12</period>
+      <period type="Year" start="2012-08-22" end="2013-06-14">12/13</period>
+      <period type="Year" start="2013-08-19" end="2014-06-13">13/14</period>
+      <period type="Year" start="2014-08-01" end="2015-06-10">14/15</period>
+      <period type="Year" start="1993-07-16" end="1994-07-15">93/94</period>
+      <period type="Year" start="1994-07-16" end="1995-07-15">94/95</period>
+      <period type="Year" start="1995-07-16" end="1996-07-15">95/96</period>
+      <period type="Year" start="1996-07-16" end="1997-07-15">96/97</period>
+      <period type="Year" start="1997-07-16" end="1998-07-15">97/98</period>
+      <period type="Year" start="1998-07-16" end="1999-07-15">98/99</period>
+      <period type="Year" start="1999-07-16" end="2000-07-15">99/00</period>
+    </extension>
+  </group>
+  <group>
+    <sourcedid>
+      <source />
+      <id>{960C5AA3-862B-4DB9-B2E0-DA0ADE540085}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Unit</typevalue>
+    </grouptype>
+    <description>
+      <short>Yvves Gymnasieskola</short>
+    </description>
+    <timeframe>
+      <begin>2014-06-01</begin>
+      <end></end>
+    </timeframe>
+    <extension>
+      <id>{960C5AA3-862B-4DB9-B2E0-DA0ADE540085}</id>
+      <csncode>22335</csncode>
+      <governedby>Municipal</governedby>
+      <municipalitycode>2482</municipalitycode>
+      <municipalityname>Skellefteå</municipalityname>
+      <phone>010-4818098</phone>
+      <pcode>931 11</pcode>
+      <street>Stadsvägen 8</street>
+      <locality>SKELLEFTEÅ</locality>
+      <web />
+      <schooltype>GY</schooltype>
+      <timestamp>2015-03-02T13:56:16.747</timestamp>
+      <period type="Year" start="2014-08-20" end="2015-06-10">14/15</period>
+      <period type="Years" start="2014-08-21" end="2016-06-16">14/16</period>
+    </extension>
+  </group>
+</enterprise>
