@@ -10,18 +10,10 @@
     </xs:documentation>
   </xs:annotation>
 
-  <xs:element name="external">
+  <xs:element name="externalstudents">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="type">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="Placements" />
-              <xs:enumeration value="Costs" />
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-        <xs:element type="student"  minOccurs="0" maxOccurs="unbounded" name="students"/>
+        <xs:element type="student"  minOccurs="0" maxOccurs="unbounded" name="student"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -29,9 +21,9 @@
   <xs:complexType name="student">
     <xs:sequence>
       <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element type="unit" minOccurs="1" maxOccurs="1" name="school" />
-      <xs:element type="program" minOccurs="0" maxOccurs="1" name="program"/>
-      <xs:element type="educationcosts" minOccurs="0" maxOccurs="1" name="costs" />
+      <xs:element type="unit" minOccurs="1" maxOccurs="1" name="unit" />
+      <xs:element type="program" minOccurs="1" maxOccurs="1" name="program"/>
+      <xs:element type="xs:boolean" minOccurs="1" maxOccurs="1" name="hasgraduated" />
     </xs:sequence>
   </xs:complexType>
 
@@ -43,14 +35,9 @@
       <xs:element name="schoolyear" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="begin" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
       <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-    </xs:sequence>
-  </xs:complexType>
-
-  <xs:complexType  name="educationcosts">
-    <xs:sequence>
-      <xs:element name="price" type="xs:float" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="comments" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="amount" type="xs:float" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricecode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="reason" type="xs:string" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -70,7 +57,7 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="Municipal" />
             <xs:enumeration value="State" />
-            <xs:enumeration value="Public" />
+            <xs:enumeration value="Private" />
           </xs:restriction>
         </xs:simpleType>
       </xs:element>        
