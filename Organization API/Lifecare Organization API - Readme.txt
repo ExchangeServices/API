@@ -58,6 +58,7 @@ Version: 1.0.3
 1.0.3	Following changes has been done:
 	- changed type for the membership extension 
 	"schoolunitcode". "schoolunitcode" is now an
-	array of strings. 
+	array of strings.
+	- updated "Examples of structures and mappings". 
 
 
