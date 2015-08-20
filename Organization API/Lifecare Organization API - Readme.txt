@@ -61,4 +61,13 @@ Version: 1.0.3
 	array of strings.
 	- updated "Examples of structures and mappings". 
 
+1.0.4	Following changes has been done:
+	- added description for "recstatus" for person, group
+	and membership.member.role.
+	- removed group.description.long. 
+	- removed group.extension.point.
+	- added group.extension.hours.
+	- updated "Delta export of organization"
+
+
 
