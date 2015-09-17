@@ -69,5 +69,10 @@ Version: 1.0.3
 	- added group.extension.hours.
 	- updated "Delta export of organization"
 
+1.0.5	Following changes has been done:
+	- added membership role Responsible
+	- excluded all preliminary placements
+	- added schooltype in properties
+
 
 
