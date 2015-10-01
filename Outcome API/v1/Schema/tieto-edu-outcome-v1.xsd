@@ -23,6 +23,7 @@
       <xs:extension base="report">
         <xs:sequence>
           <xs:element name="program"  type="xs:string" minOccurs="1" maxOccurs="1"/>
+          <xs:element type="xs:boolean" name="basiceligibility" minOccurs="1" maxOccurs="1" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -137,14 +138,14 @@
   <xs:complexType name="coursegrade">
     <xs:sequence>
       <xs:element name="schoolname" type="xs:string"  minOccurs="0" maxOccurs="1" />
-      <xs:element name="unitid" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="groupid" type="xs:string" minOccurs="0" maxOccurs="1" />
       <xs:element ref="course"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="trialperformed" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
       <xs:element minOccurs="1" maxOccurs="1" ref="student"/>
-      <xs:element minOccurs="1" maxOccurs="1" ref="assessor"/>      
+      <xs:element minOccurs="0" maxOccurs="1" ref="assessor"/>      
     </xs:sequence>
   </xs:complexType>
 
@@ -154,20 +155,21 @@
       <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
       <xs:element name="grade" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="trialperformed" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="subjectgrade">
     <xs:sequence>
       <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1" />
-      <xs:element name="unitid" minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element ref="subject"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="finalgrade"  type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="remark"  type="remark"  minOccurs="0" maxOccurs="1"/>
       <xs:element minOccurs="1" maxOccurs="1" ref="student"/>
-      <xs:element minOccurs="1" maxOccurs="1" ref="assessor"/>      
+      <xs:element minOccurs="0" maxOccurs="1" ref="assessor"/>      
     </xs:sequence>
   </xs:complexType>
 
