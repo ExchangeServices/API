@@ -74,7 +74,7 @@
     <xs:sequence>
       <xs:element minOccurs="1" maxOccurs="1" type="student" name="student"/>
       <xs:element minOccurs="1" maxOccurs="1" type="unit" name="unit"/>
-      <xs:element minOccurs="1" maxOccurs="1" type="program" name="program"/>
+      <xs:element minOccurs="0" maxOccurs="1" type="program" name="program"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" type="studyplancourse" name="course"/>
     </xs:sequence>
   </xs:complexType>
