@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema  targetNamespace="http://open.tieto.com/edu/studyinformation/v1"
-            xmlns="http://open.tieto.com/edu/studyinformation/v1"
+<xs:schema  targetNamespace="http://open.tieto.com/edu/studyinformation/v2"
+            xmlns="http://open.tieto.com/edu/studyinformation/v2"
             xmlns:xs="http://www.w3.org/2001/XMLSchema"
             elementFormDefault="qualified">
   <xs:annotation>
@@ -121,6 +121,7 @@
       <xs:element name="end" type="xs:dateTime"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="continues" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="reduced" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -202,7 +203,6 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="StudentChoice" />
       <xs:enumeration value="LanguageChoice" />
-      <xs:enumeration value="IndividualChoice" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -210,8 +210,8 @@
     <xs:sequence>
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="type" type="subjecttype"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="reduced" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
-
 </xs:schema>
 
