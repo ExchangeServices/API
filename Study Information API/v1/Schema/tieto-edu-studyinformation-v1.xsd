@@ -41,6 +41,7 @@
 
   <xs:simpleType name="programtype">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
       <xs:enumeration value="VocationalProgram" />
       <xs:enumeration value="UniversityPreparing" />
       <xs:enumeration value="IntroductionProgram" />
@@ -73,8 +74,8 @@
     <xs:sequence>
       <xs:element minOccurs="1" maxOccurs="1" type="student" name="student"/>
       <xs:element minOccurs="1" maxOccurs="1" type="unit" name="unit"/>
-      <xs:element minOccurs="1" maxOccurs="1" type="program" name="program"/>
-      <xs:element minOccurs="1" maxOccurs="unbounded" type="studyplancourse" name="course"/>
+      <xs:element minOccurs="0" maxOccurs="1" type="program" name="program"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" type="studyplancourse" name="course"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -97,6 +98,7 @@
       <xs:element name="specialorientedsubjectplan" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="continues" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
 

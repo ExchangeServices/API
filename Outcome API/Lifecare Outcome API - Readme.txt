@@ -1,5 +1,5 @@
 ————————————————————————————————————————————————————————
-OUTCOME API
+OUTCOME API																					1
 Version: 1.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version
@@ -31,6 +31,9 @@ Version: 1.0.3
 	- Moved unit from gradeoutcome to coursegrade
 	and subjectgrade
 
+1.0.4   Following changes has been done:
+	- Added courselevel to report grades
+	- Added basiceligibility to reports
 	
 
 
