@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/offering/v1"
+            xmlns="http://open.tieto.com/edu/offering/v1"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for offerings.
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation>
+
+   <xs:element name="unitofferings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" ref="unit" />
+        <xs:choice>
+          <xs:element type="program"  minOccurs="0" maxOccurs="unbounded" name="program"/>
+          <xs:element type="course"  minOccurs="0" maxOccurs="unbounded" name="course"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="unit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="program">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="type" type="programtype" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="course">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="points" type="xs:int"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="subjectcode" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="subjectname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="officialcourse" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="programtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="VocationalProgram" />
+      <xs:enumeration value="UniversityPreparing" />
+      <xs:enumeration value="IntroductionProgram" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+</xs:schema>
+
