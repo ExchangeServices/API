@@ -26,9 +26,18 @@ Version: 1.0.2
 	- renamed "continuous" to "continues"
 	- added services for delta export of study plan
 
+1.0.3	Following changes has been done:
+	- added courselevel to studyplan courses
 
+1.0.4	Following changes has been done:
+	- final version of V1. Removed not implemented parts from documentation
 
+2.0.1	Following changes has been done:
+	- added reduced property for subjects 
+	- removed IndividualChoice from subject.type
 
+2.0.2	Following changes has been done:
+	- added subjectcode property for studyplancourse 
 
 
  

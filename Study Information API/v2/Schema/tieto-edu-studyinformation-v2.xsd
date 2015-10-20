@@ -63,6 +63,16 @@
     </xs:sequence>
   </xs:complexType>
 
+    <xs:complexType name="note">
+        <xs:sequence>
+            <xs:element name="motivation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="motivation_counselling" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="educationgoal" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="other" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="studyplan" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
   <xs:complexType name="student">
     <xs:sequence>
       <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -75,6 +85,7 @@
       <xs:element minOccurs="1" maxOccurs="1" type="student" name="student"/>
       <xs:element minOccurs="1" maxOccurs="1" type="unit" name="unit"/>
       <xs:element minOccurs="0" maxOccurs="1" type="program" name="program"/>
+      <xs:element minOccurs="0" maxOccurs="1" type="note" name="note"/>
       <xs:element minOccurs="0" maxOccurs="unbounded" type="studyplancourse" name="course"/>
     </xs:sequence>
   </xs:complexType>
@@ -99,10 +110,7 @@
       <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="continues" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
-<<<<<<< HEAD
       <xs:element name="subjectcode" type="xs:string"  minOccurs="0" maxOccurs="1"/>
-=======
->>>>>>> origin/master
     </xs:sequence>
   </xs:complexType>
 
