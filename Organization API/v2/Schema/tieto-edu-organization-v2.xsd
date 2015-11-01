@@ -6,7 +6,7 @@
   <xs:annotation>
     <xs:documentation>
       Tieto Education - XML schema for organization. 
-      Version: 1.0. 
+      Version: 2.0. 
       (The XML schema is based on an XML schema generated from the IMS Enterprise DTD file imsep_epv1p1.dtd)
     </xs:documentation>
   </xs:annotation>

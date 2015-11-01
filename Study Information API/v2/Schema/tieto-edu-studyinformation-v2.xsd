@@ -6,7 +6,7 @@
   <xs:annotation>
     <xs:documentation>
       Tieto Education - XML schema for study plan, subject plan, course choices and subject choices
-      Version: 1.0
+      Version: 2.0
     </xs:documentation>
   </xs:annotation>
 
