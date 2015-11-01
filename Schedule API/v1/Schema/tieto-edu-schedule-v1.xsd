@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/schedule/v1"
+            xmlns="http://open.tieto.com/edu/schedule/v1"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for teacher assignments
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation> 
+
+  <xs:element name="schedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" type="teacherassignment" name="teacherassignment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="teacherassignment">
+    <xs:sequence>
+      <xs:element name="teacherid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="classid" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="groupid" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="subjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="hours" type="xs:int" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+
