@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 1.0.3
+Version: 2.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -73,6 +73,17 @@ Version: 1.0.3
 	- added membership role Responsible
 	- excluded all preliminary placements
 	- added schooltype in properties
+
+2.0	Following changes has been done:
+	- added services for creating/adding education groups
+	- moved programcode, programprofile, programvariant 
+	from person to membership 
+	- removed employmentstart and employmentend from 
+	person
+	- added email address for units
+
+
+
 
 
 

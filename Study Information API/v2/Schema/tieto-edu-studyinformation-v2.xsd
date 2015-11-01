@@ -111,9 +111,17 @@
       <xs:element name="continues" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="subjectcode" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="status" type="status"  minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
 
+  <xs:simpleType name="status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="active" />
+      <xs:enumeration value="break" />
+    </xs:restriction>
+  </xs:simpleType>
+  
   <xs:complexType name="subjectplan">
     <xs:sequence>
       <xs:element minOccurs="1" maxOccurs="1" type="student" name="student"/>

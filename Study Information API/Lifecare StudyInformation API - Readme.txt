@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 1.0.2
+Version: 2.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -37,7 +37,10 @@ Version: 1.0.2
 	- removed IndividualChoice from subject.type
 
 2.0.2	Following changes has been done:
-	- added subjectcode property for studyplancourse 
+	- added subjectcode property for studyplancourse
+
+2.0.3	Following changes has been done:
+	- added status property for studyplancourse 
 
 
  
