@@ -13,43 +13,13 @@
   <xs:element name="monitoring">
     <xs:complexType>
       <xs:choice>
-        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="absenceevent"/>
-        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="presenceevent"/>
-        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="absenceaccumulation"/>
-        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="presenceaccumulation"/>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="absenceaggregation"/>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="presenceaggregation"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="absenceevent">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="reason" minOccurs="1" maxOccurs="1">
-          <xs:simpleType>
-            <xs:restriction base="xs:string">
-              <xs:enumeration value="Valid" />
-              <xs:enumeration value="Invalid" />
-            </xs:restriction>
-          </xs:simpleType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-
-  <xs:element name="presenceevent">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-
-  <xs:element name="absenceaccumulation">
+  <xs:element name="absenceaggregation">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
@@ -70,7 +40,7 @@
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="presenceaccumulation">
+  <xs:element name="presenceaggregation">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
