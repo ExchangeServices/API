@@ -588,6 +588,8 @@
       <xs:element name="languagecode" type="xs:string" minOccurs="0" />
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="period" />
       <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
+      <xs:element name="email" type="xs:string" minOccurs="0" />
+      <xs:element name="mainunitname" type="xs:string" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 

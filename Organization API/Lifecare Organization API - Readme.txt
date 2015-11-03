@@ -82,6 +82,10 @@ Version: 2.0
 	person
 	- added email address for units
 
+2.0.1	Following changes has been done:
+	- updated services for adding/updating education groups
+	- added mainunitname for units
+
 
 
 
