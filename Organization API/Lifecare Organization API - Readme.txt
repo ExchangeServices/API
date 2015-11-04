@@ -74,6 +74,9 @@ Version: 2.0
 	- excluded all preliminary placements
 	- added schooltype in properties
 
+1.0.6	Following changes has been done:
+	- added mainunitname to groupextensions for units
+
 2.0	Following changes has been done:
 	- added services for creating/adding education groups
 	- moved programcode, programprofile, programvariant 
