@@ -10,12 +10,21 @@
     </xs:documentation>
   </xs:annotation>
 
-   <xs:element name="unitofferings">
+  <xs:element name="offering">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="unitofferings" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="unitofferings">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="1" maxOccurs="1" ref="unit" />
         <xs:choice>
           <xs:element type="course"  minOccurs="0" maxOccurs="unbounded" name="course"/>
+          <xs:element type="subject"  minOccurs="0" maxOccurs="unbounded" name="subject"/>
         </xs:choice>
       </xs:sequence>
     </xs:complexType>
@@ -30,6 +39,14 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <xs:complexType name="subject">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="officialsubject" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="course">
     <xs:sequence>
