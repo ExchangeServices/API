@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 2.0
+Version: 2.0.2
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -62,8 +62,8 @@ Version: 2.0
 	- updated "Examples of structures and mappings". 
 
 1.0.4	Following changes has been done:
-	- added description for "recstatus" for person, group
-	and membership.member.role.
+	- added description for "recstatus" for person, 
+	group and membership.member.role.
 	- removed group.description.long. 
 	- removed group.extension.point.
 	- added group.extension.hours.
@@ -73,6 +73,9 @@ Version: 2.0
 	- added membership role Responsible
 	- excluded all preliminary placements
 	- added schooltype in properties
+
+1.0.6	Following changes has been done:
+	- added mainunitname to groupextensions for units
 
 2.0	Following changes has been done:
 	- added services for creating/adding education groups
@@ -85,6 +88,10 @@ Version: 2.0
 2.0.1	Following changes has been done:
 	- updated services for adding/updating education groups
 	- added mainunitname for units
+
+2.0.2	Following changes has been done:
+	- changed name for services from "UpdateXXXEducationGroup"
+	to "UpdateXXXGroup"
 
 
 
