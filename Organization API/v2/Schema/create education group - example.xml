@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<enterprise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://open.tieto.com/edu/organization/v2">
+  <properties>
+    <schooltype> </schooltype>
+    <comments> </comments>
+    <datasource>Skola 24</datasource>
+    <type>UpdateGroups</type>
+    <datetime>2015-11-06 13:19:09</datetime>
+  </properties>
+
+  <group>
+    <sourcedid>
+      <source />
+      <id>{2FD0D879-56C5-484F-854E-3149B99A5C75}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">EducationGroup</typevalue>
+    </grouptype>
+    <description>
+      <short>Matte</short>
+    </description>
+    <timeframe>
+      <begin>2014-08-01</begin>
+      <end>2016-06-03</end>
+    </timeframe>
+    <email />
+  </group>
+
+  <membership>
+    <sourcedid>
+      <source />
+      <id>{2FD0D879-56C5-484F-854E-3149B99A5C75}</id>
+    </sourcedid>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{2FD0D879-56C5-484F-854E-3149B99A5C75}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2014-08-01</begin>
+          <end>2016-06-03</end>
+        </timeframe>
+      </role>
+    </member>
+  </membership>
+
+</enterprise>
