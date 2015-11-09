@@ -12,5 +12,6 @@ Version: 1.0.1
 
 1.0.1	Following changes has been done:
 	- Added status attribute for personnel
+	- Added type of employment
 
 
