@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema  targetNamespace="http://open.tieto.com/edu/employee/v2"
-            xmlns="http://open.tieto.com/edu/employee/v2"
+<xs:schema  targetNamespace="http://open.tieto.com/edu/personnel/v1"
+            xmlns="http://open.tieto.com/edu/personnel/v1"
             xmlns:xs="http://www.w3.org/2001/XMLSchema"
             elementFormDefault="qualified">
   <xs:annotation>
     <xs:documentation>
-      Tieto Education - XML schema for employees
-      Version: 2.0
+      Tieto Education - XML schema for personnel
+      Version: 1.0
     </xs:documentation>
   </xs:annotation>
 
-  <xs:element name="employees">
+  <xs:element name="personnel">
     <xs:complexType>
       <xs:choice>
-        <xs:element ref="employee"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="person"  minOccurs="0" maxOccurs="unbounded"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
 
-  <xs:element name="employee">
+  <xs:element name="person">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="id" type="xs:string"  minOccurs="1" maxOccurs="1" />
@@ -26,6 +26,7 @@
         <xs:element name="firstname" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element name="lastname" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element name="privacy" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="status" type="personstatus" minOccurs="0" />
         <xs:element ref="teachingqualification"  minOccurs="0" maxOccurs="1"/>
         <xs:element ref="employment"  minOccurs="1" maxOccurs="unbounded"/>
       </xs:sequence>
@@ -53,6 +54,7 @@
         <xs:element ref="category" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="unit" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="title" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="type" minOccurs="1" maxOccurs="1"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -60,8 +62,8 @@
   <xs:element name="category">
     <xs:simpleType>
       <xs:restriction base="xs:string">
-        <xs:enumeration value="TeachingStaff" />
-        <xs:enumeration value="OtherStaff" />
+        <xs:enumeration value="TeachingPersonnel" />
+        <xs:enumeration value="OtherPersonnel" />
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
@@ -80,10 +82,31 @@
     <xs:simpleType>
       <xs:restriction base="xs:string">
         <xs:enumeration value="Principal" />
-        <xs:enumeration value="OtherTitle" />
+        <xs:enumeration value="Other" />
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
+
+  <xs:element name="type">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Other" />
+        <xs:enumeration value="Project" />
+        <xs:enumeration value="UntilFurther" />
+        <xs:enumeration value="Substitute" />
+        <xs:enumeration value="CertainTime" />
+        <xs:enumeration value="Unknown" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:simpleType name="personstatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Deceased" />
+      <xs:enumeration value="Emigrated" />
+    </xs:restriction>
+  </xs:simpleType>
 
 </xs:schema>
 

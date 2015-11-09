@@ -65,6 +65,7 @@
   <xs:element name="properties">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="schooltype" />
         <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
         <xs:element ref="datasource" />
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="target" />
