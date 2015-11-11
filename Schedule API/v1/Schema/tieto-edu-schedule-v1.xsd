@@ -10,19 +10,19 @@
     </xs:documentation>
   </xs:annotation> 
 
+  
   <xs:element name="schedule">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" type="teacherassignment" name="teacherassignment"/>
-      </xs:sequence>
+      <xs:choice>
+        <xs:element type="teacherassignment"  minOccurs="0" maxOccurs="unbounded" name="teacherassignment"/>
+      </xs:choice>
     </xs:complexType>
   </xs:element>
-
+        
   <xs:complexType name="teacherassignment">
     <xs:sequence>
-      <xs:element name="teacherid" type="xs:string" minOccurs="1" maxOccurs="1" />
-      <xs:element name="classid" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="groupid" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="teacherid" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="groupid" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="subjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="hours" type="xs:int" minOccurs="1" maxOccurs="1"/>

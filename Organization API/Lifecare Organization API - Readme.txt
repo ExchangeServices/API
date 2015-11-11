@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 2.0.2
+Version: 2.0.4
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -77,6 +77,9 @@ Version: 2.0.2
 1.0.6	Following changes has been done:
 	- added mainunitname to groupextensions for units
 
+1.0.7	Following changes has been done:
+	- renamed mainunitname to officialunitname
+
 2.0	Following changes has been done:
 	- added services for creating/adding education groups
 	- moved programcode, programprofile, programvariant 
@@ -93,7 +96,12 @@ Version: 2.0.2
 	- changed name for services from "UpdateXXXEducationGroup"
 	to "UpdateXXXGroup"
 
+2.0.3	Following changes has been done:
+	- renamed mainunitname to officialunitname 
 
+2.0.4	Following changes has been done:
+	- added new membership extension called hours, which 
+	will be used in relation between teacher and group/class 
 
 
 

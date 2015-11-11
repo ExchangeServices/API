@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 PERSONNEL API																					1
-Version: 1.0.1
+Version: 1.0.2
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -13,5 +13,9 @@ Version: 1.0.1
 1.0.1	Following changes has been done:
 	- Added status attribute for personnel
 	- Added type of employment
+
+1.0.2	Following changes has been done:
+	- Changed type for privacy from string 
+	to enum. 
 
 
