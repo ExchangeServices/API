@@ -21,6 +21,8 @@
   <xs:complexType name="student">
     <xs:sequence>
       <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="firstname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="lastname" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element type="unit" minOccurs="1" maxOccurs="1" name="unit" />
       <xs:element type="program" minOccurs="1" maxOccurs="1" name="program"/>
       <xs:element type="xs:boolean" minOccurs="1" maxOccurs="1" name="hasgraduated" />

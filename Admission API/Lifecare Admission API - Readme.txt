@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ADMISSION API																					1
-Version: 1.0.3
+Version: 1.0.4
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -12,6 +12,8 @@ Version: 1.0.3
 	- Import placement and cost at the same time for 
 	external students (ÄB-4)
  
+1.0.4	Following changes has been done:
+	- Added firstname and lastname to student
 
 
  
