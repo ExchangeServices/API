@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OUTCOME API																					1
-Version: 2.0
+Version: 2.0.1
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -38,6 +38,11 @@ Version: 2.0
 2.0     Following changes has been done:
 	- Added course assessments
 	- Added subject assessments
+	
+2.0.1   Following changes has been done:
+	- Changes input parameters to service for 
+	getting national tests
+	- Minor changes
 	
 
 

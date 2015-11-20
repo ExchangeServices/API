@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema  targetNamespace="http://open.tieto.com/edu/outcome/v1"
-            xmlns="http://open.tieto.com/edu/outcome/v1"
+<xs:schema  targetNamespace="http://open.tieto.com/edu/outcome/v2"
+            xmlns="http://open.tieto.com/edu/outcome/v2"
             xmlns:xs="http://www.w3.org/2001/XMLSchema"
             elementFormDefault="qualified">
   <xs:annotation>
     <xs:documentation>
-      Tieto Education - XML schema for grades and national tests.
-      Version: 1.0
+      Tieto Education - XML schema for grades, assessments and national tests.
+      Version: 2.0
     </xs:documentation>
   </xs:annotation>
 
@@ -63,6 +63,17 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:element name="assessmentoutcome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element type="subjectassessment" minOccurs="0" maxOccurs="unbounded" name="subjectassessment"/>
+          <xs:element type="courseassessment" minOccurs="0" maxOccurs="unbounded" name="courseassessment"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
   <xs:element name="nationaltestoutcome">
     <xs:complexType>
       <xs:choice>

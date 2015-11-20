@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 2.0.4
+Version: 2.0.5
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -102,6 +102,11 @@ Version: 2.0.4
 2.0.4	Following changes has been done:
 	- added new membership extension called hours, which 
 	will be used in relation between teacher and group/class 
+
+2.0.5	Following changes has been done:
+        - membership extensions grouped by relation type
+	- added english name for course and subject
+
 
 
 

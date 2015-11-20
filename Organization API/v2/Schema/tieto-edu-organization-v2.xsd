@@ -472,6 +472,7 @@
             <xs:enumeration value="DepartmentGroup" />
             <xs:enumeration value="Principal" />
             <xs:enumeration value="MentorGroup" />
+            <xs:enumeration value="Responsible" />
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
@@ -569,8 +570,10 @@
     <xs:sequence>
       <xs:element name="id" type="xs:string" minOccurs="0" />
       <xs:element name="coursecode" type="xs:string" minOccurs="0" />
+      <xs:element name="courseenglishname " type="xs:string" minOccurs="0" />
       <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
       <xs:element name="subjectname" type="xs:string" minOccurs="0" />
+      <xs:element name="subjectenglishname" type="xs:string" minOccurs="0" />
       <xs:element name="point" type="xs:string" minOccurs="0" />
       <xs:element name="hours" type="xs:string" minOccurs="0" />
       <xs:element name="schoolyear" type="xs:string" minOccurs="0" />

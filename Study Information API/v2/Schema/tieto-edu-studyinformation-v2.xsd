@@ -135,7 +135,7 @@
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="language" type="xs:string"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="type" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="type" type="subjecttype"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="schoolyear" type="xs:int"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="start" type="xs:dateTime"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="end" type="xs:dateTime"  minOccurs="0" maxOccurs="1"/>
@@ -222,7 +222,11 @@
   <xs:simpleType name="subjecttype">
     <xs:restriction base="xs:string">
       <xs:enumeration value="StudentChoice" />
+      <xs:enumeration value="StudentChoiceLanguage" />
       <xs:enumeration value="LanguageChoice" />
+      <xs:enumeration value="AlternativeToLanguageChoice" />
+      <xs:enumeration value="MotherTongue" />
+      <xs:enumeration value="Other" />
     </xs:restriction>
   </xs:simpleType>
 

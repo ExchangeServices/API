@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 2.0.3
+Version: 2.0.4
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -41,6 +41,9 @@ Version: 2.0.3
 
 2.0.3	Following changes has been done:
 	- added status property for studyplancourse 
+
+2.0.4	Following changes has been done:
+	- added subject type values 
 
 
  
