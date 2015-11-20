@@ -104,8 +104,11 @@ Version: 2.0.5
 	will be used in relation between teacher and group/class 
 
 2.0.5	Following changes has been done:
-        - membership extensions grouped by relation type
+    - membership extensions grouped by relation type
 	- added english name for course and subject
+
+2.0.6	Following changes has been done:
+    - removed personextension "schoolunitcode"
 
 
 

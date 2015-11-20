@@ -542,7 +542,6 @@
       <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
       <xs:element name="nativelanguage" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="signature" type="xs:string" minOccurs="0" />
-      <xs:element name="schoolunitcode" type="xs:string" minOccurs="0" />
       <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
       <xs:element name="altadr" type="altadr" minOccurs="0" />
       <xs:element name="status" type="personstatus" minOccurs="0" />
