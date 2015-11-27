@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OUTCOME API																					1
-Version: 2.0.1
+Version: 2.0.2
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -43,6 +43,10 @@ Version: 2.0.1
 	- Changes input parameters to service for 
 	getting national tests
 	- Minor changes
+
+2.0.2   Following changes has been done:
+	- Removed period and semester from national
+	tests. (Date should be sufficient.)
 	
 
 

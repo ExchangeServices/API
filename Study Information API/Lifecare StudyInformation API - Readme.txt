@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 2.0.4
+Version: 2.0.5
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -30,7 +30,8 @@ Version: 2.0.4
 	- added courselevel to studyplan courses
 
 1.0.4	Following changes has been done:
-	- final version of V1. Removed not implemented parts from documentation
+	- final version of V1. Removed not implemented 
+	parts from documentation
 
 2.0.1	Following changes has been done:
 	- added reduced property for subjects 
@@ -44,6 +45,10 @@ Version: 2.0.4
 
 2.0.4	Following changes has been done:
 	- added subject type values 
+
+2.0.5	Following changes has been done:
+	- added english attributes for subject, course,
+	vocationaloutcome and content 
 
 
  

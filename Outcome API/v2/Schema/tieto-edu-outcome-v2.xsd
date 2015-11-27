@@ -291,8 +291,7 @@
     <xs:sequence>
       <xs:element ref="student"  minOccurs="1" maxOccurs="1"/>
       <xs:element ref="course"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="period" type="xs:string"  minOccurs="1" maxOccurs="1" />
-      <xs:element name="semester" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
@@ -301,8 +300,7 @@
     <xs:sequence>
       <xs:element ref="student"  minOccurs="1" maxOccurs="1"/>
       <xs:element ref="subject"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="period" type="xs:string"  minOccurs="1" maxOccurs="1" />
-      <xs:element name="semester" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="schoolyear" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
     </xs:sequence>

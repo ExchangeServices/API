@@ -44,7 +44,6 @@
     <xs:sequence>
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="englishname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="officialsubject" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
@@ -53,7 +52,6 @@
     <xs:sequence>
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="englishname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="points" type="xs:int"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="subjectcode" type="xs:string"  minOccurs="1" maxOccurs="1"/>

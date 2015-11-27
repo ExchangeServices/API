@@ -60,13 +60,14 @@
       <xs:element name="profilename" type="xs:string"  minOccurs="0" maxOccurs="1" />
       <xs:element name="vocationaloutcomecode" type="xs:string"  minOccurs="0" maxOccurs="1" />
       <xs:element name="vocationaloutcomename" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="vocationaloutcomeenglishname" type="xs:string"  minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
     <xs:complexType name="note">
         <xs:sequence>
             <xs:element name="motivation" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="motivation_counselling" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="motivationcounselling" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="educationgoal" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="other" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="studyplan" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -94,10 +95,12 @@
     <xs:sequence>
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="englishname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="type" type="studyplancoursetype"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="deviation" type="deviation" minOccurs="1" maxOccurs="1"/>
       <xs:element name="comment" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="content" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="contentinenglish" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="points" type="xs:int"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="hours" type="xs:int"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="grade" type="xs:string"  minOccurs="0" maxOccurs="1"/>
@@ -134,6 +137,7 @@
     <xs:sequence>
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="englishname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="language" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="type" type="subjecttype"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="schoolyear" type="xs:int"  minOccurs="1" maxOccurs="1"/>

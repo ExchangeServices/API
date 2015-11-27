@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OFFERING API																					1
-Version: 1.0.3
+Version: 1.0.4
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -11,6 +11,10 @@ Version: 1.0.3
 
 1.0.3 	Following changes has been done:
 	- added english name for course and subject
+
+1.0.4 	Following changes has been done:
+	- removed english name for course and subject
+	(this is available in the Study Information API)
 
 
 
