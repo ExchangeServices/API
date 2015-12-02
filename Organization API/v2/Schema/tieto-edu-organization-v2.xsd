@@ -624,6 +624,7 @@
       <xs:element name="programprofile" type="xs:string" minOccurs="0" />
       <xs:element name="programvariant" type="xs:string" minOccurs="0" />
       <xs:element name="hours" type="xs:int" minOccurs="0" />
+      <xs:element name="cancelled" type="xs:boolean" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 

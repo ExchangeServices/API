@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 2.0.7
+Version: 2.0.8
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -116,6 +116,10 @@ Version: 2.0.7
 	- removed groupextensions "hours"
 	(hours are available in relations)
 
+2.0.8	Following changes has been done:
+    	- added support for schema groups
+	- added a new attribute in relation between student
+	and course. The attribute is called "cancelled"
 
 
 
