@@ -13,15 +13,25 @@
   
   <xs:element name="schedule">
     <xs:complexType>
-      <xs:choice>
-        <xs:element type="teacherassignment"  minOccurs="0" maxOccurs="unbounded" name="teacherassignment"/>
+        <xs:choice>
+        <xs:element type="teacherassignments"  minOccurs="0" maxOccurs="unbounded" name="teacherassignments"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
-        
+
+  <xs:complexType name="teacherassignments">
+    <xs:sequence>
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="teacherassignment" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
   <xs:complexType name="teacherassignment">
     <xs:sequence>
-      <xs:element name="teacherid" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="teacherid" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="groupid" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="subjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -32,4 +42,3 @@
   </xs:complexType>
 
 </xs:schema>
-
