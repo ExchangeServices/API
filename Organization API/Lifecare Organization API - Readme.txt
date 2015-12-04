@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 2.0.8
+Version: 2.0.9
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -117,9 +117,13 @@ Version: 2.0.8
 	(hours are available in relations)
 
 2.0.8	Following changes has been done:
-    	- added support for schema groups
+    	- added support for schedule groups
 	- added a new attribute in relation between student
 	and course. The attribute is called "cancelled"
+
+2.0.9	Following changes has been done:
+    	- added timeframe attribute in properties
+	- the attribute properties/type is now an enum
 
 
 

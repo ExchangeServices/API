@@ -23,6 +23,12 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="type" type="xs:string" />
+  <xs:simpleType name="typeofservice">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompleteOrganization" />
+      <xs:enumeration value="DeltaOrganization" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:element name="sourcedid">
     <xs:complexType>
       <xs:sequence>
@@ -69,7 +75,8 @@
         <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
         <xs:element ref="datasource" />
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="target" />
-        <xs:element minOccurs="0" maxOccurs="1" ref="type" />
+        <xs:element minOccurs="1" maxOccurs="1" type="typeofservice" name="type"/>
+        <xs:element type="organizationdatatimeframe" name="timeframe" minOccurs="1" maxOccurs="1" />
         <xs:element ref="datetime" />
         <xs:element minOccurs="0" maxOccurs="1" ref="extension" />
       </xs:sequence>
@@ -79,6 +86,12 @@
   <xs:element name="datasource" type="xs:string" />
   <xs:element name="target" type="xs:string" />
   <xs:element name="datetime" type="xs:string" />
+  <xs:complexType name="organizationdatatimeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
   <xs:element name="person">
     <xs:complexType>
       <xs:sequence>
