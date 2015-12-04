@@ -28,6 +28,7 @@
         <xs:element ref="privacy" minOccurs="1" maxOccurs="1" />
         <xs:element ref="status" minOccurs="0" />
         <xs:element ref="teachingqualification"  minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="workarea"  minOccurs="0" maxOccurs="1"/>
         <xs:element ref="employment"  minOccurs="1" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
@@ -50,11 +51,25 @@
         <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
         <xs:element name="emailwork" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="phonework" type="xs:string" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="signature" type="xs:string" minOccurs="1" maxOccurs="1"/> 
+        <xs:element name="signature" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="category" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="unit" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="title" minOccurs="1" maxOccurs="1"/>
-        <xs:element ref="type" minOccurs="1" maxOccurs="1"/>
+        <xs:element type="employmenttype" minOccurs="1" maxOccurs="1" name="type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="workarea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="unit" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        <xs:element type="workareatype" minOccurs="1" maxOccurs="1" name="type"/>
+        <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="note" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="hours" type="xs:string" minOccurs="1" maxOccurs="1"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -96,18 +111,22 @@
     </xs:simpleType>
   </xs:element>
 
-  <xs:element name="type">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="Other" />
-        <xs:enumeration value="Project" />
-        <xs:enumeration value="UntilFurther" />
-        <xs:enumeration value="Substitute" />
-        <xs:enumeration value="CertainTime" />
-        <xs:enumeration value="Unknown" />
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:element>
+  <xs:simpleType name="employmenttype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="Project" />
+      <xs:enumeration value="UntilFurther" />
+      <xs:enumeration value="Substitute" />
+      <xs:enumeration value="CertainTime" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="workareatype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GradeAdministration" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:element name="status">
     <xs:simpleType>

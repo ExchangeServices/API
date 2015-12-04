@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 PERSONNEL API																					1
-Version: 1.0.2
+Version: 1.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -18,4 +18,7 @@ Version: 1.0.2
 	- Changed type for privacy from string 
 	to enum. 
 
+1.0.3	Following changes has been done:
+	- Added an attribute called "workarea"
+	- Added delta services
 
