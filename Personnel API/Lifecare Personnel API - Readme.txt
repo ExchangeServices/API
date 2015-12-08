@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 PERSONNEL API																					1
-Version: 1.0.3
+Version: 1.0.4
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -21,4 +21,9 @@ Version: 1.0.3
 1.0.3	Following changes has been done:
 	- Added an attribute called "workarea"
 	- Added delta services
+
+1.0.4	Following changes has been done:
+	- Added the attributes "change" and 
+	"timestamp"
+	- Updates related to teacher qualifications
 
