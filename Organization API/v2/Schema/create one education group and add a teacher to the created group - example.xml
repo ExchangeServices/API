@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<enterprise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://open.tieto.com/edu/organization/v2">
+  <properties>
+    <schooltype>SF</schooltype>
+    <comments> </comments>
+    <datasource>Skola 24</datasource>
+    <type>DeltaOrganization</type>
+    <timeframe>
+      <start>2015-06-02T16:10:29.519</start>
+      <end>2015-06-03T16:10:29.519</end>
+    </timeframe>
+    <datetime>2015-11-06 13:19:09</datetime>
+  </properties>
+
+  <group>
+    <sourcedid>
+      <source />
+      <id>{A1B4E866-D5DD-4C16-B0C1-E5ADAF676196}</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">EducationGroup</typevalue>
+    </grouptype>
+    <description>
+      <short>SFI B</short>
+    </description>
+    <timeframe>
+      <begin>2015-01-01</begin>
+      <end>2018-06-30</end>
+    </timeframe>
+    <extension />
+  </group>
+
+  <group>
+    <sourcedid>
+      <source />
+      <id>{0845A137-B56F-489F-90A5-07686AB456D6}-SFIKUB9</id>
+    </sourcedid>
+    <grouptype>
+      <typevalue level="1">Course</typevalue>
+    </grouptype>
+    <description>
+      <short>Utbildning i svenska för invandrare kurs B</short>
+    </description>
+    <extension>
+      <coursecode>SFIKUB9</coursecode>
+      <subjectcode>SFI</subjectcode>
+      <subjectname>Svenska för invandrare</subjectname>
+      <timestamp>2015-06-02T16:10:29.519</timestamp>
+    </extension>
+  </group>
+
+  <membership complete="true">
+    <sourcedid>
+      <source />
+      <id>{D28FBBEB-AE83-43FC-9399-B3EC5579ED81}</id>
+    </sourcedid>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{6748A8CF-EF69-4083-86D1-A4F0982F3632}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="OtherGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-09T15:30:02.456</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{76FBFB1E-309C-47B9-8525-D1383EDF9FF4}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-10T14:47:38.653</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{90ADB1D7-188B-4EEC-8C36-FAD324650C86}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-10T14:47:13.544</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{D3B87622-4F7B-4025-8299-DDC8DD01ACA8}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-10T14:48:21.004</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{F832321D-4B4E-4430-A471-9F9F124C698E}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-09-21T11:04:16.98</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{F9DD1F49-210F-4852-BE0C-3EFB133A947F}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-15T15:12:50.411</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{46098971-DCE6-4C1F-A10A-7C986E579A3B}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-15T13:39:53.315</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{0845A137-B56F-489F-90A5-07686AB456D6}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-15T13:56:00.884</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{A1B4E866-D5DD-4C16-B0C1-E5ADAF676196}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="EducationGroup">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-04-09T23:29:43.603</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{9D4D7A01-D38D-41F0-8535-C8233693DD93}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2012-05-24T00:00:00</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{BFBD8086-642F-4519-A126-A8102F6F9BE2}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-04-09T23:57:51.34</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{0D573A30-1A94-4ED9-965D-02FFBCA78F7C}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-06-02T10:16:42.307</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{BFDA7C63-0CD4-4615-955E-ADB55E53BA4C}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2014-11-03T12:08:48.561</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{419EC2C7-EC0D-42E6-B19D-F084735FDFB5}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-01-13T00:00:00.919</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{4BD7E2EB-7598-439E-BC9E-2465D7FF3E38}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2012-05-24T00:00:00</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{C1DB9A94-3BDD-4CD3-92BD-EFDC9C9F1697}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2007-08-07T15:54:33.029</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{587F8CAD-C0C4-4782-8527-BE40AC368493}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-09-18T15:16:12.965</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{29E88F3E-D0BB-4D07-B0A2-CCBEFB27718A}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-11-16T09:50:45.998</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{DC8C73E1-8CDB-40E1-B173-4422DFE9AD98}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2014-10-02T12:58:37.274</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>CG{7BF90969-6269-48F9-8000-F2B1F84C0CFE}</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="ContactGroup">
+        <status>Active</status>
+        <extension>
+          <timestamp>2015-09-15T14:17:34.515</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+  </membership>
+
+  <membership complete="true">
+    <sourcedid>
+      <source />
+      <id>{0845A137-B56F-489F-90A5-07686AB456D6}</id>
+    </sourcedid>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{0845A137-B56F-489F-90A5-07686AB456D6}-SFIKUB9</id>
+      </sourcedid>
+      <idtype>Group</idtype>
+      <role roletype="Course">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-06-02T16:10:29.519</timestamp>
+          <schoolyear />
+        </extension>
+      </role>
+    </member>
+  </membership>
+
+  <membership complete="true">
+    <sourcedid>
+      <source />
+      <id>{0845A137-B56F-489F-90A5-07686AB456D6}-SFIKUB9</id>
+    </sourcedid>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{0D573A30-1A94-4ED9-965D-02FFBCA78F7C}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role roletype="Student">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-06-02T16:10:29.519</timestamp>
+         </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{419EC2C7-EC0D-42E6-B19D-F084735FDFB5}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role roletype="Student">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-03-02</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-12-08T10:38:59.926</timestamp>
+         </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{0D573A30-DDDD-4ED9-965D-02FFBCA78F7C}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role roletype="Student">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-01-01</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-06-02T16:10:29.519</timestamp>
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{419EC2C7-EEEE-42E6-B19D-F084735FDFB5}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role roletype="Student">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-03-02</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-12-08T10:38:59.926</timestamp>
+        </extension>
+      </role>
+    </member>
+    <member>
+      <sourcedid>
+        <source />
+        <id>{419EC2C7-EC0D-42E6-1234-F084735FDFB5}</id>
+      </sourcedid>
+      <idtype>Person</idtype>
+      <role roletype="Instructor">
+        <status>Active</status>
+        <timeframe>
+          <begin>2015-03-02</begin>
+          <end>2018-06-30</end>
+        </timeframe>
+        <extension>
+          <timestamp>2015-12-08T10:38:59.926</timestamp>
+          <hours>100</hours>
+        </extension>
+      </role>
+    </member>
+  </membership>
+
+</enterprise>
