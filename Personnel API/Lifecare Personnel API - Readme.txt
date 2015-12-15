@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 PERSONNEL API																					1
-Version: 1.0.4
+Version: 1.0.5
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -26,4 +26,10 @@ Version: 1.0.4
 	- Added the attributes "change" and 
 	"timestamp"
 	- Updates related to teacher qualifications
+
+1.0.5	Following changes has been done:
+	- "title" is replaced with "titlecode" and 
+	"titlename"
+	- "workarea.type" is replaced with 
+	"workarea.code" and "workarea.name"
 

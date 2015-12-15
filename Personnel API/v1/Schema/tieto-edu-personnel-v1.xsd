@@ -66,7 +66,8 @@
         <xs:element name="signature" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="category" minOccurs="1" maxOccurs="1"/>
         <xs:element ref="unit" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="titlecode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="titlename" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element type="employmenttype" minOccurs="1" maxOccurs="1" name="type"/>
       </xs:sequence>
     </xs:complexType>
@@ -78,7 +79,7 @@
         <xs:element ref="unit" minOccurs="1" maxOccurs="1"/>
         <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
         <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
-        <xs:element type="workareatype" minOccurs="1" maxOccurs="1" name="type"/>
+        <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="note" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="hours" type="xs:string" minOccurs="1" maxOccurs="1"/>
