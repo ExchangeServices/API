@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OFFERING API																					1
-Version: 1.0.4
+Version: 1.0.5
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -15,6 +15,10 @@ Version: 1.0.4
 1.0.4 	Following changes has been done:
 	- removed english name for course and subject
 	(this is available in the Study Information API)
+
+1.0.5	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
 
 
 

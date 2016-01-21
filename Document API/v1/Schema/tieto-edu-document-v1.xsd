@@ -13,8 +13,18 @@
   <xs:element name="documents">
     <xs:complexType>
       <xs:choice>
-        <xs:element ref="documentlink"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="studentdocumentlinks"  minOccurs="0" maxOccurs="unbounded"/>
       </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="studentdocumentlinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="studentid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element ref="documentlink"  minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="complete" type="xs:boolean" default="false"/>
     </xs:complexType>
   </xs:element>
 
@@ -24,7 +34,6 @@
         <xs:element name="href" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element type="documenttype" minOccurs="1" maxOccurs="1" name="type"/>
-        <xs:element name="studentid" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element name="unitid" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
         <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>

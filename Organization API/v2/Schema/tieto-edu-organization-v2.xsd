@@ -486,6 +486,7 @@
             <xs:enumeration value="Principal" />
             <xs:enumeration value="MentorGroup" />
             <xs:enumeration value="Responsible" />
+            <xs:enumeration value="ScheduleGroup" />
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>

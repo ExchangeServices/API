@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 2.0.9
+Version: 2.0.11
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -80,6 +80,13 @@ Version: 2.0.9
 1.0.7	Following changes has been done:
 	- renamed mainunitname to officialunitname
 
+1.0.8	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
+
+1.0.9	Following changes has been done:
+	- Minor changes
+
 2.0	Following changes has been done:
 	- added services for creating/adding education groups
 	- moved programcode, programprofile, programvariant 
@@ -125,7 +132,11 @@ Version: 2.0.9
     	- added timeframe attribute in properties
 	- the attribute properties/type is now an enum
 
+2.0.10	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
 
-
+2.0.11	Following changes has been done:
+	- Minor changes
 
 

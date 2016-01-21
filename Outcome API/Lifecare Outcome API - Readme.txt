@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OUTCOME API																					1
-Version: 2.0.2
+Version: 2.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -35,6 +35,10 @@ Version: 2.0.2
 	- Added courselevel to report grades
 	- Added basiceligibility to reports
 	
+1.0.5	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
+
 2.0     Following changes has been done:
 	- Added course assessments
 	- Added subject assessments
@@ -48,7 +52,9 @@ Version: 2.0.2
 	- Removed period and semester from national
 	tests. (Date should be sufficient.)
 	
-
+2.0.3	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
 
  
 

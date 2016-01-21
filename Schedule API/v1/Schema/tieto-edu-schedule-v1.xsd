@@ -5,16 +5,18 @@
             elementFormDefault="qualified">
   <xs:annotation>
     <xs:documentation>
-      Tieto Education - XML schema for teacher assignments
+      Tieto Education - XML schema for teacher assignments, teacher activities and student activities in schedule groups
       Version: 1.0
     </xs:documentation>
-  </xs:annotation> 
+  </xs:annotation>
 
-  
+
   <xs:element name="schedule">
     <xs:complexType>
-        <xs:choice>
+      <xs:choice>
         <xs:element type="teacherassignments"  minOccurs="0" maxOccurs="unbounded" name="teacherassignments"/>
+        <xs:element type="teacheractivities"  minOccurs="0" maxOccurs="unbounded" name="teacheractivities"/>
+        <xs:element type="studentactivities"  minOccurs="0" maxOccurs="unbounded" name="studentactivities"/>
       </xs:choice>
     </xs:complexType>
   </xs:element>
@@ -25,7 +27,7 @@
       <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
       <xs:element name="end" type="xs:date" minOccurs="0" maxOccurs="1" />
-      <xs:element name="teacherassignment" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="teacherassignment" minOccurs="1" maxOccurs="unbounded" type="teacherassignment" />
     </xs:sequence>
   </xs:complexType>
 
@@ -36,6 +38,49 @@
       <xs:element name="subjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="hours" type="xs:int" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="teacheractivities">
+    <xs:sequence>
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="teacheractivity" minOccurs="1" maxOccurs="unbounded" type="teacheractivity" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="teacheractivity">
+    <xs:sequence>
+      <xs:element name="teacherid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="groupid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="subjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="hours" type="xs:int" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="studentactivities">
+    <xs:sequence>
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="studentactivity" minOccurs="1" maxOccurs="unbounded" type="studentactivity" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="studentactivity">
+    <xs:sequence>
+      <xs:element name="studentid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="groupid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="subjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1"/>
       <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1" />
       <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1" />
     </xs:sequence>

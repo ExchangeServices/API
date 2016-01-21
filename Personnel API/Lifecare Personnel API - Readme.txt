@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 PERSONNEL API																					1
-Version: 1.0.5
+Version: 1.0.6
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -32,4 +32,9 @@ Version: 1.0.5
 	"titlename"
 	- "workarea.type" is replaced with 
 	"workarea.code" and "workarea.name"
+
+1.0.6	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
+
 

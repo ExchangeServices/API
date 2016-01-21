@@ -12,10 +12,10 @@
 
   <xs:element name="monitoring">
     <xs:complexType>
-      <xs:choice>
-        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="absenceaggregation"/>
-        <xs:element minOccurs="1" maxOccurs="unbounded" ref ="presenceaggregation"/>
-      </xs:choice>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref ="absenceaggregation"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref ="presenceaggregation"/>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 
@@ -23,8 +23,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="hours" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="minutes" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="time" type="xs:int" minOccurs="1" maxOccurs="1"/>
         <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
         <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
         <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -44,8 +43,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="student" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="hours" type="xs:integer" minOccurs="1" maxOccurs="1"/>
-        <xs:element name="minutes" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="time" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="timeoffered" type="xs:int" minOccurs="1" maxOccurs="1"/>
         <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
         <xs:element name="end" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
         <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>

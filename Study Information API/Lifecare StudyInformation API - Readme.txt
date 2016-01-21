@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 2.0.5
+Version: 2.0.6
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -33,6 +33,10 @@ Version: 2.0.5
 	- final version of V1. Removed not implemented 
 	parts from documentation
 
+1.0.5	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
+
 2.0.1	Following changes has been done:
 	- added reduced property for subjects 
 	- removed IndividualChoice from subject.type
@@ -49,6 +53,10 @@ Version: 2.0.5
 2.0.5	Following changes has been done:
 	- added english attributes for subject, course,
 	vocationaloutcome and content 
+
+2.0.6	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
 
 
  

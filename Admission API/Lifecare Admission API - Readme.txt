@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ADMISSION API																					1
-Version: 1.0.4
+Version: 1.0.5
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -14,6 +14,11 @@ Version: 1.0.4
  
 1.0.4	Following changes has been done:
 	- Added firstname and lastname to student
+
+1.0.5	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
+
 
 
  

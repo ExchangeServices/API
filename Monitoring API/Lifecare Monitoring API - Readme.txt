@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 MONITORING API																					1
-Version: 1.0.2
+Version: 1.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -12,6 +12,13 @@ Version: 1.0.2
 1.0.2	Following changes has been done:
 	- Removed hours
 	- Removed export services
+
+1.0.3	Following changes has been done:
+	- Changed "Lifecare Exchange Services" to 
+	"Lifecare Education API Services". 
+	- Changed integer to int
+	- Changed name of minutes to time
+	- Added timeoffered
 
 
 

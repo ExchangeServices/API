@@ -1,7 +1,7 @@
 API
 ===
 
-Software Development Kit (SDK) for Lifecare API containing documentation, XML schemas and examples.  
+Software Development Kits (SDKs) for Lifecare Education APIs containing documentation, XML schemas and examples.  
 
 
 A comment regarding the documentation:
