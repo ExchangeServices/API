@@ -28,7 +28,7 @@
         <xs:element ref="privacy" minOccurs="1" maxOccurs="1" />
         <xs:element ref="status" minOccurs="0" />
         <xs:element ref="teachingqualification"  minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="workarea"  minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="workarea"  minOccurs="0" maxOccurs="unbounded"/>
         <xs:element ref="employment"  minOccurs="1" maxOccurs="unbounded"/>
         <xs:element name="timestamp" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
       </xs:sequence>

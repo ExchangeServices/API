@@ -41,14 +41,14 @@
 
   <xs:element name="reportoutcome">
     <xs:complexType>
-      <xs:choice>
+      <xs:sequence>
         <xs:element type="semesterreport"  minOccurs="0" maxOccurs="unbounded" name="semesterreport"/>
         <xs:element type="finalreport"  minOccurs="0" maxOccurs="unbounded" name="finalreport"/>
         <xs:element type="catalogextractionreport"  minOccurs="0" maxOccurs="unbounded" name="catalogextractionreport"/>
         <xs:element type="diplomacertificatereport"  minOccurs="0" maxOccurs="unbounded" name="diplomacertificatereport"/>
         <xs:element type="uppersecondaryschoolcertificatereport"  minOccurs="0" maxOccurs="unbounded" name="uppersecondaryschoolcertificatereport"/>
         <xs:element type="studycertificatereport"  minOccurs="0" maxOccurs="unbounded" name="studycertificatereport"/>
-      </xs:choice>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 
