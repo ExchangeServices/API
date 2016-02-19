@@ -12,11 +12,39 @@
 
   <xs:element name="personnel">
     <xs:complexType>
-      <xs:choice>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
         <xs:element ref="person"  minOccurs="0" maxOccurs="unbounded"/>
-      </xs:choice>
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
+  
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datetime" type="xs:dateTime" />
+        <xs:element name="datasource" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+        <xs:element minOccurs="1" maxOccurs="1" type="typeofservice" name="type" />
+        <xs:element minOccurs="1" maxOccurs="1" type="xs:string" name="schooltype" />
+        <xs:element type="timeframe" name="timeframe" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="timeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="typeofservice">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompletePersonnel" />
+      <xs:enumeration value="DeltaPersonnel" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:element name="person">
     <xs:complexType>
@@ -29,7 +57,7 @@
         <xs:element ref="status" minOccurs="0" />
         <xs:element ref="teachingqualification"  minOccurs="0" maxOccurs="unbounded"/>
         <xs:element ref="workarea"  minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="employment"  minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="employment"  minOccurs="0" maxOccurs="unbounded"/>
         <xs:element name="timestamp" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
       </xs:sequence>
       <xs:attribute name="change">
@@ -41,7 +69,6 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>
-
     </xs:complexType>
   </xs:element>
 
