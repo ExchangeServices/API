@@ -22,10 +22,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="1" maxOccurs="1" ref="unit" />
-        <xs:choice>
-          <xs:element type="course"  minOccurs="0" maxOccurs="unbounded" name="course"/>
-          <xs:element type="subject"  minOccurs="0" maxOccurs="unbounded" name="subject"/>
-        </xs:choice>
+        <xs:element type="course"  minOccurs="0" maxOccurs="unbounded" name="course"/>
+        <xs:element type="subject"  minOccurs="0" maxOccurs="unbounded" name="subject"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -52,6 +50,7 @@
     <xs:sequence>
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="officialcode" type="xs:string"  minOccurs="0" maxOccurs="1" />
       <xs:element name="points" type="xs:int"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="subjectcode" type="xs:string"  minOccurs="1" maxOccurs="1"/>
@@ -59,6 +58,6 @@
       <xs:element name="officialcourse" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
-
+  
 </xs:schema>
 

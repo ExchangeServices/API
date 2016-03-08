@@ -603,6 +603,7 @@
       <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
       <xs:element name="email" type="xs:string" minOccurs="0" />
       <xs:element name="officialunitname" type="xs:string" minOccurs="0" />
+      <xs:element name="points" type="xs:int" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 

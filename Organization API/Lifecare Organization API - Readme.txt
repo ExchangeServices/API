@@ -87,6 +87,9 @@ Version: 2.0.11
 1.0.9	Following changes has been done:
 	- Minor changes
 
+1.0.10	Following changes has been done:
+	- Documentation of delta export use cases
+
 2.0	Following changes has been done:
 	- added services for creating/adding education groups
 	- moved programcode, programprofile, programvariant 
@@ -139,4 +142,9 @@ Version: 2.0.11
 2.0.11	Following changes has been done:
 	- Minor changes
 
+2.0.12	Following changes has been done:
+	- Documentation of delta export use cases
+
+2.0.13	Following changes has been done:
+	- Added points to course groups
 
