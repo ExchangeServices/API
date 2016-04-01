@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API																					1
-Version: 2.0.11
+Version: 3.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -147,4 +147,11 @@ Version: 2.0.11
 
 2.0.13	Following changes has been done:
 	- Added points to course groups
+
+3.0	Following changes has been done:
+	- Removed Course groups and Subject groups
+	- Removed attribute signature and emailwork for teacher
+	- Added list of responsibility, list of activity and placement to membershipextensions.
+	- Moved attributes from membershipextension to responsibility, activity and placement
+
 

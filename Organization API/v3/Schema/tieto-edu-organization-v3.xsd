@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/organization/v3"
+            xmlns="http://open.tieto.com/edu/organization/v3"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for organization. 
+      Version: 3.0. 
+      (The XML schema is based on an XML schema generated from the IMS Enterprise DTD file imsep_epv1p1.dtd)
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="enterprise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+        <xs:element ref="properties" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="person" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="group" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="membership" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="type" type="xs:string" />
+  <xs:simpleType name="typeofservice">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompleteOrganization" />
+      <xs:enumeration value="DeltaOrganization" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="sourcedid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="source" />
+        <xs:element ref="id" />
+      </xs:sequence>
+      <xs:attribute name="sourcedidtype">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="New" />
+            <xs:enumeration value="Old" />
+            <xs:enumeration value="Duplicate" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="source" type="xs:string" />
+  <xs:element name="id" type="xs:string" />
+  <xs:element name="userid">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="useridtype" type="xs:string" />
+          <xs:attribute name="password" type="xs:string" />
+          <xs:attribute name="pwencryptiontype" type="xs:string" />
+          <xs:attribute name="authenticationtype" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="email" type="xs:string" />
+  <xs:element name="extension">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" type="xs:string" name="schooltype" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+        <xs:element ref="datasource" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="target" />
+        <xs:element minOccurs="1" maxOccurs="1" type="typeofservice" name="type"/>
+        <xs:element type="organizationdatatimeframe" name="timeframe" minOccurs="1" maxOccurs="1" />
+        <xs:element ref="datetime" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="extension" />
+      </xs:sequence>
+      <xs:attribute name="lang" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="datasource" type="xs:string" />
+  <xs:element name="target" type="xs:string" />
+  <xs:element name="datetime" type="xs:string" />
+  <xs:complexType name="organizationdatatimeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="sourcedid" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="userid" />
+        <xs:element ref="name" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="demographics" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="email" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="url" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tel" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="adr" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="photo" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="systemrole" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="institutionrole" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="datasource" />
+        <xs:element minOccurs="0" maxOccurs="1" type="personextension" name="extension"/>
+      </xs:sequence>
+      <xs:attribute name="recstatus">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="fn" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="sort" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="nickname" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="n" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fn" type="xs:string" />
+  <xs:element name="sort" type="xs:string" />
+  <xs:element name="nickname" type="xs:string" />
+  <xs:element name="n">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="family" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="given" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="other" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="prefix" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="suffix" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="partname" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="family" type="xs:string" />
+  <xs:element name="given" type="xs:string" />
+  <xs:element name="other" type="xs:string" />
+  <xs:element name="prefix" type="xs:string" />
+  <xs:element name="suffix" type="xs:string" />
+  <xs:element name="partname">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="lang" type="xs:string" />
+          <xs:attribute name="partnametype" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="demographics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="gender" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="bday" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="disability" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="gender" type="xs:string" />
+  <xs:element name="bday" type="xs:string" />
+  <xs:element name="disability" type="xs:string" />
+  <xs:element name="tel">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute default="1" name="teltype">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="1" />
+                <xs:enumeration value="2" />
+                <xs:enumeration value="3" />
+                <xs:enumeration value="4" />
+                <xs:enumeration value="Voice" />
+                <xs:enumeration value="Fax" />
+                <xs:enumeration value="Mobile" />
+                <xs:enumeration value="Pager" />
+                <xs:enumeration value="Work" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="adr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="pobox" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="extadd" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="street" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="locality" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="region" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="pcode" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="country" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pobox" type="xs:string" />
+  <xs:element name="extadd" type="xs:string" />
+  <xs:element name="street" type="xs:string" />
+  <xs:element name="locality" type="xs:string" />
+  <xs:element name="region" type="xs:string" />
+  <xs:element name="pcode" type="xs:string" />
+  <xs:element name="country" type="xs:string" />
+  <xs:element name="photo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="extref" />
+      </xs:sequence>
+      <xs:attribute name="imgtype" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="systemrole">
+    <xs:complexType>
+      <xs:attribute name="systemroletype" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="SysAdmin" />
+            <xs:enumeration value="SysSupport" />
+            <xs:enumeration value="Creator" />
+            <xs:enumeration value="AccountAdmin" />
+            <xs:enumeration value="User" />
+            <xs:enumeration value="None" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="institutionrole">
+    <xs:complexType>
+      <xs:attribute name="primaryrole" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Yes" />
+            <xs:enumeration value="No" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="institutionroletype" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="Student" />
+            <xs:enumeration value="Faculty" />
+            <xs:enumeration value="Staff" />
+            <xs:enumeration value="Alumni" />
+            <xs:enumeration value="ProspectiveStudent" />
+            <xs:enumeration value="Guest" />
+            <xs:enumeration value="Other" />
+            <xs:enumeration value="Administrator" />
+            <xs:enumeration value="Observer" />
+            <xs:enumeration value="Contact" />
+            <xs:enumeration value="Child" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="extref" type="xs:string" />
+  <xs:element name="group">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="sourcedid" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="grouptype" />
+        <xs:element ref="description" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="org" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="timeframe" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="enrollcontrol" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="email" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="url" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="relationship" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="groupmembers" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="datasource" />
+        <xs:element minOccurs="0" maxOccurs="1" type="groupextension" name="extension" />
+      </xs:sequence>
+      <xs:attribute name="recstatus">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="grouptype">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="scheme" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="typevalue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scheme" type="xs:string" />
+  <xs:element name="typevalue">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="level" type="xs:string" use="required" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="short" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="long" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="full" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="short" type="xs:string" />
+  <xs:element name="long" type="xs:string" />
+  <xs:element name="full" type="xs:string" />
+  <xs:element name="org">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="orgname" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="orgunit" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="type" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="id" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="orgname" type="xs:string" />
+  <xs:element name="orgunit" type="xs:string" />
+  <xs:element name="timeframe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="begin" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="end" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="adminperiod" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="begin">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="restrict" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="end">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="restrict" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="adminperiod" type="xs:string" />
+  <xs:element name="enrollcontrol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="enrollaccept" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="enrollallowed" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="enrollaccept" type="xs:string" />
+  <xs:element name="enrollallowed" type="xs:string" />
+  <xs:element name="url" type="xs:string" />
+  <xs:element name="relationship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sourcedid" />
+        <xs:element ref="label" />
+      </xs:sequence>
+      <xs:attribute default="1" name="relation">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="label" type="xs:string" />
+  <xs:element name="groupmembers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="sourcedid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="membership">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+        <xs:element ref="sourcedid" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="member" />
+      </xs:sequence>
+      <xs:attribute name="complete" type="xs:boolean" default="false"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="member">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+        <xs:element ref="sourcedid" />
+        <xs:element ref="idtype" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" ref="role" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="idtype" type="xs:string" />
+  <xs:element name="role">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="subrole" />
+        <xs:element ref="status" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="userid" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="datetime" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="timeframe" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="interimresult" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="finalresult" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="email" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="datasource" />
+        <xs:element minOccurs="0" maxOccurs="1" type="membershipextension" name="extension" />
+      </xs:sequence>
+      <xs:attribute name="recstatus">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="1" />
+            <xs:enumeration value="2" />
+            <xs:enumeration value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute default="01" name="roletype">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="01" />
+            <xs:enumeration value="02" />
+            <xs:enumeration value="03" />
+            <xs:enumeration value="04" />
+            <xs:enumeration value="05" />
+            <xs:enumeration value="06" />
+            <xs:enumeration value="07" />
+            <xs:enumeration value="08" />
+            <xs:enumeration value="Learner" />
+            <xs:enumeration value="Instructor" />
+            <xs:enumeration value="ContentDeveloper" />
+            <xs:enumeration value="Member" />
+            <xs:enumeration value="Manager" />
+            <xs:enumeration value="Mentor" />
+            <xs:enumeration value="Administrator" />
+            <xs:enumeration value="TeachingAssistant" />
+            <xs:enumeration value="Guardian" />
+            <xs:enumeration value="OtherResponsible" />
+            <xs:enumeration value="Contact" />
+            <xs:enumeration value="Student" />
+            <xs:enumeration value="Child" />
+            <xs:enumeration value="Unit" />
+            <xs:enumeration value="Class" />
+            <xs:enumeration value="OtherGroup" />
+            <xs:enumeration value="EducationGroup" />
+            <xs:enumeration value="ContactGroup" />
+            <xs:enumeration value="GradeAuthority" />
+	          <xs:enumeration value="Department" />
+            <xs:enumeration value="DepartmentGroup" />
+            <xs:enumeration value="Principal" />
+            <xs:enumeration value="MentorGroup" />
+            <xs:enumeration value="Responsible" />
+            <xs:enumeration value="ScheduleGroup" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="subrole" type="xs:string" />
+  <xs:element name="status" type="xs:string" />
+  <xs:element name="comments">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="lang" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="finalresult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mode" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="values" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="result" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interimresult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="mode" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="values" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="result" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="comments" />
+      </xs:sequence>
+      <xs:attribute name="resulttype" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mode" type="xs:string" />
+  <xs:element name="values">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="list" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="min" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="max" />
+      </xs:sequence>
+      <xs:attribute name="valuetype" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="0" />
+            <xs:enumeration value="1" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="list" type="xs:string" />
+  <xs:element name="max" type="xs:string" />
+  <xs:element name="min" type="xs:string" />
+  <xs:element name="result" type="xs:string" />
+
+  <xs:complexType name="personextension">
+    <xs:sequence>
+      <xs:element name="privacy" type="xs:string" minOccurs="0" />
+      <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
+      <xs:element name="nativelanguage" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="altadr" type="altadr" minOccurs="0" />
+      <xs:element name="status" type="personstatus" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="altadr">
+    <xs:sequence>
+      <xs:element name="street" type="xs:string" />
+      <xs:element name="pcode" type="xs:string" />
+      <xs:element name="locality" type="xs:string" />
+      <xs:element name="extadd" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="personstatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Deceased" />
+      <xs:enumeration value="Emigrated" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="groupextension">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="0" />
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" />
+      <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
+      <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
+      <xs:element name="csncode" type="xs:string" minOccurs="0" />
+      <xs:element name="governedby" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+      <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
+      <xs:element name="phone" type="xs:string" minOccurs="0" />
+      <xs:element name="pcode" type="xs:string" minOccurs="0" />
+      <xs:element name="street" type="xs:string" minOccurs="0" />
+      <xs:element name="locality" type="xs:string" minOccurs="0" />
+      <xs:element name="web" type="xs:string" minOccurs="0" />
+      <xs:element name="schooltype" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="groupusage" type="xs:string" minOccurs="0" />
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="period" />
+      <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
+      <xs:element name="email" type="xs:string" minOccurs="0" />
+      <xs:element name="officialunitname" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="period">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute default="Semester" name="type" type="periodtype">  
+          </xs:attribute>
+          <xs:attribute default="1" name="start">
+          </xs:attribute>
+          <xs:attribute default="1" name="end">
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="periodtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Years" />
+      <xs:enumeration value="Year" />
+      <xs:enumeration value="Semester" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="membershipextension">
+    <xs:sequence>
+      <xs:element name="activity" type="activity" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="placement" type="placement" minOccurs="0" maxOccurs="1" />
+      <xs:element name="responsibility" type="responsibility" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="activity">
+    <xs:sequence>
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" />
+      <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
+      <xs:element name="hours" type="xs:int" minOccurs="0" />
+      <xs:element name="cancelled" type="xs:boolean" minOccurs="1" />
+      <xs:element name="begin" type="xs:date" minOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="1" />
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="placement">
+    <xs:sequence>
+      <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
+      <xs:element name="schoolunitcode" type="xs:int" minOccurs="0"/>
+      <xs:element name="programcode" type="xs:string" minOccurs="0" />
+      <xs:element name="programprofile" type="xs:string" minOccurs="0" />
+      <xs:element name="programvariant" type="xs:string" minOccurs="0" />
+      <xs:element name="begin" type="xs:date" minOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="1" />
+      <xs:element name="timestamp" type="xs:date" minOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="responsibility">
+    <xs:sequence>
+      <xs:element name="schoolunitcode" type="xs:int" minOccurs="1" />
+      <xs:element name="begin" type="xs:date" minOccurs="1" />
+      <xs:element name="end" type="xs:date" minOccurs="1" />
+      <xs:element name="timestamp" type="xs:dateTime" minOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

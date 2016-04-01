@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OUTCOME API																					1
-Version: 2.0.4
+Version: 3.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -55,11 +55,10 @@ Version: 2.0.4
 2.0.3	Following changes has been done:
 	- Changed "Lifecare Exchange Services" to 
 	"Lifecare Education API Services". 
-	
-2.0.4	Following changes has been done:
-	- Made "reportoutcome" able to contain all 
-	types of reports
-	
+ 
+3.0	Following changes has been done:
+	- Added support for subtests for national tests
+	- Added properties in the header 
 
  
 
