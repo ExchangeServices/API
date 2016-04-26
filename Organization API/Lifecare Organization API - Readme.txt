@@ -152,6 +152,10 @@ Version: 3.0
 	- Removed Course groups and Subject groups
 	- Removed attribute signature and emailwork for teacher
 	- Added list of responsibility, list of activity and placement to membershipextensions.
-	- Moved attributes from membershipextension to responsibility, activity and placement
+	- Moved attributes from membershipextension to responsibility, activity and placement.
+
+3.1	Following changes has been done:
+	- Changed placement to list of placements
+
 
 
