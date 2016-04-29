@@ -626,7 +626,7 @@
   <xs:complexType name="membershipextension">
     <xs:sequence>
       <xs:element name="activity" type="activity" minOccurs="0" maxOccurs="unbounded" />
-      <xs:element name="placement" type="placement" minOccurs="0" maxOccurs="1" />
+      <xs:element name="placement" type="placement" minOccurs="0" maxOccurs="unbounded" />
       <xs:element name="responsibility" type="responsibility" minOccurs="0" maxOccurs="unbounded" />
       <xs:element name="timestamp" type="xs:dateTime" minOccurs="0" />
     </xs:sequence>
