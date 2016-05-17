@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/personnel/v2"
+            xmlns="http://open.tieto.com/edu/personnel/v2"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for personnel
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="personnel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="person"  minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datetime" type="xs:dateTime" />
+        <xs:element name="datasource" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+        <xs:element minOccurs="1" maxOccurs="1" type="typeofservice" name="type" />
+        <xs:element minOccurs="1" maxOccurs="1" type="xs:string" name="schooltype" />
+        <xs:element type="timeframe" name="timeframe" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="timeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="typeofservice">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompletePersonnel" />
+      <xs:enumeration value="DeltaPersonnel" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="personid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="firstname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="middlename" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="lastname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element ref="privacy" minOccurs="1" maxOccurs="1" />
+        <xs:element ref="status" minOccurs="0" />
+        <xs:element ref="teachingqualification"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="workarea"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="employment"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="timestamp" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="change">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Add" />
+            <xs:enumeration value="Update" />
+            <xs:enumeration value="Delete" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="teachingqualification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="fromschoolyear" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="toschoolyear" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="subject" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="employment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="phone" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="signature" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="category" minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="unit" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="titlecode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="titlename" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element type="employmenttype" minOccurs="1" maxOccurs="1" name="type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="workarea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="unit" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="note" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="hours" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="category">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="TeachingPersonnel" />
+        <xs:enumeration value="OtherPersonnel" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="privacy">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="None" />
+        <xs:enumeration value="Level1" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="unit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="schooltype" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="employmenttype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Other" />
+      <xs:enumeration value="Project" />
+      <xs:enumeration value="UntilFurther" />
+      <xs:enumeration value="Substitute" />
+      <xs:enumeration value="CertainTime" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="workareatype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GradeAdministration" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="status">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Normal" />
+        <xs:enumeration value="Deceased" />
+        <xs:enumeration value="Emigrated" />
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+</xs:schema>
+

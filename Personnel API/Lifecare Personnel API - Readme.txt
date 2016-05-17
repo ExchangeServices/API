@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 PERSONNEL API																					1
-Version: 1.0.8
+Version: 1.0.6
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -37,11 +37,6 @@ Version: 1.0.8
 	- Changed "Lifecare Exchange Services" to 
 	"Lifecare Education API Services". 
 
-1.0.7	Following changes has been done:
-	- Made "workarea" an array . 
 
-1.0.8	Following changes has been done:
-	- Allow zero occurances of "employment". 
-	- Added a <properties>-tag in schema.
-
-
+2.0	Following changes has been done:
+	- Added support for middle name
