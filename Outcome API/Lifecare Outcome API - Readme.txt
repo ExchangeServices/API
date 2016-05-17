@@ -38,6 +38,11 @@ Version: 3.0
 1.0.5	Following changes has been done:
 	- Changed "Lifecare Exchange Services" to 
 	"Lifecare Education API Services". 
+	
+1.0.6	Following changes has been done:
+	- Clarified that when importing grades,
+	old grades not mentioned in the input 
+	are removed from BER. 
 
 2.0     Following changes has been done:
 	- Added course assessments
@@ -55,6 +60,10 @@ Version: 3.0
 2.0.3	Following changes has been done:
 	- Changed "Lifecare Exchange Services" to 
 	"Lifecare Education API Services". 
+	
+2.0.4	Following changes has been done:
+	- Updated with the gradeoutcome entity
+	with the attribute 'complete'.
  
 3.0	Following changes has been done:
 	- Added support for subtests for national tests
