@@ -67,7 +67,10 @@ Version: 3.0
  
 3.0	Following changes has been done:
 	- Added support for subtests for national tests
-	- Added properties in the header 
+	- Added properties in the header
+	
+3.0.1	Following changes has been done:
+	- Created gradeoutcome, subjectoutcome and nationaltestoutcome 
 
  
 
