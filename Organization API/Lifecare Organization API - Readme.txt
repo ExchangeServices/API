@@ -153,10 +153,15 @@ Version: 3.0
 	- Removed attribute signature and emailwork for teacher
 	- Added list of responsibility, list of activity and placement to membershipextensions.
 	- Moved attributes from membershipextension to responsibility, activity and placement.
+	- Support for many placements in same class for a studnet
+	- Support for many activities in same group for a studnet
 
 3.0.1	Following changes has been done:
 	- Changed placement to list of placements
 
 3.0.2	Following changes has been done:
 	- Added support for middlename 
-
+ 
+3.0.3	Following changes has been done:
+	- Added realestate to altadr
+	- Added area as roletype for usage in municipal organization
