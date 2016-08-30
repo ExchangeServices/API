@@ -460,6 +460,7 @@
             <xs:enumeration value="06" />
             <xs:enumeration value="07" />
             <xs:enumeration value="08" />
+            <xs:enumeration value="Area" />
             <xs:enumeration value="Learner" />
             <xs:enumeration value="Instructor" />
             <xs:enumeration value="ContentDeveloper" />
@@ -564,6 +565,7 @@
       <xs:element name="pcode" type="xs:string" />
       <xs:element name="locality" type="xs:string" />
       <xs:element name="extadd" type="xs:string" />
+      <xs:element name="realestate" type="xs:string" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
 
