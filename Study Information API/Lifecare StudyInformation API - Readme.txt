@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 2.0.6
+Version: 3.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -58,6 +58,21 @@ Version: 2.0.6
 	- Changed "Lifecare Exchange Services" to 
 	"Lifecare Education API Services". 
 
+3.0.0	Following changes has been done:
+	- Created new version of the API.
+	- Added properties
+	- removed three elements
+	  + vocationaloutcomeenglishname from program 
+	  + englishname from studyplancourse
+	  + contentinenglish from studyplancourse
+
+3.0.1	Following changes has been done:
+	- Added properties
+	  + vocationaloutcomenameinenglish in program 
+	  + nameinenglish in studyplancourse
+	  + contentinenglish in studyplancourse
+	  + nameinenglish in subjectplansubject
+	  + contentinenglish in coursechoicecourse
 
  
 
