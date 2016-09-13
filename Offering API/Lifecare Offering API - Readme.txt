@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OFFERING API																					1
-Version: 1.0.7
+Version: 2.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -29,6 +29,12 @@ Version: 1.0.7
 	- Replaced enum coursetype with officialcourse
 	- Replaced enum subjecttype with officialsubject
 
+2.0.0	Initial version
+	- Added a properties element
+
+2.0.1	Following changes has been done:
+	- Added support for education plans
+	- Added nameinenglish for course and subject
 
 
  
