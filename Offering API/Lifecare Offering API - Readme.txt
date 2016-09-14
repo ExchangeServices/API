@@ -35,6 +35,7 @@ Version: 2.0.0
 2.0.1	Following changes has been done:
 	- Added support for education plans
 	- Added nameinenglish for course and subject
+	- Renamed unitofferings to unitoffering
 
 
  
