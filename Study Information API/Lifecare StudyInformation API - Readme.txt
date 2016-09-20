@@ -74,5 +74,10 @@ Version: 3.0.0
 	  + nameinenglish in subjectplansubject
 	  + contentinenglish in coursechoicecourse
 
+3.0.2	Following changes has been done:
+	- Added properties
+	  + nameinenglish in program
+	  + orientationinenglish in program
+
  
 
