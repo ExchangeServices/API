@@ -98,7 +98,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1" />
-        <xs:element name="type" type="educationplantype"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="type" type="coursetypetype"  minOccurs="1" maxOccurs="1" />
         <xs:element name="points" type="xs:int"  minOccurs="1" maxOccurs="1" />
         <xs:element type="course"  minOccurs="0" maxOccurs="unbounded" name="course"/>
       </xs:sequence>
