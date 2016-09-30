@@ -37,6 +37,8 @@ Version: 2.0.0
 	- Added nameinenglish for course and subject
 	- Renamed unitofferings to unitoffering
 
+2.0.2	Following changes has been done:
+	- Fixed type on coursetype
 
  
 

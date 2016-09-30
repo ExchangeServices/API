@@ -173,13 +173,19 @@
 
   <xs:simpleType name="studyplancoursetype">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="UpperSecondarySubjects" />
+      <xs:enumeration value="ProgrammeSpecificSubjects" />
       <xs:enumeration value="Orientation" />
-      <xs:enumeration value="ProgramRecess" />
-      <xs:enumeration value="IndividualChoice" />
-      <xs:enumeration value="UpperSecondarySchoolWork" />
-      <xs:enumeration value="UpperSecondarySchoolCommon" />
-      <xs:enumeration value="ProgramCommon" />
-      <xs:enumeration value="OrientationAndProgramRecess" />
+      <xs:enumeration value="ProgrammeSpecialisation" />
+      <xs:enumeration value="IndividualOptions" />
+      <xs:enumeration value="DiplomaProject" />
+      <xs:enumeration value="OrientationAndProgrammeSpecialisation" />
+      <xs:enumeration value="UpperSecondarySubjectsForStudentsWithLearningDisabilities" />
+      <xs:enumeration value="AssessedCourseWork" />
+      <xs:enumeration value="CommonSubjectsInFurtherEducation" />
+      <xs:enumeration value="Profile" />
+      <xs:enumeration value="Outcome" />
+      <xs:enumeration value="DegreeProject" />
       <xs:enumeration value="Other" />
     </xs:restriction>
   </xs:simpleType>

@@ -79,5 +79,21 @@ Version: 3.0.0
 	  + nameinenglish in program
 	  + orientationinenglish in program
 
+3.0.3	Following changes has been done:
+	- Renamed values in studyplancoursetype
+	  + IndividualChoice -> IndividualOptions
+	  + ProgramCommon -> ProgrammeSpecificSubjects
+	  + ProgramRecess -> ProgrammeSpecialisation
+	  + UpperSecondarySchoolWork -> DiplomaProject
+	  + UpperSecondarySchoolCommon -> UpperSecondarySubjects
+	  + OrientationAndProgramRecess -> OrientationAndProgrammeSpecialisation
+	- Added values to studyplancoursetype
+	  + UpperSecondarySubjectsForStudentsWithLearningDisabilities
+	  + AssessedCourseWork
+	  + CommonSubjectsInFurtherEducation
+	  + Profile
+	  + Outcome
+	  + DegreeProject
+
  
 
