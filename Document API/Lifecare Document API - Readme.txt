@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 DOCUMENT API																					1
-Version: 1.0.2
+Version: 1.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -10,4 +10,7 @@ Version: 1.0.2
 
 1.0.2	Following changes has been done:
 	- Changed "Lifecare Exchange Services" to 
-	"Lifecare Education API Services". 
+	"Lifecare Education API Services".
+
+1.0.3	Following changes has been done:
+	- Added properties. 

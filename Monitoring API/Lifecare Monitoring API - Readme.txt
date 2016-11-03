@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 MONITORING API																					1
-Version: 1.0.3
+Version: 1.0.4
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -19,6 +19,9 @@ Version: 1.0.3
 	- Changed integer to int
 	- Changed name of minutes to time
 	- Added timeoffered
+
+1.0.4	Following changes has been done:
+	- Added properties
 
 
 
