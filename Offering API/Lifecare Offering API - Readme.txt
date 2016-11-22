@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 OFFERING API																					1
-Version: 2.0.0
+Version: 2.0.3
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -40,5 +40,6 @@ Version: 2.0.0
 2.0.2	Following changes has been done:
 	- Fixed type on coursetype
 
- 
+2.0.3	Following changes has been done:
+	- Added id for course and subject 
 
