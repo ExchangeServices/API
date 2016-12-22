@@ -165,3 +165,9 @@ Version: 3.0
 3.0.3	Following changes has been done:
 	- Added realestate to altadr
 	- Added area as roletype for usage in municipal organization
+
+4.0		Following changes has been done:
+	- Added vistingaddress for unit
+	- Added resident status for person
+	- Added integrated schooltype
+
