@@ -71,6 +71,15 @@ Version: 3.0
 	
 3.0.1	Following changes has been done:
 	- Created gradeoutcome, subjectoutcome and nationaltestoutcome 
+	
+3.0.2	Following changes has been done:
+	- Description of entities for national test results are updated
+	- Added Use Cases for Import of National Test Results
+	
+3.0.3	Following changes has been done:
+	- Updated schema for national test results
+	- Updated documentation for national test results
+	 
 
  
 
