@@ -79,7 +79,10 @@ Version: 3.0
 3.0.3	Following changes has been done:
 	- Updated schema for national test results
 	- Updated documentation for national test results
-	 
+	
+3.0.4	Following changes has been done:
+	- Updated Tech Spec documentation for national test results for courses
+	- Updated schema file (changed cardinality for grades in national tests) 
 
  
 
