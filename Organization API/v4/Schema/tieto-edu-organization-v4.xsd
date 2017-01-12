@@ -571,6 +571,7 @@
       <xs:enumeration value="DiplomatChildrenWithinEuEssSwitzerland" />
       <xs:enumeration value="DiplomatChildrenOutsideEuEssSwitzerland" />
       <xs:enumeration value="PermitApplicationSeeker" />
+      <xs:enumeration value="Unknown" />
     </xs:restriction>
   </xs:simpleType>
   

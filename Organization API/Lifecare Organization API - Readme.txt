@@ -171,3 +171,6 @@ Version: 3.0
 	- Added resident status for person
 	- Added integrated schooltype
 
+4.0.1	Following changes has been done:
+	- Added unknown as a residentstatus for person
+
