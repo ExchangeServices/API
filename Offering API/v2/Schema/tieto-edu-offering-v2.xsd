@@ -61,6 +61,7 @@
 
   <xs:complexType name="subject">
     <xs:sequence>
+      <xs:element name="id" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="nameinenglish" type="xs:string"  minOccurs="1" maxOccurs="1"/>
@@ -70,6 +71,7 @@
 
   <xs:complexType name="course">
     <xs:sequence>
+      <xs:element name="id" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="code" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="nameinenglish" type="xs:string"  minOccurs="1" maxOccurs="1"/>
@@ -128,6 +130,7 @@
       <xs:enumeration value="Profile" />
       <xs:enumeration value="Outcome" />
       <xs:enumeration value="DegreeProject" />
+      <xs:enumeration value="Other" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
