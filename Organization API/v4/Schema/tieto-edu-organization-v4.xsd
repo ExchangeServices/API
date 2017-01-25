@@ -596,8 +596,6 @@
   <xs:complexType name="groupextension">
     <xs:sequence>
       <xs:element name="id" type="xs:string" minOccurs="0" />
-      <xs:element name="coursecode" type="xs:string" minOccurs="0" />
-      <xs:element name="subjectcode" type="xs:string" minOccurs="0" />
       <xs:element name="schoolyear" type="xs:string" minOccurs="0" />
       <xs:element name="csncode" type="xs:string" minOccurs="0" />
       <xs:element name="governedby" type="xs:string" minOccurs="0" />
