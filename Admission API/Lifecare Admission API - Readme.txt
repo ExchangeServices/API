@@ -19,6 +19,12 @@ Version: 1.0.5
 	- Changed "Lifecare Exchange Services" to 
 	"Lifecare Education API Services". 
 
+2.0.0	Initial version
+	- Added a properties element
+	- Changed attributes unit and program to not required
+	- Added possibility ta add only exam
+
+
 
 
  
