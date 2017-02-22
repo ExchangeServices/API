@@ -184,8 +184,10 @@
       <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="subject" type="subject" minOccurs="1" maxOccurs="1"/>
       <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="semester" type="semester"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="finalgrade"  type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="trialperformed" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="remark"  type="remark"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="assessor" type="assessor" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
@@ -196,6 +198,7 @@
       <xs:element name="subject" type="subject"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
       <xs:element name="finalgrade"  type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="trialperformed" type="xs:boolean"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="remark"  type="remark"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="period" type="xs:string"  minOccurs="1" maxOccurs="1" />
     </xs:sequence>
@@ -360,6 +363,20 @@
       <xs:enumeration value="F" />
       <xs:enumeration value="G" />
       <xs:enumeration value="H" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="semester">
+    <xs:sequence>
+      <xs:element name="type" type="semestertype"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="year" type="xs:int"  minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="semestertype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VT" />
+      <xs:enumeration value="HT" />
     </xs:restriction>
   </xs:simpleType>
 

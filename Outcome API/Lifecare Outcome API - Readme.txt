@@ -83,6 +83,11 @@ Version: 3.0
 3.0.4	Following changes has been done:
 	- Updated Tech Spec documentation for national test results for courses
 	- Updated schema file (changed cardinality for grades in national tests) 
+	
+3.0.5	Following changes has been done:
+	- Updated Tech Spec documentation for subject grades / subject report grades
+	- Updated Prod info documentation for subject grades / subject report grades
+	- Updated schema file (added "semester" and "trialperformed") 
 
  
 
