@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
-ORGANIZATION API																					1
-Version: 3.0
+ORGANIZATION API
+Version: 4.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -171,6 +171,9 @@ Version: 3.0
 	- Added resident status for person
 	- Added integrated schooltype
 
-4.0.1
+4.0.1  Following changes has been done:
 	- SubjectCode and CourseCode removed from group extension
+
+4.0.2  Following changes has been done:
+	- Added properties courseid and subjectid in activity extension in role
 
