@@ -23,7 +23,12 @@ Version: 1.0.5
 	- Added a properties element
 	- Changed attributes unit and program to not required
 	- Added possibility ta add only exam
+	- Added municipalitycode for student
 
+2.0.1	Following changes has been done:
+	- Firstname and lastname not required
+	- Added municipalitycode for student
+	- Modified properties
 
 
 
