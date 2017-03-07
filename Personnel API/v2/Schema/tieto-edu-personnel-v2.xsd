@@ -46,6 +46,8 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:element name="email" type="xs:string" />
+
   <xs:element name="person">
     <xs:complexType>
       <xs:sequence>
@@ -54,6 +56,20 @@
         <xs:element name="firstname" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element name="middlename" type="xs:string"  minOccurs="1" maxOccurs="1" />
         <xs:element name="lastname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+
+        <xs:element name="emailwork" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="emailhome" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="tel" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="adr" />
+
+        <xs:element minOccurs="0" maxOccurs="1" name="gender" type="xs:string"/>
+        <xs:element minOccurs="0" maxOccurs="1" name="bday" type="xs:string"/>
+        <xs:element name="geographickeycode" type="xs:string" minOccurs="0" />
+        <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+        <xs:element name="municipalityname" type="xs:string" minOccurs="0" />
+        <xs:element name="nativelanguage" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        
+        
         <xs:element ref="privacy" minOccurs="1" maxOccurs="1" />
         <xs:element ref="status" minOccurs="0" />
         <xs:element ref="teachingqualification"  minOccurs="0" maxOccurs="unbounded"/>
@@ -87,6 +103,7 @@
   <xs:element name="employment">
     <xs:complexType>
       <xs:sequence>
+        <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
         <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
         <xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
@@ -170,5 +187,50 @@
     </xs:simpleType>
   </xs:element>
 
+  <!-- Contact Info-->
+  <xs:element name="tel">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute default="1" name="teltype">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="1" />
+                <xs:enumeration value="2" />
+                <xs:enumeration value="3" />
+                <xs:enumeration value="4" />
+                <xs:enumeration value="Voice" />
+                <xs:enumeration value="Fax" />
+                <xs:enumeration value="Mobile" />
+                <xs:enumeration value="Pager" />
+                <xs:enumeration value="Work" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="adr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="pobox" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="extadd" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="street" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="locality" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="region" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="pcode" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="country" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pobox" type="xs:string" />
+  <xs:element name="extadd" type="xs:string" />
+  <xs:element name="street" type="xs:string" />
+  <xs:element name="locality" type="xs:string" />
+  <xs:element name="region" type="xs:string" />
+  <xs:element name="pcode" type="xs:string" />
+  <xs:element name="country" type="xs:string" />
+  
 </xs:schema>
 
