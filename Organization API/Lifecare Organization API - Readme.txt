@@ -166,6 +166,10 @@ Version: 4.0
 	- Added realestate to altadr
 	- Added area as roletype for usage in municipal organization
 
+3.0.4	Following changes has been done:
+	- Updated use case documentation for delta
+	- Updated what available delta functions exists
+
 4.0		Following changes has been done:
 	- Added vistingaddress for unit
 	- Added resident status for person
@@ -176,4 +180,8 @@ Version: 4.0
 
 4.0.2  Following changes has been done:
 	- Added properties courseid and subjectid in activity extension in role
+
+4.0.3	Following changes has been done:
+	- Updated use case documentation for delta
+	- Updated what available delta functions exists
 
