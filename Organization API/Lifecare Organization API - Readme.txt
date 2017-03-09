@@ -170,6 +170,9 @@ Version: 4.0
 	- Updated use case documentation for delta
 	- Updated what available delta functions exists
 
+3.0.5	Following changes has been done:
+	- Removed reference to service (delta for leisure time center) not supported in this version
+
 4.0		Following changes has been done:
 	- Added vistingaddress for unit
 	- Added resident status for person
@@ -184,4 +187,7 @@ Version: 4.0
 4.0.3	Following changes has been done:
 	- Updated use case documentation for delta
 	- Updated what available delta functions exists
+
+4.0.4	Following changes has been done:
+	- Updated use case documentation for delta 
 
