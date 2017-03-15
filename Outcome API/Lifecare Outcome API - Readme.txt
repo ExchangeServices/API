@@ -88,6 +88,10 @@ Version: 3.0
 	- Updated Tech Spec documentation for subject grades / subject report grades
 	- Updated Prod info documentation for subject grades / subject report grades
 	- Updated schema file (added "semester" and "trialperformed") 
+	
+3.0.6	Following changes has been done:
+	- Removed 'Omdöme i ämne' in Prod info documentation
+	- Removed references to non-supported school types for Assessments in Tech Spec documentation
 
  
 
