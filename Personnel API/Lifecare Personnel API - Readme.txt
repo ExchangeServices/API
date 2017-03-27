@@ -40,3 +40,12 @@ Version: 1.0.6
 
 2.0	Following changes has been done:
 	- Added support for middle name
+
+2.0.1	Following changes has been done:
+	- Added id on employment
+	- Added attributes for contactinformation
+
+2.0.2	Following changes has been done:
+	- Updated schema with teacher qualification structure
+	- Updated Tech Spec with teacher qualification info
+	- Updated Produkt Info with teacher qualification info

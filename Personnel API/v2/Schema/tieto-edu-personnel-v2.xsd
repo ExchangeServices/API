@@ -9,12 +9,13 @@
       Version: 1.0
     </xs:documentation>
   </xs:annotation>
-
+  
   <xs:element name="personnel">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
         <xs:element ref="person"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="teacherlicenseextract"  minOccurs="0" maxOccurs="1"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -232,5 +233,181 @@
   <xs:element name="pcode" type="xs:string" />
   <xs:element name="country" type="xs:string" />
   
+  <xs:element name="teacherlicenseextract" type="teacherLicenseExtractType" />
+  
+  <xs:complexType name="teacherLicenseExtractType">
+    <xs:sequence>
+      <xs:element name="teachers" type="teachersType" minOccurs="0" />
+      <xs:element name="missingteachers" type="missingTeachersType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="teachersType">
+    <xs:sequence>
+      <xs:element name="teacher" type="teacherType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="teacherType">
+    <xs:annotation>
+      <xs:documentation>Contains information for a teacher</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="socialsecuritynumber" type="socialSecurityNumberType">
+        <xs:annotation>
+          <xs:documentation>Social security number in format YYYYMMDD-NNNN</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="firstname" type="nonEmptyStringType" minOccurs="0" />
+      <xs:element name="middlename" type="nonEmptyStringType" minOccurs="0" />
+      <xs:element name="lastname" type="nonEmptyStringType" minOccurs="0" />
+      <xs:element name="givenname" type="nonEmptyStringType" minOccurs="0" />
+      <xs:element name="warning" type="warningType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="license" type="licenseType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="foreignexamtitle" type="nonEmptyStringType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Foreign Exam title</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="qualifications" type="qualificationsType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>One or several qualifications describing items for which a teacher is qualified to teach</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="missingTeachersType">
+    <xs:sequence>
+      <xs:element name="missingteacher" type="missingTeacherType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="missingTeacherType">
+    <xs:annotation>
+      <xs:documentation>Info for teacher not found in license register</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="socialsecuritynumber" type="socialSecurityNumberType">
+        <xs:annotation>
+          <xs:documentation>Social security number in format YYYYMMDD-NNNN</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="licenseType">
+    <xs:annotation>
+      <xs:documentation>Basic information about a license. </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="typeoflicense" type="nonEmptyStringType">
+        <xs:annotation>
+          <xs:documentation>Type of license, TEACHER or PRESCHOOL_TEACHER</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="lecturertitle" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Lecturer title</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="warningType">
+    <xs:annotation>
+      <xs:documentation>Basic information about a warning. </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="decisiondate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Date of decision to warn teacher</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="qualificationsType">
+    <xs:sequence>
+      <xs:element name="qualification" type="qualificationType" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="qualificationType">
+    <xs:annotation>
+      <xs:documentation>A qualification describes an item for which a teacher is qualified to teach</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="typeofqualification" type="nonEmptyStringType">
+        <xs:annotation>
+          <xs:documentation>The type of qualification, SUBJECT, SCHOOL_TYPE or STUDY_PATH</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="typeofschooling" type="nonEmptyStringType">
+        <xs:annotation>
+          <xs:documentation>Code for type of schooling</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="code" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Code identifying subject or study_path</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="subcode" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Sub code for generic subjects, like MOD (Modern languages)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Name of the qualification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="fromyear" type="xs:int" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The start year for which this qualification applies</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="toyear" type="xs:int" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The end year for which this qualification applies</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="specializationcode" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Code indicating that a qualification is the result of special pedagogue degree.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="specializationname" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Name of spexialization</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="studypathcode" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Code of studyPath</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="studypathname" type="nonEmptyStringType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Name of studyPath</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="socialSecurityNumberType">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9]{8}[\-][0-9]{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="nonEmptyStringType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:whiteSpace value="collapse" />
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>
 
