@@ -49,3 +49,6 @@ Version: 1.0.6
 	- Updated schema with teacher qualification structure
 	- Updated Tech Spec with teacher qualification info
 	- Updated Produkt Info with teacher qualification info
+
+2.0.3	Following changes has been done:
+	- Updated domain model in Tech Spec
