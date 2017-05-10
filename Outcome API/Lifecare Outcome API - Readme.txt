@@ -92,6 +92,8 @@ Version: 3.0
 3.0.6	Following changes has been done:
 	- Removed 'Omdöme i ämne' in Prod info documentation
 	- Removed references to non-supported school types for Assessments in Tech Spec documentation
-
+	
+3.0.7	Following changes has been done:
+	- Added property recommendedsubjectcode in subject
  
 
