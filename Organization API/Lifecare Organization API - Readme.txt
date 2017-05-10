@@ -191,3 +191,7 @@ Version: 4.0
 4.0.4	Following changes has been done:
 	- Updated use case documentation for delta 
 
+4.0.5 Following changes has been done:
+    - Added property recommededsubjectcode in activity extension in role
+
+
