@@ -43,3 +43,6 @@ Version: 2.0.3
 2.0.3	Following changes has been done:
 	- Added id for course and subject 
 
+2.0.4	Following changes has been done:
+	- Added property recommendedsubjectcode for subject 
+
