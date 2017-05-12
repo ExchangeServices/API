@@ -95,5 +95,10 @@ Version: 3.0.0
 	  + Outcome
 	  + DegreeProject
 
+3.0.4 Following changes has been done:
+	  + - Added property recommededsubjectcode in subjectplansubject
+
+
+
  
 
