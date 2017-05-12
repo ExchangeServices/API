@@ -96,7 +96,7 @@ Version: 3.0.0
 	  + DegreeProject
 
 3.0.4 Following changes has been done:
-	  + - Added property recommededsubjectcode in subjectplansubject
+	  + Added property recommededsubjectcode in subjectplansubject
 
 
 
