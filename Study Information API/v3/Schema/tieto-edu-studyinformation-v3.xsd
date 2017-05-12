@@ -19,6 +19,7 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" type ="programchoice" name="programchoice"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" type ="coursechoice" name="coursechoice"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" type ="subjectchoice" name="subjectchoice"/>
+        <xs:element minOccurs="0" maxOccurs="1" type="eventreports" name="eventreports"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -86,20 +87,29 @@
     </xs:sequence>
   </xs:complexType>
 
-    <xs:complexType name="note">
-        <xs:sequence>
-            <xs:element name="motivation" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="motivationcounselling" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="educationgoal" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="other" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="studyplan" type="xs:string" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
+  <xs:complexType name="note">
+    <xs:sequence>
+      <xs:element name="motivation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="motivationcounselling" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="educationgoal" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="other" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="studyplan" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <xs:complexType name="student">
     <xs:sequence>
       <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="personid" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="name" type="xs:string"  minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="guardian">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="phone" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="email" type="xs:string"  minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
@@ -146,7 +156,7 @@
       <xs:enumeration value="break" />
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:complexType name="subjectplan">
     <xs:sequence>
       <xs:element minOccurs="1" maxOccurs="1" type="student" name="student"/>
@@ -166,8 +176,8 @@
       <xs:element name="start" type="xs:dateTime"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="end" type="xs:dateTime"  minOccurs="0" maxOccurs="1"/>
       <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
-      <xs:element name="continues" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
       <xs:element name="reduced" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="recommendedsubjectcode" type="xs:string"  minOccurs="1" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
@@ -270,5 +280,57 @@
       <xs:element name="reduced" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
   </xs:complexType>
+
+  <xs:complexType name="eventreports">
+    <xs:sequence>
+      <xs:element name="eventreport" type="eventreport" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eventreport">
+    <xs:sequence>
+      <xs:element name="student" type="student" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="unit" type="unit" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="xtrainformation" type="xtrainformation" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="eventinformation" type="eventinformation"  minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="xtrainformation">
+    <xs:sequence>
+      <xs:element name="dossiernumber" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="nativelanguagecode" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="nativelanguage" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="programprofile" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="guardians" type="guardian"  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eventinformation">
+    <xs:sequence>
+      <xs:element name="eventtype" type="eventtype"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="timeframe" type="timeframe"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="program" type="program"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="classname" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="schoolyear" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="exchangestudent" type="xs:boolean"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="supportforactivity" type="xs:boolean"  minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eventtype">
+    <xs:sequence>
+      <xs:element name="type" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="text" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
 </xs:schema>
+
+
+
+
+
+
 
