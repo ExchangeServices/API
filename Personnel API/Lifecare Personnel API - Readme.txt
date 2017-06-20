@@ -52,3 +52,6 @@ Version: 1.0.6
 
 2.0.3	Following changes has been done:
 	- Updated domain model in Tech Spec
+
+2.0.4	Following changes has been done:
+	- Added possibility to read one personnel with PersonId
