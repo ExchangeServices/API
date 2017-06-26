@@ -173,6 +173,9 @@ Version: 4.0
 3.0.5	Following changes has been done:
 	- Removed reference to service (delta for leisure time center) not supported in this version
 
+3.0.6	Following changes has been done:
+	- Added reference to service delta for leisure time center
+
 4.0		Following changes has been done:
 	- Added vistingaddress for unit
 	- Added resident status for person
@@ -193,5 +196,14 @@ Version: 4.0
 
 4.0.5 Following changes has been done:
     - Added property recommededsubjectcode in activity extension in role
+	
 
+5.0		Following changes has been done:
+	- Changed email to emailhome for person
+	- Added emailworkschool to person
+	- Added organizernumber to unit
+	- Removed responsible role type
+	- Added use of manager role type
+	- Added group type ProfitCenter in municipal export
+	- Unified calls for municipal export into one call for all school types
 
