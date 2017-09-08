@@ -27,6 +27,7 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="CompleteOrganization" />
       <xs:enumeration value="DeltaOrganization" />
+      <xs:enumeration value="MunicipalOrganization" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="sourcedid">
@@ -488,6 +489,7 @@
             <xs:enumeration value="Principal" />
             <xs:enumeration value="MentorGroup" />
             <xs:enumeration value="ScheduleGroup" />
+            <xs:enumeration value="Organization" />
           </xs:restriction>
         </xs:simpleType>
       </xs:attribute>

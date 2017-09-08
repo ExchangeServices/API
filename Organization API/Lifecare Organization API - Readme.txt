@@ -207,3 +207,10 @@ Version: 4.0
 	- Added group type ProfitCenter in municipal export
 	- Unified calls for municipal export into one call for all school types
 
+5.0.1	Following changes has been done:
+    - Added role type "Organization", and property type "MunicipalOrganization" in schema file
+	- Added description of the Area and Organization group in Product Information
+	- In Technical Specification:
+	  + Updated pictures in ch 3.2
+	  + Updated text about Municipal organization in ch 5 and 6.5
+	  + Changes in description of Use Cases in ch 6.2.1
