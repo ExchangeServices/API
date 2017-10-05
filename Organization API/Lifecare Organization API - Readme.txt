@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 ORGANIZATION API
-Version: 4.0
+Version: 5.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -214,3 +214,6 @@ Version: 4.0
 	  + Updated pictures in ch 3.2
 	  + Updated text about Municipal organization in ch 5 and 6.5
 	  + Changes in description of Use Cases in ch 6.2.1
+
+5.0.2	Following changes has been done:
+    - Added Use Case description for Department Groups
