@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 DOCUMENT API																					1
-Version: 1.0.3
+Version: 2.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -14,3 +14,8 @@ Version: 1.0.3
 
 1.0.3	Following changes has been done:
 	- Added properties. 
+
+
+
+2.0 Following changes has been done:
+	- Added new type to document links "OwnDocument"

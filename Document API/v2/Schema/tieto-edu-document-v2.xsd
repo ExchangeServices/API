@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/document/v2"
+            xmlns="http://open.tieto.com/edu/document/v2"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for Document API
+      Version: 2.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="documents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="studentdocumentlinks"  minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datetime" type="xs:dateTime" />
+        <xs:element name="datasource" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+        <xs:element minOccurs="1" maxOccurs="1" type="xs:string" name="schooltype" />
+        <xs:element type="timeframe" name="timeframe" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="timeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="studentdocumentlinks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="studentid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element ref="documentlink"  minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="complete" type="xs:boolean" default="false"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="documentlink">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="href" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element type="documenttype" minOccurs="1" maxOccurs="1" name="type"/>
+        <xs:element name="unitid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="documenttype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IndividualDevelopmentPlan" />
+      <xs:enumeration value="ActionPlan" />
+      <xs:enumeration value="PerformanceReview" />
+      <xs:enumeration value="OwnDocument" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+
