@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
-DOCUMENT API																					1
-Version: 2.0
+DOCUMENT API
+Version: 2.0.1
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -19,3 +19,6 @@ Version: 2.0
 
 2.0 Following changes has been done:
 	- Added new type to document links "OwnDocument"
+
+2.0.1 Following changes has been done:
+	- Added update document links for PreSchool and LeisureTimeCenter
