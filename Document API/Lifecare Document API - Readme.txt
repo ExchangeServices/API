@@ -22,3 +22,6 @@ Version: 2.0.1
 
 2.0.1 Following changes has been done:
 	- Added update document links for PreSchool and LeisureTimeCenter
+
+2.0.2 Following changes has been done:
+	- Added all remaining schooltypes for update document links
