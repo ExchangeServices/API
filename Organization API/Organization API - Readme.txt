@@ -238,4 +238,8 @@ Version: 5.0.3
 	- Changed "Lifecare Education API Services" to
 	"Tieto Education APIs".
  
+5.0.4	Following changes has been done:
+	- Added organizationtypecode for organizations
+	- Added organizationtypename for organizations
+ 
 
