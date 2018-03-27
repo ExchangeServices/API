@@ -1,7 +1,7 @@
 API
 ===
 
-Software Development Kits (SDKs) for Lifecare Education APIs containing documentation, XML schemas and examples.  
+Software Development Kits (SDKs) for Tieto Education APIs containing documentation and XML schemas.  
 
 
 A comment regarding the documentation:
