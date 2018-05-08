@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 MONITORING API																					1
-Version: 1.0.5
+Version: 1.0.6
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -24,12 +24,12 @@ Version: 1.0.5
 	- Added properties
 
 1.0.5	Following changes has been done:
-	- Added support for preschool class
+	- Added support for import of aggregated 
+	absence for preschool class
 	- Changed "Lifecare Education API Services" to
 	"Tieto Education APIs".
 
-
-
-
- 
+1.0.6	Following changes has been done:
+	- Added support for import of aggregated 
+	presence for preschool class
 
