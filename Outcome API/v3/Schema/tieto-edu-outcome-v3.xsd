@@ -357,12 +357,19 @@
       <xs:enumeration value="Write" />
       <xs:enumeration value="Listen" />
       <xs:enumeration value="A" />
+      <xs:enumeration value="A1" />
+      <xs:enumeration value="A2" />
+      <xs:enumeration value="A3" />
       <xs:enumeration value="B" />
       <xs:enumeration value="C" />
       <xs:enumeration value="D" />
       <xs:enumeration value="E" />
       <xs:enumeration value="F" />
+      <xs:enumeration value="F1" />
+      <xs:enumeration value="F2" />
       <xs:enumeration value="G" />
+      <xs:enumeration value="G1" />
+      <xs:enumeration value="G2" />
       <xs:enumeration value="H" />
     </xs:restriction>
   </xs:simpleType>
