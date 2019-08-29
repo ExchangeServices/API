@@ -1,7 +1,7 @@
-————————————————————————————————————————————————————————
+ï»¿â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 OUTCOME API																					1
 Version: 3.0.8
-————————————————————————————————————————————————————————
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 1.0	Initial version
 
 1.0.1	Following changes has been done:
@@ -98,7 +98,7 @@ Version: 3.0.8
 	- Updated schema file (added "semester" and "trialperformed") 
 	
 3.0.6	Following changes has been done:
-	- Removed 'Omdöme i ämne' in Prod info documentation
+	- Removed 'OmdÃ¶me i Ã¤mne' in Prod info documentation
 	- Removed references to non-supported school types for Assessments in Tech Spec documentation
 	
 3.0.7	Following changes has been done:
@@ -108,4 +108,6 @@ Version: 3.0.8
 	- Changed "Lifecare Education API Services" to
 	"Tieto Education APIs".
  
+4.0.0 Following changes has been done:
+  - Added Export national tests for all school forms
 

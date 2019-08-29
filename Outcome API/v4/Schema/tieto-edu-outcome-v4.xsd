@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/outcome/v3"
+            xmlns="http://open.tieto.com/edu/outcome/v3"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for grades, assessments and national tests.
+      Version: 3.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="outcome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="properties" type="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element name="semesterreport" type="semesterreport"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="finalreport" type="finalreport"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="catalogextractionreport" type="catalogextractionreport"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="diplomacertificatereport" type="diplomacertificatereport"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="uppersecondaryschoolcertificatereport" type="uppersecondaryschoolcertificatereport"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="studycertificatereport" type="studycertificatereport"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="gradeoutcome" type="gradeoutcome" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="assessmentoutcome" type="assessmentoutcome" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="nationaltestoutcome" type="nationaltestoutcome"  minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType  name="properties">
+    <xs:sequence>
+      <xs:element name="datetime" type="xs:dateTime" />
+      <xs:element name="datasource" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+      <xs:element minOccurs="1" maxOccurs="1" type="typeofservice" name="type" />
+      <xs:element minOccurs="1" maxOccurs="1" type="xs:string" name="schooltype" />
+      <xs:element type="timeframe" name="timeframe" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="system">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="version" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="dateofexport" type="xs:date" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testopportunity">
+    <xs:sequence>
+      <xs:element name="scbexportorder" type="xs:int" minOccurs="1" maxOccurs="1" />
+      <xs:element name="result" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="math">
+    <xs:sequence>
+      <xs:element name="math" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="english">
+    <xs:sequence>
+      <xs:element name="english" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="swedish">
+    <xs:sequence>
+      <xs:element name="swedish" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testresult">
+    <xs:sequence>
+      <xs:element name="personid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="schoolyear" type="xs:int" minOccurs="0" maxOccurs="1" />
+      <xs:element name="program" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="classname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="coursegrade" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="scbschoolid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="firstname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="middlename" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="lastname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="swedishforimmigrants" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="periodstart" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="periodend" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="math" type="math" minOccurs="1" maxOccurs="1" />
+      <xs:element name="english" type="english" minOccurs="1" maxOccurs="1" />
+      <xs:element name="swedish" type="swedish" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="nationaltestexport">
+    <xs:complexType >
+      <xs:sequence>
+        <xs:element name="properties" type="properties" minOccurs="1" maxOccurs="1" />
+        <xs:element name="system" type="system" minOccurs="1" maxOccurs="1" />
+        <xs:element name="results" type="testresult" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="timeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="typeofservice">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Reports" />
+      <xs:enumeration value="Grades" />
+      <xs:enumeration value="Assessments" />
+      <xs:enumeration value="NationalTests" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="report">
+    <xs:sequence>
+      <xs:element name="date"  type="xs:dateTime" minOccurs="1" maxOccurs="1" />
+      <xs:element name="student" type="student" minOccurs="1" maxOccurs="1" />
+      <xs:element name="unit" type="unit" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="coursereport">
+    <xs:complexContent>
+      <xs:extension base="report">
+        <xs:sequence>
+          <xs:element name="program"  type="xs:string" minOccurs="1" maxOccurs="1"/>
+          <xs:element type="xs:boolean" name="basiceligibility" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="subjectreport">
+    <xs:complexContent>
+      <xs:extension base="report">
+        <xs:sequence>
+          <xs:element name="schoolyear"  type="xs:string" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType  name="finalreport">
+    <xs:complexContent>
+      <xs:extension base="subjectreport">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="unbounded" type="subjectreportgrade" name="grade"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="semesterreport">
+    <xs:complexContent>
+      <xs:extension base="subjectreport">
+        <xs:sequence>
+          <xs:element name="semester"  type="xs:string" minOccurs="1" maxOccurs="1"/>
+          <xs:element name="absence"  type="xs:string" minOccurs="1" maxOccurs="1"/>
+          <xs:element minOccurs="1" maxOccurs="unbounded" type="subjectreportgrade" name="grade"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="catalogextractionreport">
+    <xs:complexContent>
+      <xs:extension base="coursereport">
+        <xs:sequence>
+          <xs:element name="absence" type="xs:string"  minOccurs="1" maxOccurs="1"/>
+          <xs:element minOccurs="1" maxOccurs="unbounded" type="coursereportgrade" name="grade"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="studycertificatereport">
+    <xs:complexContent>
+      <xs:extension base="coursereport">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="unbounded" type="coursereportgrade" name="grade"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="diplomacertificatereport">
+    <xs:complexContent>
+      <xs:extension base="coursereport">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="unbounded" type="coursereportgrade" name ="grade"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="uppersecondaryschoolcertificatereport">
+    <xs:complexContent>
+      <xs:extension base="coursereport">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="unbounded" type="coursereportgrade" name ="grade"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="gradeoutcome">
+    <xs:sequence>
+      <xs:element name="student" type="student"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="coursegrade" type="coursegrade" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="subjectgrade" type="subjectgrade" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="complete" type="xs:boolean" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="coursegrade">
+    <xs:sequence>
+      <xs:element name="schoolname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="groupid" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="course" type="course"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="trialperformed" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="assessor" type="assessor" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="coursereportgrade">
+    <xs:sequence>
+      <xs:element name="course" type="course"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="grade" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="trialperformed" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="courselevel" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subjectgrade">
+    <xs:sequence>
+      <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="subject" type="subject" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="semester" type="semester"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="finalgrade"  type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="trialperformed" type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="remark"  type="remark"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="assessor" type="assessor" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType  name="subjectreportgrade">
+    <xs:sequence>
+      <xs:element name="subject" type="subject"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="finalgrade"  type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="trialperformed" type="xs:boolean"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="remark"  type="remark"  minOccurs="0" maxOccurs="1"/>
+      <xs:element name="period" type="xs:string"  minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="remark">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="GradeNotSet77" />
+      <xs:enumeration value="GradeNotSet1018" />
+      <xs:enumeration value="GradeNotSet1120" />
+      <xs:enumeration value="AdaptedStudyPlan" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="unit">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schoolname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schoolunitcode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="schoolunitname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="principal" type="principal" minOccurs="1" maxOccurs="1" />
+      <xs:element name="schooltype" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="student">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string"  minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="assessor">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string"  minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="principal">
+    <xs:sequence>
+      <xs:element name="id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="course">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="points"  type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subject">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="recommendedsubjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string"  minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="assessmentoutcome">
+    <xs:sequence>
+      <xs:element name="student" type="student" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="subjectassessment" type="subjectassessment"  minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="courseassessment" type="courseassessment"  minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="complete" type="xs:boolean" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="courseassessment">
+    <xs:sequence>
+      <xs:element name="schoolname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="groupid" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="course" type="course"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="assessment" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="assessor" type="assessor" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subjectassessment">
+    <xs:sequence>
+      <xs:element name="schoolname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="subject" type="subject" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="date" type="xs:date"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="assessment" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="assessor" type="assessor" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nationaltestoutcome">
+    <xs:sequence>
+      <xs:element name="student" type="student" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="subjectnationaltest" type="subjectnationaltestresult" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="coursenationaltest" type="coursenationaltestresult" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="complete" type="xs:boolean" default="false"/>
+  </xs:complexType>
+
+  <xs:complexType name="coursenationaltestresult">
+    <xs:sequence>
+      <xs:element name="course" type="course" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="registrationdate" type="xs:date"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="grade" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="subtestresult" type="coursenationalsubtestresult"  minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="participated"  type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="coursenationalsubtestresult">
+    <xs:sequence>
+      <xs:element name="type" type="subtesttype"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="status" type="status"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="grade" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="points" type="xs:double"  minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subjectnationaltestresult">
+    <xs:sequence>
+      <xs:element name="subject" type="subject" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="registrationdate" type="xs:date"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="grade" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="schoolyear" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="subtestresult" type="subjectnationalsubtestresult"  minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="participated"  type="xs:boolean"  minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subjectnationalsubtestresult">
+    <xs:sequence>
+      <xs:element name="type" type="subtesttype"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="status" type="status"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="grade" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      <xs:element name="points" type="xs:double"  minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="approved" />
+      <xs:enumeration value="notapproved" />
+      <xs:enumeration value="notparticipated" />
+      <xs:enumeration value="lost" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="subtesttype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Read" />
+      <xs:enumeration value="Speak" />
+      <xs:enumeration value="Write" />
+      <xs:enumeration value="Listen" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="A1" />
+      <xs:enumeration value="A2" />
+      <xs:enumeration value="A3" />
+      <xs:enumeration value="B" />
+      <xs:enumeration value="C" />
+      <xs:enumeration value="D" />
+      <xs:enumeration value="E" />
+      <xs:enumeration value="F" />
+      <xs:enumeration value="F1" />
+      <xs:enumeration value="F2" />
+      <xs:enumeration value="G" />
+      <xs:enumeration value="G1" />
+      <xs:enumeration value="G2" />
+      <xs:enumeration value="H" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="semester">
+    <xs:sequence>
+      <xs:element name="type" type="semestertype"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="year" type="xs:int"  minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="semestertype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VT" />
+      <xs:enumeration value="HT" />
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+
