@@ -1,7 +1,7 @@
-————————————————————————————————————————————————————————
+ï»¿â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 ORGANIZATION API
-Version: 5.0.4
-————————————————————————————————————————————————————————
+Version: 7.0.0
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 1.0	Initial version
 
 1.0.1	Following changes has been done:
@@ -241,5 +241,14 @@ Version: 5.0.4
 5.0.4	Following changes has been done:
 	- Added organizationtypecode for organizations
 	- Added organizationtypename for organizations
- 
+
+6.0.0  Following changes has been done:
+    - Added id in Period
+    - Added vigonumber field in groupextension
+    - Added gsinumber field in groupextension
+    - Added organizationnumber field in groupextension
+    - Added support for fetching teacher organization
+
+7.0.0 Following changes has been done:
+    - Added mentor element to membership extensions
 
