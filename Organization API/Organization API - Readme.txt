@@ -252,3 +252,6 @@ Version: 7.0.0
 7.0.0 Following changes has been done:
     - Added mentor element to membership extensions
 
+7.0.1 Following changes has been done:
+    - Removed PersonId argument for Get*Organization methods
+
