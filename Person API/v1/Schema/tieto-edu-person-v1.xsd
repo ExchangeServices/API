@@ -27,6 +27,15 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  
+  <xs:element name="person-delta-root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="properties" type="properties"></xs:element>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="person" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 
   <xs:element name="extraattributes">
     <xs:complexType>
