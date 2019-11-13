@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema  targetNamespace="http://open.tieto.com/edu/outcome/v3"
-            xmlns="http://open.tieto.com/edu/outcome/v3"
+<xs:schema  targetNamespace="http://open.tieto.com/edu/outcome/v4"
+            xmlns="http://open.tieto.com/edu/outcome/v4"
             xmlns:xs="http://www.w3.org/2001/XMLSchema"
             elementFormDefault="qualified">
   <xs:annotation>
     <xs:documentation>
       Tieto Education - XML schema for grades, assessments and national tests.
-      Version: 3.0
+      Version: 4.0
     </xs:documentation>
   </xs:annotation>
 
@@ -23,6 +23,7 @@
         <xs:element name="gradeoutcome" type="gradeoutcome" minOccurs="0" maxOccurs="unbounded" />
         <xs:element name="assessmentoutcome" type="assessmentoutcome" minOccurs="0" maxOccurs="unbounded" />
         <xs:element name="nationaltestoutcome" type="nationaltestoutcome"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="nationaltestexport" type="nationaltestexport"  minOccurs="0" maxOccurs="unbounded" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -48,59 +49,60 @@
 
   <xs:complexType name="testopportunity">
     <xs:sequence>
-      <xs:element name="scbexportorder" type="xs:int" minOccurs="1" maxOccurs="1" />
+      <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="result" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="resulttype" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="scbexportorder" type="xs:int" minOccurs="1" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="math">
     <xs:sequence>
-      <xs:element name="math" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="result" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="testtype" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="english">
     <xs:sequence>
-      <xs:element name="english" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="result" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="testtype" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="swedish">
     <xs:sequence>
-      <xs:element name="swedish" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="swedishforimmigrants" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="result" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="testtype" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="testresult">
+  <xs:complexType name="nationaltestexport">
     <xs:sequence>
-      <xs:element name="personid" type="xs:string" minOccurs="1" maxOccurs="1" />
-      <xs:element name="schoolyear" type="xs:int" minOccurs="0" maxOccurs="1" />
-      <xs:element name="program" type="xs:string" minOccurs="0" maxOccurs="1" />
-      <xs:element name="classname" type="xs:string" minOccurs="1" maxOccurs="1" />
-      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1" />
-      <xs:element name="coursegrade" type="xs:string" minOccurs="0" maxOccurs="1" />
-      <xs:element name="scbschoolid" type="xs:string" minOccurs="1" maxOccurs="1" />
-      <xs:element name="firstname" type="xs:string" minOccurs="1" maxOccurs="1" />
-      <xs:element name="middlename" type="xs:string" minOccurs="1" maxOccurs="1" />
-      <xs:element name="lastname" type="xs:string" minOccurs="1" maxOccurs="1" />
-      <xs:element name="swedishforimmigrants" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="student" type="student"  minOccurs="1" maxOccurs="1"/>
+      <xs:element name="nationaltestexportresult" type="nationaltestexportresult" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nationaltestexportresult">
+    <xs:sequence>
       <xs:element name="periodstart" type="xs:date" minOccurs="1" maxOccurs="1" />
       <xs:element name="periodend" type="xs:date" minOccurs="1" maxOccurs="1" />
-      <xs:element name="math" type="math" minOccurs="1" maxOccurs="1" />
-      <xs:element name="english" type="english" minOccurs="1" maxOccurs="1" />
-      <xs:element name="swedish" type="swedish" minOccurs="1" maxOccurs="1" />
+      <xs:element name="periodname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="coursecode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="subjectcode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="schoolyear" type="xs:int" minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitname" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="testtype" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="testname" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="result" type="testopportunity" minOccurs="1" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
-
-  <xs:element name="nationaltestexport">
-    <xs:complexType >
-      <xs:sequence>
-        <xs:element name="properties" type="properties" minOccurs="1" maxOccurs="1" />
-        <xs:element name="system" type="system" minOccurs="1" maxOccurs="1" />
-        <xs:element name="results" type="testresult" minOccurs="1" maxOccurs="unbounded" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
 
   <xs:complexType name="timeframe">
     <xs:sequence>
