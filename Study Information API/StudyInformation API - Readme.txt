@@ -1,7 +1,7 @@
-————————————————————————————————————————————————————————
+ï»¿â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 STUDY INFORMATION API																					1
-Version: 3.0.5
-————————————————————————————————————————————————————————
+Version: 4.0.0
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 1.0	Initial version
 
 1.0.1	Following changes has been done:
@@ -109,8 +109,12 @@ Version: 3.0.5
 3.0.5	Following changes has been done:
 	- Changed "Lifecare Education API Services" to
 	"Tieto Education APIs".
-  
 
+4.0.0 Following changes has been done:
+	- Created new version of the API
+	- Added a number of attrbutes to studyplan
+	- Added support to export school choices for students
+	- Added support to import school placements
 
  
 
