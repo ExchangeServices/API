@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/absence/v1"
+            xmlns="http://open.tieto.com/edu/absence/v1"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for abcense and presence.
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="absence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref ="aggregation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="events">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref ="event"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datetime" type="xs:dateTime" />
+        <xs:element name="datasource" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="schooltype" />
+        <xs:element type="timeframe" name="timeframe" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="timeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Valid" />
+      <xs:enumeration value="Invalid" />
+      <xs:enumeration value="LateArrival" />
+      <xs:enumeration value="Present" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="aggregation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="personid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="minutes" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="offeredminutes" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="stop" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="courseorsubjectid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="reason" type="type" minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="event">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="lessonid" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="personid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="registeredby" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="reason" type="type" minOccurs="1" maxOccurs="1" />
+        <xs:element name="minutes" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="lessonminutes" type="xs:int" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="courseorsubjectid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="grouporclassid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="schoolunitid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="stop" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element> 
+  
+</xs:schema>
