@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 ORGANIZATION API
-Version: 7.0.0
+Version: 8.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -254,4 +254,11 @@ Version: 7.0.0
 
 7.0.1 Following changes has been done:
     - Removed PersonId argument for Get*Organization methods
+
+7.0.2 Following changes has been done:
+    - Updated structure examples for Compulsory and Upper Secondary School
+
+8.0.0 Following changes has been done:
+    - Added new group type: ExamGroup
+    - Added new fields for group: subgrouptype and notes
 
