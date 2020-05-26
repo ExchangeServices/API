@@ -1,7 +1,7 @@
-————————————————————————————————————————————————————————
+ï»¿â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 PERSONNEL API																					1
-Version: 2.0.5
-————————————————————————————————————————————————————————
+Version: 3.0.0
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
 	changes has been done:
@@ -62,4 +62,9 @@ Version: 2.0.5
 2.0.5	Following changes has been done:
 	- Changed "Lifecare Education API Services" to
 	"Tieto Education APIs".
- 
+
+3.0 	Following changes has been done:
+	- Added support import of employments
+      - For Norway only
+      - For Compulsory School only
+
