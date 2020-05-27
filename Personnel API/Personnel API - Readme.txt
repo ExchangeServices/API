@@ -68,3 +68,6 @@ Version: 3.0.0
       - For Norway only
       - For Compulsory School only
 
+4.0 	Following changes has been done:
+	- changed name for <unit> to <place>
+    - added percent, titlecode and titlename to <placement>
