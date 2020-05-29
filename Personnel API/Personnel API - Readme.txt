@@ -70,4 +70,9 @@ Version: 3.0.0
 
 4.0 	Following changes has been done:
 	- changed name for <unit> to <place>
-    - added percent, titlecode and titlename to <placement>
+	- added percent, titlecode and titlename to <placement>
+
+5.0 	Following changes has been done:
+	- added parameter UpdateAllPersonalInfo to service UpdatePersonInfo
+	- added email2 to <employment>
+
