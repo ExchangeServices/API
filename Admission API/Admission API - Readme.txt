@@ -1,7 +1,7 @@
-————————————————————————————————————————————————————————
-ADMISSION API																					1
-Version: 2.0.2
-————————————————————————————————————————————————————————
+ï»¿â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+ADMISSION API
+Version: 3.0.0
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 1.0	Initial version
 
 1.0.2	Following changes has been done:
@@ -10,7 +10,7 @@ Version: 2.0.2
 
 1.0.3	Following changes has been done:
 	- Import placement and cost at the same time for 
-	external students (ÄB-4)
+	external students (Ã„B-4)
  
 1.0.4	Following changes has been done:
 	- Added firstname and lastname to student
@@ -34,5 +34,6 @@ Version: 2.0.2
 	- Change "Lifecare Education API Services" to
 	"Tieto Education APIs".
 
- 
+3.0.0	Following changes has been done:
+	- Added study certificate 
 
