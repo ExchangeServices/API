@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 4.0.0
+Version: 5.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -115,6 +115,14 @@ Version: 4.0.0
 	- Added a number of attrbutes to studyplan
 	- Added support to export school choices for students
 	- Added support to import school placements
+
+4.0.1 Following changes has been done:
+    - Added missing attribute "courses.id" in Produktinformation
+
+5.0.0 Following changes has been done:
+	- Created new version of the API
+	- Added more info in export school choices for students
+
 
  
 
