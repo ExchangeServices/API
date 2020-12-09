@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/calendarevent/v1"
+            xmlns="http://open.tieto.com/edu/calendarevent/v1"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for calendar information.
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="calendarevents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref ="calendarevent"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datetime" type="xs:dateTime" />
+        <xs:element name="datasource" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="schooltype" />
+        <xs:element type="timeframe" name="timeframe" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="timeframe">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="end" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="calendarevent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="eventid" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="teacherid" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="teachersocialsecuritynumber" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="teachername" type="xs:string" minOccurs="1" maxOccurs="1" />
+        <xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="unitname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="courseorsubjectid" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="courseorsubjectcode" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="courseorsubjectname" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="stop" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="roomname" type="xs:string" minOccurs="1"  maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>     
+  
+</xs:schema>
