@@ -28,6 +28,18 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:element name="reportabsence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element name="studentid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="guardianid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="stop" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
   <xs:element name="properties">
     <xs:complexType>
       <xs:sequence>
@@ -65,6 +77,8 @@
         <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
         <xs:element name="stop" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
         <xs:element name="courseorsubjectid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="courseorsubjectcode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="courseorsubjectname" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="reason" type="type" minOccurs="1" maxOccurs="1" />
       </xs:sequence>
     </xs:complexType>
@@ -80,13 +94,18 @@
         <xs:element name="minutes" type="xs:int" minOccurs="1" maxOccurs="1"/>
         <xs:element name="lessonminutes" type="xs:int" minOccurs="1" maxOccurs="1"/>
         <xs:element name="courseorsubjectid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="courseorsubjectcode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="courseorsubjectname" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="grouporclassid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="grouporclassname" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1"/>
-        <xs:element name="schoolunitid" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="unitname" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1"/>
         <xs:element name="start" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
         <xs:element name="stop" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
       </xs:sequence>
     </xs:complexType>
-  </xs:element> 
+  </xs:element>
+ 
   
 </xs:schema>
