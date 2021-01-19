@@ -1,0 +1,135 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Archiving API v1"
+  },
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/v1/ExternalArchive/GetNewCollections": {
+      "get": {
+        "tags": [
+          "ExternalArchive"
+        ],
+        "summary": "Get all collections not previously tranferred to external archive.",
+        "operationId": "ExternalArchive_GetNewCollections",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "format": "uuid",
+                "type": "string",
+                "example": "00000000-0000-0000-0000-000000000000"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ExternalArchive/GetCollection": {
+      "get": {
+        "tags": [
+          "ExternalArchive"
+        ],
+        "summary": "Returns a selection together with files according to FGS packet structure for e-archives.",
+        "operationId": "ExternalArchive_GetCollection",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "collectionId",
+            "in": "query",
+            "description": "Id for selection history that should be transferred.",
+            "required": true,
+            "type": "string",
+            "format": "uuid"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/ExternalArchive/MarkCollectionAsTransferred": {
+      "post": {
+        "tags": [
+          "ExternalArchive"
+        ],
+        "summary": "Marks transferred collection as transferred and remove locally stored files.",
+        "operationId": "ExternalArchive_MarkCollectionAsTransferred",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "archiveUpdatedModel",
+            "in": "body",
+            "description": "Internal and external ids.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ArchiveUpdatedModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ArchiveUpdatedModel": {
+      "description": "Contains result after sending to external storage.",
+      "type": "object",
+      "properties": {
+        "collectionId": {
+          "format": "uuid",
+          "description": "Gets or sets collection Id.",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "success": {
+          "description": "Gets or sets a value indicating whether the collection was sucessfully stored in external storage.",
+          "type": "boolean"
+        },
+        "externallyArchivedIds": {
+          "description": "Gets or sets internal ids grouped with corresponding external ids.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "LicenseKey": {
+      "type": "apiKey",
+      "name": "LicenseKey",
+      "in": "query"
+    }
+  }
+}
