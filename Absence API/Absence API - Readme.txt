@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 Absence API																					
-Version: 1.0.1
+Version: 2.0.0
 ————————————————————————————————————————————————————————
 
 1.0.0	Initial version
@@ -10,3 +10,7 @@ Version: 1.0.1
 	- Fixed faulty UnitId name
 	- Added more info about Units, CourseOrSubject, GroupOrClass 
 	- Added ReportAbsence
+
+2.0.0
+    - Added Preschool
+    - Refactored output
