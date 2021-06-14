@@ -262,3 +262,11 @@ Version: 8.0.0
     - Added new group type: ExamGroup
     - Added new fields for group: subgrouptype and notes
 
+9.0.0 Following changes has been done:
+    - The privacy field for persons has changed type
+    - A new field for units has been added - oidcode
+    - A new field for units has been added - childactivitycode
+    - A new field for groups has been added - profile
+    - Endpoints for retrieving school placements added
+    - Two new endpoints for teacher organization added
+
