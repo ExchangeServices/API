@@ -1,15 +1,14 @@
-
-<style type='text/css'>
-    img[alt$=>] {
+ <style type='text/css'>
+    img[alt$=">"] {
         float: right;
     }
 
-    img[alt$=<] {
+    img[alt$="<"] {
         float: left;
         padding-right: 5px;
     }
 
-    img[alt$=><] {
+    img[alt$="><"] {
         display: block;
         max-width: 100%;
         height: auto;
@@ -22,6 +21,7 @@
     }
 
 </style>
+
 # Produktinformation #
 
 ## Application Status API ##
@@ -33,7 +33,7 @@ Application Status API är en programvara för att hämta status gällande olika
  
 Alla API’er levereras med en SDK som innehåller teknisk dokumentation och informationskontrakt som levereras via GitHub, https://github.com/ExchangeServices   
 
-<br />/><br />/>
+<br /><br />
 Modulen finns för skolformerna förskola, grundskola och gymnasieskola. Modulen tillhandahåller status för följande typer av ansökningar:
 
 - Skolval
@@ -47,7 +47,7 @@ Modulen finns för skolformerna förskola, grundskola och gymnasieskola. Modulen
 
 ### Informationsstruktur ###
 
-Informationsstrukturen innehåller rörande kalenderaktiviteter.  
+Informationsstrukturen innehåller rörande ansökningar.  
 
 <br />
 
