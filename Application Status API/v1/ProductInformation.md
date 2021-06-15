@@ -1,30 +1,4 @@
- <style type='text/css'>
-    img[alt$=">"] {
-        float: right;
-    }
-
-    img[alt$="<"] {
-        float: left;
-        padding-right: 5px;
-    }
-
-    img[alt$="><"] {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        margin: auto;
-        float: none!important;
-    }
-
-    body {
-        max-width: none;
-    }
-
-    .red {
-        background-color: red;
-    }
-
-</style>
+<link rel="stylesheet" type="text/css" media="all" href="ProductInformation.css" />
 
 # Produktinformation #
 
