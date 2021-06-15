@@ -4,14 +4,13 @@
 
 ## Application Status API ##
 
-<br />
-
 ![<](Images/ApiGears.png)
+
 Application Status API är en programvara för att hämta status gällande olika typer av ansökningar. Modulen ingår i plattformen Tieto Education APIs.  
  
 Alla API’er levereras med en SDK som innehåller teknisk dokumentation och informationskontrakt som levereras via GitHub, https://github.com/ExchangeServices   
 
-<br /><br />
+
 Modulen finns för skolformerna förskola, grundenhet och gymnasieenhet. Modulen tillhandahåller status för följande typer av ansökningar:
 
 - Skolval
@@ -21,19 +20,19 @@ Modulen finns för skolformerna förskola, grundenhet och gymnasieenhet. Modulen
 - Modersmålsundervisning
 - Val av förskola och fritids
 
-<br />
+
 
 ### Informationsstruktur ###
 
 Informationsstrukturen innehåller rörande ansökningar.  
 
-<br />
+
 
 ### Tekniska specifikationer ### 
 
 Application Status API använder tekniken XML och HTTP för informationsutbytet. Tjänsterna är grupperade på skolform, filtreras på elev och kan även filtreras efter tidpunkt. 
 
-<br />
+
 
 ## Dataspecifikationer ##
 
@@ -46,10 +45,10 @@ Huvudattribut.
 | firstname  | Förnamn för elev                              |
 | middlename | Mellannamn för elev                           |
 | lastname   | Efternamn för elev                            |
-| privacy    | <a href="#privacy">Sekretesskydd</a> för elev |
+| privacy    | <a href="#sekretesskydd">Sekretesskydd</a> för elev |
 | timestamp  |                                               |
  
-<br />
+
 
 Applikationsgemensamma attribut. Prefix för samtliga attribut är *application*.
 
@@ -65,7 +64,7 @@ Applikationsgemensamma attribut. Prefix för samtliga attribut är *application*
 | unitdomain      | Skolform          |
 
 
-<br />
+
 
 Skolvalsspecificka attribut. Prefix för samtliga attribut är *schoolchoice*.
 
@@ -78,12 +77,12 @@ Skolvalsspecificka attribut. Prefix för samtliga attribut är *schoolchoice*.
 | grade         | Betyg           |
 | incomingdate  | Inkommandedatum |
 
-<br />
+
 
 <div class="red">Skolbytesspecifika attribut. Prefix för samtliga attribut är *schoolexchange*?</div>
 
 
-<br />
+
 
 Specifika attribut för val av inriktning. Prefix för samtliga attribut är *orientationchoice*.
 
@@ -109,7 +108,7 @@ Specifika attribut för val av inriktning. Prefix för samtliga attribut är *or
 | receipt          |                        |
 
 
-<br />
+
 Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 
 | Attribut                    | Beskrivning                     | Exempel |
@@ -144,7 +143,7 @@ Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 | usplacementunitid           |                                 |
 | usplacementunitname         |                                 |
 
-<br />
+
 Ämnesvalsspecifika attribut. Prefix för samtliga attribut är *subjectchoice*.
 
 | Attribut                | Beskrivning      | Exempel |
@@ -169,7 +168,7 @@ Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 | subjectabbreviation     | Ämnesförkortning |
 | guardiansubjectchoiceid |                  |
 
-<br />
+
 Modersmålsundervisningsspecifika attribut. Prefix för samtliga attribut är *mothertongueeducation*.
 
 | Attribut           | Beskrivning                                         | Exempel |
@@ -178,13 +177,13 @@ Modersmålsundervisningsspecifika attribut. Prefix för samtliga attribut är *m
 | type               | Typ                                                 |
 | unitmanagerid      | Id för enhetschef                                   |
 | unitmanagername    | Namn för enhetschef                                 |
-| unitmanagerprivacy | <a href="#privacy">Sekretesskydd</a> för enhetschef |
+| unitmanagerprivacy | <a href="#sekretesskydd">Sekretesskydd</a> för enhetschef |
 | teacherid          | Id på lärare                                        |
 | teachername        | Namn på lärare                                      |
-| teacherprivacy     | <a href="#privacy">Sekretessskydd</a> för lärare    |
+| teacherprivacy     | <a href="#sekretesskydd">Sekretessskydd</a> för lärare    |
 
 
-<br />
+
 
 Förskola- och fritidsspecifika attribut. Prefix för samtliga attribut är *preschoolleisuretimecenter*.
 
@@ -245,8 +244,7 @@ Förskola- och fritidsspecifika attribut. Prefix för samtliga attribut är *pre
 | anyunitinthearea                                  |                       |
 | extrainformation                                  |                       |
 
-<br />
+
 
 ## Sekretesskydd ## 
-<a name="privcy"></a>
-Om personen är skyddad gäller följande värden på ”level”: <br />1 &emsp;&emsp; Skyddad adress <br />2 &emsp;&emsp; Skyddad folkbokföring <br />3 &emsp;&emsp; Både 1 och 2
+Om personen är skyddad gäller följande värden på ”level”: 1 &emsp;&emsp; Skyddad adress 2 &emsp;&emsp; Skyddad folkbokföring 3 &emsp;&emsp; Både 1 och 2
