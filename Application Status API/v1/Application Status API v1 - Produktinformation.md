@@ -1,10 +1,10 @@
-<link rel="stylesheet" type="text/css" media="all" href="ProductInformation.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../../Shared/Styling/Custom.css" />
 
 # Produktinformation 
 
 ## Application Status API 
 
-![<](../../Images/ApiGears.png)
+![<](../../Shared/Images/ApiGears.png)
 
 Application Status API är en programvara för att hämta status gällande olika typer av ansökningar. Modulen ingår i plattformen Tieto Education APIs.  
  
