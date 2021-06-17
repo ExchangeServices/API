@@ -10,7 +10,7 @@ Application Status API är en programvara för att hämta status gällande olika
  
 Alla API’er levereras med en SDK som innehåller teknisk dokumentation och informationskontrakt som levereras via GitHub, https://github.com/ExchangeServices   
 
-Modulen finns för skolformerna förskola, grundenhet och gymnasieenhet. Modulen tillhandahåller status för följande typer av ansökningar:
+Modulen finns för skolformerna förskola, grundskola och gymnasieskola. Modulen tillhandahåller status för följande typer av ansökningar:
 
 - Val av inriktning
 - Kurs- och ämnesval
@@ -56,7 +56,7 @@ Applikationsgemensamma attribut. Prefix för samtliga attribut är *application*
 | applicationdate | Datum för ansökan  | 2021-01-01                             |
 | startdate       | Startdatum         | 2021-01-01                             |
 | enddate         | Slutdatum          | 2021-05-15                             |
-| status          | Status             | <div class="red">Example needed</div>  |
+| status          | Status för skolval, skolbyte och modersmålsval. <br/> <br/>Alternativ för status är: <br/><br/> **Skolval och skolbyte** <br/> - Utskickad <br/> - Påbörjad <br/> - Accepterad <br/> - Avböjd <br/> - Manuellt i inkorg <br/> - Oense <br/> - Flyttad till nya <br/> - Sparad <br/> - Maxpåminnelse ingen svarat <br/> - Maxpåminnelse en svarat <br/> - Hanterad <br/><br/> **Modersmålsval** <br/> - Beviljad <br/>- Kö <br/>- Beviljas <br/>- Avslås             | Hanterad  |
 | unit            | Enhetsnamn         | Balderskolan                           |
 | unitdomain      | Skolform           | Grundskola                             |
 
@@ -95,7 +95,7 @@ Specifika attribut för val av inriktning. Prefix för samtliga attribut är *or
 | coursetypeid     | Kurstypsid             | INR                                    |
 | coursetype       | Kurstyp                | Inriktningar                           |
 | priority         | Prioritet              | 1                                      |
-| status           | Status                 | Placerad                               |
+| status           | Status som kan vara: <br/>- Ansökt <br/>- Omval <br/>- Placerad                 | Placerad                               |
 | unitid           | Enhetsid               | {17084b40-08f5-4bcd-a739-c0d08c176bad} |
 | unitname         | Enhetsnamn             | Balderskolan                           |
 | studyselectionid | Id för val             | {17084b40-08f5-4bcd-a739-c0d08c176bad} |
@@ -113,7 +113,7 @@ Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 | id                          | Kursid                              | {17084b40-08f5-4bcd-a739-c0d08c176bad}           |
 | priority                    | Prioritet                           | 1                                                |
 | typeofchoice                | Kurstyp                             | SPRAKVAL                                         |
-| status                      | Status                              | Ansökt                                           |
+| status                      | Status som kan vara: <br/>- Ansökt <br/>- Omval <br/>- Placerad                              | Ansökt                                           |
 | periodforclass              | Klassperiod                         | 20/21                                            |
 | classid                     | Klassid                             | {17084b40-08f5-4bcd-a739-c0d08c176bad}           |
 | classname                   | Klassnamn                           | TE19                                             |
@@ -145,10 +145,10 @@ Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 Ämnesvalsspecifika attribut. Prefix för samtliga attribut är *subjectchoice*.
 
 | <div style="width:200px">Attribut</div>                | <div style="width:300px">Beskrivning</div>                          | <div style="width:400px">Exempel</div>                                                        |
-| ----------------------- | ------------------------------------ | -------------------------------------------------------------- |
-| id                      | Ämnesid                              | {17084b40-08f5-4bcd-a739-c0d08c176bad}                         |
-| alternative             | Alternativ text                      | <div class="red">What can be here</div>                        |
-| status                  | Status                               | <div class="red">What can be here: (KJ1VAA1GSC.STATUS_T)</div> |
+ ----------------------- | ------------------------------------ | -------------------------------------------------------------- |
+| id                      | Ämnesvalsid                              | {17084b40-08f5-4bcd-a739-c0d08c176bad}                         |
+| alternative             | Alternativ                      |1                        |
+| status                  | Status som kan vara:<br/> - Ny <br/>- Tilldelad <br/>   - Avvisad                               | Tilldelad |
 | unitid                  | Enhetsid                             | 123                                                            |
 | unitname                | Enhetsnamn                           | Balderskolan                                                   |
 | unitdomainid            | Skolformsid                          | 123                                                            |
@@ -164,7 +164,7 @@ Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 | subjectid               | Ämnesid                              | 123                                                            |
 | subjectname             | Ämnesnamn                            | Biologi                                                        |
 | subjectabbreviation     | Ämnesförkortning                     | BI                                                             |
-| guardiansubjectchoiceid | <div class="red">What is this?</div> | {17084b40-08f5-4bcd-a739-c0d08c176bad}                         |
+| guardiansubjectchoiceid | Id för vårdnadshavarens ansökan | {17084b40-08f5-4bcd-a739-c0d08c176bad}                         |
 
 <br />
 
@@ -174,14 +174,14 @@ Modersmålsundervisningsspecifika attribut. Prefix för samtliga attribut är *m
 
 | <div style="width:200px">Attribut</div>           | <div style="width:300px">Beskrivning</div>                                               | <div style="width:400px">Exempel</div> |
 | ------------------ | --------------------------------------------------------- | ------- |
-| subject            | Ämne                                                      |
-| type               | Typ                                                       |
-| unitmanagerid      | Enhetschefsid                                             |
-| unitmanagername    | Enhetschefsnamn                                           |
-| unitmanagerprivacy | <a href="#sekretesskydd">Sekretesskydd</a> för enhetschef |
-| teacherid          | Lärarid                                                   |
-| teachername        | Lärarnamn                                                 |
-| teacherprivacy     | <a href="#sekretesskydd">Sekretesskydd</a> för lärare    |
+| subject            | Ämne                                                      | Spanska
+| unitdomain            | Skolform                                             | Grundskola
+| unitmanagerid      | Enhetschef personnummer | 19911201TF10                                             
+| unitmanagername    | Enhetschefsnamn                                           | Karl Karlsson
+| unitmanagerprivacy | <a href="#sekretesskydd">Sekretesskydd</a> för enhetschef | "level" = 2
+| teacherid          | Lärare personnummer | 19911201TF10                                                   |
+| teachername        | Lärarnamn                                                 | Karl Karlsson
+| teacherprivacy     | <a href="#sekretesskydd">Sekretesskydd</a> för lärare    | "level" = 2
 
 <br />
 
@@ -232,8 +232,8 @@ Förskola- och fritidsspecifika attribut. Prefix för samtliga attribut är *pre
 | othernativelanguagecode                           | Kod för andra modersmål                                                   | ARA                                                      |
 | nativelanguage                                    | Första modersmål Tyska                                                    | Tyska                                                    |
 | othernativelanguage                               | Andra modersmål                                                           | Arabiska                                                 |
-| primaryadditionalinformationcode                  | Kod för utökad beskrivning                                                |
-| primaryadditionalinformationtext                  | Utökad beskrivning                                                        |
+| primaryadditionalinformationcode                  | Kod för utökad beskrivning                                                | 1234
+| primaryadditionalinformationtext                  | Utökad beskrivning                                                        | Behov av särskilt stöd
 | carehours                                         | Önskat antal timmar                                                       | 40.0                                                     |
 | extenttext                                        | <div style="width:300px">Beskrivning</div> av omfattning                                                 | Beskrivande text                                         |
 | placementtypeid                                   | Id för placeringstyp                                                      | 123                                                      |
