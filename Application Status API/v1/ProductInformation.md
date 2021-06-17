@@ -22,7 +22,7 @@ Modulen finns för skolformerna förskola, grundskola och gymnasieskola. Modulen
 
 ### Informationsstruktur
 
-Informationsstrukturen innehåller rörande ansökningar.  
+Informationsstrukturen innehåller information rörande ansökningar.  
 
 <br />
 
@@ -36,7 +36,7 @@ Application Status API använder tekniken XML och HTTP för informationsutbytet.
 
 Personattribut som används av samtliga ansökningar.
 
-| <div style="width:200px">Attribut</div> | <div style="width:300px">Beskrivning</div>                                         | <div style="width:400px">Exempel</div>                                |
+| Attribut | Beskrivning                                         | Exempel                                |
 | ---------- | --------------------------------------------------- | -------------------------------------- |
 | id         | Unik identifierare                                  | {17084b40-08f5-4bcd-a739-c0d08c176bad} |
 | personid   | personnummer                                        | 19911201TF10                           |
@@ -49,7 +49,7 @@ Personattribut som används av samtliga ansökningar.
 
 Applikationsgemensamma attribut. Prefix för samtliga attribut är *application*.
 
-| <div style="width:200px">Attribut</div>        | <div style="width:300px">Beskrivning</div>        | <div style="width:400px">Exempel</div>                                |
+| Attribut        | Beskrivning        | Exempel                                |
 | --------------- | ------------------ | -------------------------------------- |
 | id              | Unik identifierare | {17084b40-08f5-4bcd-a739-c0d08c176bad} |
 | period          | Period             | 20/21                                  |
@@ -66,7 +66,7 @@ Applikationsgemensamma attribut. Prefix för samtliga attribut är *application*
 
 Skolval- och skolbytesspecificka attribut. Prefix för samtliga attribut är *schoolchoice*.
 
-| <div style="width:200px">Attribut</div>      | <div style="width:300px">Beskrivning</div>        | <div style="width:400px">Exempel</div>                                |
+| Attribut      | Beskrivning        | Exempel                                |
 | ------------- | ------------------ | -------------------------------------- |
 | priority      | Prioritet          | 1                                      |
 | id            | Unik identifierare | {17084b40-08f5-4bcd-a739-c0d08c176bad} |
@@ -81,7 +81,7 @@ Skolval- och skolbytesspecificka attribut. Prefix för samtliga attribut är *sc
 
 Specifika attribut för val av inriktning. Prefix för samtliga attribut är *orientationchoice*.
 
-| <div style="width:200px">Attribut</div>         | <div style="width:300px">Beskrivning</div>            | <div style="width:400px">Exempel</div>                                |
+| Attribut         | Beskrivning            | Exempel                                |
 | ---------------- | ---------------------- | -------------------------------------- |
 | educationplanid  | Id för utbildningsplan | {17084b40-08f5-4bcd-a739-c0d08c176bad} |
 | educationplan    | Utbildningsplan        | TEPRO20                                |
@@ -108,7 +108,7 @@ Specifika attribut för val av inriktning. Prefix för samtliga attribut är *or
 
 Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 
-| <div style="width:200px">Attribut</div>                    | <div style="width:300px">Beskrivning</div>                         | <div style="width:400px">Exempel</div>                                          |
+| Attribut                    | Beskrivning                         | Exempel                                          |
 | --------------------------- | ----------------------------------- | ------------------------------------------------ |
 | id                          | Kursid                              | {17084b40-08f5-4bcd-a739-c0d08c176bad}           |
 | priority                    | Prioritet                           | 1                                                |
@@ -144,7 +144,7 @@ Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 
 Ämnesvalsspecifika attribut. Prefix för samtliga attribut är *subjectchoice*.
 
-| <div style="width:200px">Attribut</div>                | <div style="width:300px">Beskrivning</div>                          | <div style="width:400px">Exempel</div>                                                        |
+| Attribut                | Beskrivning                          | Exempel                                                        |
  ----------------------- | ------------------------------------ | -------------------------------------------------------------- |
 | id                      | Ämnesvalsid                              | {17084b40-08f5-4bcd-a739-c0d08c176bad}                         |
 | alternative             | Alternativ                      |1                        |
@@ -172,7 +172,7 @@ Kursvalsspecifika attribut. Prefix för samtliga attribut är *coursechoice*.
 
 Modersmålsundervisningsspecifika attribut. Prefix för samtliga attribut är *mothertongueeducation*.
 
-| <div style="width:200px">Attribut</div>           | <div style="width:300px">Beskrivning</div>                                               | <div style="width:400px">Exempel</div> |
+| Attribut           | Beskrivning                                               | Exempel |
 | ------------------ | --------------------------------------------------------- | ------- |
 | subject            | Ämne                                                      | Spanska
 | unitdomain            | Skolform                                             | Grundskola
@@ -189,7 +189,7 @@ Modersmålsundervisningsspecifika attribut. Prefix för samtliga attribut är *m
 
 Förskola- och fritidsspecifika attribut. Prefix för samtliga attribut är *preschoolleisuretimecenter*.
 
-| <div style="width:200px">Attribut</div>                                          | <div style="width:300px">Beskrivning</div>                                                               | <div style="width:400px">Exempel</div>                                                  |
+| Attribut                                          | Beskrivning                                                               | Exempel                                                  |
 | ------------------------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------- |
 | id                                                | Unikt id                                                                  | {17084b40-08f5-4bcd-a739-c0d08c176bad}                   |
 | queuenumber                                       | Köplats                                                                   | 5                                                        |
@@ -235,7 +235,7 @@ Förskola- och fritidsspecifika attribut. Prefix för samtliga attribut är *pre
 | primaryadditionalinformationcode                  | Kod för utökad beskrivning                                                | 1234
 | primaryadditionalinformationtext                  | Utökad beskrivning                                                        | Behov av särskilt stöd
 | carehours                                         | Önskat antal timmar                                                       | 40.0                                                     |
-| extenttext                                        | <div style="width:300px">Beskrivning</div> av omfattning                                                 | Beskrivande text                                         |
+| extenttext                                        | Beskrivning av omfattning                                                 | Beskrivande text                                         |
 | placementtypeid                                   | Id för placeringstyp                                                      | 123                                                      |
 | placementtype                                     | Placeeringstyp                                                            | Parallell placering                                      |
 | withinapplicationdeadline                         | Inom tid för ansökan                                                      | true                                                     |
@@ -248,7 +248,7 @@ Förskola- och fritidsspecifika attribut. Prefix för samtliga attribut är *pre
 <br />
 
 ## Sekretesskydd ## 
-Om personen är skyddad gäller följande värden på ”level”: 
+För sekretesskydd gäller följande värden på ”level”: 
 <br />0 &emsp;&emsp; Ingen
 <br />1 &emsp;&emsp; Skyddad adress 
 <br />2 &emsp;&emsp; Skyddad folkbokföring 
