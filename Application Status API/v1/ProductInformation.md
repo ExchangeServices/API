@@ -249,6 +249,7 @@ Förskola- och fritidsspecifika attribut. Prefix för samtliga attribut är *pre
 
 ## Sekretesskydd ## 
 Om personen är skyddad gäller följande värden på ”level”: 
+<br />0 &emsp;&emsp; Ingen
 <br />1 &emsp;&emsp; Skyddad adress 
 <br />2 &emsp;&emsp; Skyddad folkbokföring 
 <br />3 &emsp;&emsp; Både 1 och 2
