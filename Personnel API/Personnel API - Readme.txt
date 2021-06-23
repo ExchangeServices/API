@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 PERSONNEL API																					1
-Version: 3.0.0
+Version: 5.0.1
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -76,3 +76,8 @@ Version: 3.0.0
 	- added parameter UpdateAllPersonalInfo to service UpdatePersonInfo
 	- added email2 to <employment>
 
+All versions
+	Following changes has been done for all versions:
+	- Two new filtering parameters have been added for Complete export
+	  - MunicipalityCode
+	  - GovernedBy
