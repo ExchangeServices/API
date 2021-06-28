@@ -1,19 +1,5 @@
-<style>
-.alignright{
-    float : right;
-}
 
-.alignleft{
-    float : left;
-}
-
-.divsmall{
-    margine-top : 200px;
-}
-</style>
-
-
-<div class= "alignleft">
+<div style = " float : left;" align = "left">
 <left>
 
    **Tieto Education APIs**
@@ -24,7 +10,7 @@ Application Status API
 
 
 </div>
- <div class= "alignright">
+ <div style = " float : right;" align = "right">
 
 ![alt](https://www.infopulse.com/files/images/evry-and-tieto-form-tietoevry-a-leading-nordic-digital-services-company-featured-image.jpg)
 
@@ -142,7 +128,7 @@ This chapter describe the Application status entities  and their attributes.
 
 <div style = "margin-top : 50px;">
 
-![Applications stauts API domain model](./ASA.png)
+![<](../../Shared/Images/ASA.png)
 
 </div>
 
