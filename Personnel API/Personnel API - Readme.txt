@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
-PERSONNEL API																					1
-Version: 5.0.1
+PERSONNEL API																		
+Version: 6.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -65,8 +65,8 @@ Version: 5.0.1
 
 3.0 	Following changes has been done:
 	- Added support import of employments
-      - For Norway only
-      - For Compulsory School only
+	- For Norway only
+	- For Compulsory School only
 
 4.0 	Following changes has been done:
 	- changed name for <unit> to <place>
@@ -81,3 +81,9 @@ All versions
 	- Two new filtering parameters have been added for Complete export
 	  - MunicipalityCode
 	  - GovernedBy
+
+6.0     Following changes has been done:
+	- The privacy field for persons has changed type
+	- Endpoint UpdateEmployments has replaced UpdatePersonInfo and UpdateEmploymentInfo
+	- Endpoint UpdateEmployments is enabled for Swedish customers also
+
