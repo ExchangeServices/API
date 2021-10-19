@@ -1,6 +1,6 @@
-﻿————————————————————————————————————————————————————————
+————————————————————————————————————————————————————————
 ORGANIZATION API
-Version: 8.0.0
+Version: 10.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -265,8 +265,17 @@ Version: 8.0.0
 9.0.0 Following changes has been done:
     - The privacy field for persons has changed type
     - A new field for units has been added - oidcode
-    - A new field for units has been added - childactivitycode
-    - A new field for groups has been added - profile
-    - Endpoints for retrieving school placements added
-    - Two new endpoints for teacher organization added
+	- A new field for units has been added - childactivitycode
+	- A new field for groups has been added - profile
+	- Endpoints for retrieving school placements added
+	- Two new endpoints for teacher organization added
+
+All versions 3 and up:
+    Following changes has been done for all versions:
+    - Two new filtering parameters have been added for Complete export
+      - MunicipalityCode
+      - GovernedBy
+
+10.0.0 Following changes has been done:
+    - Added field for proposed unit placement in GetStudentOrganization for CS
 
