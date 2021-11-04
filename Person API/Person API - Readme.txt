@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 PERSON API
-Version: 2.0.0
+Version: 3.0.0
 ————————————————————————————————————————————————————————
 
 1.0 Initial version
@@ -16,3 +16,6 @@ Version: 2.0.0
         - More attributes in person information
         - Extended delta handling, including changes in contact informations
         - Getting person information for a list of persons
+
+3.0.0 Following changes has been done:
+    - The privacy field for persons has changed type

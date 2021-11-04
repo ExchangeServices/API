@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+           targetNamespace="http://open.tieto.com/edu/applicationstatus/v1"
+           xmlns="http://open.tieto.com/edu/applicationstatus/v1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for School choice application status
+      Version: 5.0
+    </xs:documentation>
+  </xs:annotation>
+
+   <xs:element name="PersonApplication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+        <xs:element ref="person"  minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="datetime" type="xs:dateTime" />
+        <xs:element name="datasource" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+        <xs:element minOccurs="1" maxOccurs="1" type="typeofservice" name="type" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="personid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="firstname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="middlename" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="lastname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="privacy" type="privacyType" minOccurs="0" maxOccurs="1" />
+        <xs:element ref="application"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="timestamp" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="application">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="period" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="applicationdate" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="startdate" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="enddate" type="xs:string"  minOccurs="0" maxOccurs="1"/>
+        <xs:element name="status" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unit" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitdomain" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element ref="schoolchoice"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="mothertongueeducation"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="orientationchoice"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="coursechoice"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="subjectchoice"  minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="subjectchoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="alternative" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="status" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitdomainid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitdomainname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="areaid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="periodid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="period" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="startdate" type="xs:dateTime"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="enddate" type="xs:dateTime"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="schoolyear" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="subjecttypeid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="subjecttypename" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="subjectid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="subjectname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="subjectabbreviation" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="guardiansubjectchoiceid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="orientationchoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="educationplanid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="educationplan" type="xs:string"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="program" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="schoolyear" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="classperiod" type="privacyType" minOccurs="0" maxOccurs="1" />
+        <xs:element name="classid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="classname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="timeofchoice" type="xs:dateTime"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="comment" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="coursetypeid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="coursetype" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="priority" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="status" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="studyselectionid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="schooldomain" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="receipt" type="xs:string"  minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="coursechoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="priority" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="typeofchoice" type="xs:string"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="status" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="periodforclass" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="classid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="classname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="programcode" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="schoolyear" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="coursename" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="coursecode" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="coursepoints" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="timeofchoice" type="xs:dateTime"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="startdate" type="xs:dateTime"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="enddate" type="xs:dateTime"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="points" type="xs:double" minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitdomainid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="periodizededucationplanguid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitguid" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitid" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitmunicipalitycode" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitname" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="periodid" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="choiceperiodid" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="receipt" type="xs:int" minOccurs="0" maxOccurs="1" />
+        <xs:element name="studyselectionguid" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="schedulegroups" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="usplacementunitid" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="usplacementunitname" type="xs:string" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="preschoolleisuretimecenter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="queuenumber" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="queuepriorityid" type="xs:int"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="queueprioritytext" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="prioritypoint" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="prioritypointgroup1" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="prioritypointgroup2" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="prioritypointgroup3" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="registereddate" type="xs:date" minOccurs="0" maxOccurs="1" />
+        <xs:element name="queuedate" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="placementrequestdate" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="passivequeue" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="queueoptionid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="areaid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="placementarea" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="childminderid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="childmindername" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="managementid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="childactivitytype" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="hassiblingwithplacement" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="hassiblingwithplacementinsamearea" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="youngestsiblingbirthdate" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="oldestsiblingbirthdate" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="youngestsiblingsbirthdateplacementinsamearea" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="oldestsiblingsbirthdateplacementinsamearea" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="youngestsiblingsbirthdatequeueinsameunit" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="oldestsiblingsbirthdatequeueinsameunit" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="youngestsiblingsbirthdatequeueinsamearea" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="oldestsiblingsbirthdatequeueinsamearea" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="oldestsiblingsbirthdatequeueorplacementinsamearea" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="oldestsiblingsbirthdatequeueorplacementinsameunit" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="hassiblinginqueue" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="guaranteedate" type="xs:date"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="hasplacement" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="hasplacementoffer" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="nativelanguagecode" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="othernativelanguagecode" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="nativelanguage" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="othernativelanguage" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="primaryadditionalinformationcode" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="primaryadditionalinformationtext" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="carehours" type="xs:double"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="extenttext" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="siblingswithplacement" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="placementtypeid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="placementtype" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="withinapplicationdeadline" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="placementrequestdateformatinyearmonth" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="guaranteemonth" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="anychildminderinthearea" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="anyunitinthearea" type="xs:boolean"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="extrainformation" type="xs:string"  minOccurs="0" maxOccurs="1" />
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="mothertongueeducation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="subject" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="type" type="xs:string"  minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="unitmanagerid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitmanagername" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unitmanagerprivacy" type="privacyType" minOccurs="0" maxOccurs="1" />
+        <xs:element name="teacherid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="teachername" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="teacherprivacy" type="privacyType" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+  <xs:element name="schoolchoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="priority" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="id" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="placementarea" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        <xs:element name="unit" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="grade" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        <xs:element name="incomingdate" type="xs:date"  minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+    
+  <xs:complexType name="privacyType">
+    <xs:simpleContent>
+      <xs:extension base="xs:boolean">
+        <xs:attribute name="level" type="xs:int" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  
+<!--todo  update enum with school choice application stauts-->
+  <xs:simpleType name="typeofservice">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CompleteSchoolChoiceApplicationStatus" />
+      <xs:enumeration value="CompleteSchoolChangeApplicationStatus" />
+      <xs:enumeration value="CompleteMotherTongueEducationApplicationStatus" />
+      <xs:enumeration value="CompleteStudyChoiceApplicationStatus" />
+
+      
+    </xs:restriction>
+  </xs:simpleType>
+  
+ 
+</xs:schema>
