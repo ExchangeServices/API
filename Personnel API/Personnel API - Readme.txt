@@ -87,3 +87,8 @@ All versions
 	- Endpoint UpdateEmployments has replaced UpdatePersonInfo and UpdateEmploymentInfo
 	- Endpoint UpdateEmployments is enabled for Swedish customers also
 
+All versions:
+    Following changes has been done for all versions:
+    - Two new filtering parameters have been added for Delta export
+      - MunicipalityCode
+      - GovernedBy

@@ -270,7 +270,7 @@ Version: 10.0.0
 	- Endpoints for retrieving school placements added
 	- Two new endpoints for teacher organization added
 
-All versions 3 and up:
+All versions 5 and up:
     Following changes has been done for all versions:
     - Two new filtering parameters have been added for Complete export
       - MunicipalityCode
@@ -278,4 +278,10 @@ All versions 3 and up:
 
 10.0.0 Following changes has been done:
     - Added field for proposed unit placement in GetStudentOrganization for CS
+
+All versions 5 and up:
+    Following changes has been done for all versions:
+    - Two new filtering parameters have been added for Delta export
+      - MunicipalityCode
+      - GovernedBy
 
