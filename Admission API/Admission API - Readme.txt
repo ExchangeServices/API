@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 ADMISSION API
-Version: 3.0.0
+Version: 4.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -36,4 +36,7 @@ Version: 3.0.0
 
 3.0.0	Following changes has been done:
 	- Added study certificate 
+
+4.0.0	Following changes has been done:
+	- Extended the GovernedBy enumerator 
 
