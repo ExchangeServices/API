@@ -17,3 +17,6 @@ Version: 2.0.0
 
 2.0.1
     - Added UnitId as optional input parameter
+
+2.0.2
+    - Clarification regarding end date in queries
