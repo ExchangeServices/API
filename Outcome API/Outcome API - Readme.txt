@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 OUTCOME API																					1
-Version: 4.0.0
+Version: 5.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -111,3 +111,7 @@ Version: 4.0.0
 4.0.0 Following changes has been done:
     - Added Export national tests for all school forms
 
+5.0.0 Following changes has been done
+    - remark enumeration has one more value: Unknown
+    - subjectgrade has one more element: remarkname
+	
