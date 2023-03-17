@@ -14,9 +14,9 @@ School Search API
 
 ![alt](https://www.infopulse.com/files/images/evry-and-tieto-form-tietoevry-a-leading-nordic-digital-services-company-featured-image.jpg)
 
-Version 1.0.0
+Version 1.0.1
 
-2021-11-04
+2023-03-17
 
 </div>
 
@@ -76,6 +76,8 @@ Version 1.0.0
 - [**4.4 Read Application Services**](#read-application-services) 
 
 - [**4.5 Save Application Services**](#save-application-services) 
+
+- [**4.6 Delete Application Service**](#delete-application-service) 
 
 <br/>  
 
@@ -561,5 +563,22 @@ These services save applications and related information.
 | SaveApplicationCurrentYear    | Saves an application for current year.          |
 | SaveNotApplying               | Saves a not applying application for next year. |
 | SaveAcceptanceLetterSignature | Saves a signature.                              |
+---
+
+<br/>
+
+<div id="delete-application-service">
+
+### **4.6 Delete Application Service**
+
+</div>
+
+This service deletes an application.
+
+**Service :**
+
+| Service           | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| DeleteApplication | Deletes an application for a specific `applicationId`. |
 ---
 ---
