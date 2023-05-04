@@ -1,6 +1,6 @@
-﻿————————————————————————————————————————————————————————
+————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 5.0.0
+Version: 8.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -123,6 +123,11 @@ Version: 5.0.0
 	- Created new version of the API
 	- Added more info in export school choices for students
 
+(version 6 and 7 are not released)
 
+8.0.0 Following changes has been done:
+  - Added properties educationcoursetypepoints, extent, assessmenttext, assessmentdate and assessment lock date in studyplancourse
+  - Added property typeofschoolplacement in schoolchoicestudent when importing school choices and school transfers
+  - Added endpoint GetCompulsorySchoolSchoolChoicePeriods to retrieve basic period information
  
 
