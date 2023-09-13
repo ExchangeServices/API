@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://open.tieto.com/edu/schoolsearch/v2"
+           xmlns="http://open.tieto.com/edu/schoolsearch/v2"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for school search in Stockholm.
+      Version: 2.0.
+
+      This schema contains school search structures for handling information transfer between BER and the e-service SökaSkola.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="schoolsearch">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Unit Info types -->
+        <xs:element name="cityarea" type="cityareatype" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="school" type="schooltype" minOccurs="0" maxOccurs="unbounded" />
+
+        <!-- Custodian types -->
+        <xs:element ref="person" minOccurs="0" maxOccurs="unbounded" />
+
+        <!-- Configuration values -->
+        <xs:element name="configuration" type="configurationtype" minOccurs="0"/>
+
+        <!-- Application types -->
+        <xs:element name="child" type="childtype" minOccurs="0"/>
+        <xs:element name="pdfdocument" type="xs:base64Binary" minOccurs="0" maxOccurs="1" />
+        <xs:element name="signature" type="signaturetype" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="schooltextadmission" type="xs:string" minOccurs="0" maxOccurs="1" />
+
+        <xs:element name="applicationnextyear" type="applicationnextyeartype" minOccurs="0"/>
+        <xs:element name="applicationreelection" type="applicationbasetype" minOccurs="0"/>
+        <xs:element name="applicationcurrentyear" type="applicationbasetype" minOccurs="0"/>
+        <xs:element name="applicationnotapplying" type="applicationnotappliedtype" minOccurs="0"/>
+
+        <!-- Import status -->
+        <xs:element ref="result" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+
+  <!-- structures defining unit info -->
+
+
+  <xs:complexType name="cityareatype">
+    <xs:sequence>
+      <xs:element name="areaid" type="xs:string"/>
+      <xs:element name="areaname" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="schooltype">
+    <xs:sequence>
+      <xs:element name="schoolid" type="xs:int"/>
+      <xs:element name="schoolname" type="xs:string"/>
+      <xs:element name="schooltypeid" type="xs:int"/>
+      <xs:element name="isprofileschool" type="xs:boolean"/>
+      <xs:element name="profilename" type="xs:string" minOccurs="0"/>
+      <xs:element name="grade" type="xs:int" maxOccurs="unbounded"/>
+      <xs:element name="isschoolusingoursystem" type="xs:boolean"/>
+      <xs:element name="cityarea" type="cityareatype"/>
+      <xs:element name="proficiencytestid" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- structures defining person -->
+
+  <xs:element name="person" type="persontype"/>
+
+  <xs:complexType name="persontype">
+    <xs:sequence>
+      <xs:element name="ssn" type="xs:string"/>
+      <xs:element name="firstname" type="xs:string"/>
+      <xs:element name="lastname" type="xs:string"/>
+      <xs:element name="streetaddress" type="xs:string"/>
+      <xs:element name="zipcode" type="xs:string"/>
+      <xs:element name="postalarea" type="xs:string"/>
+      <xs:element name="careofaddress" type="xs:string"/>
+      <xs:element name="protectedidentity" type="xs:boolean"/>
+      <xs:element name="notinmunicipality" type="xs:boolean"/>
+      <!-- Very Stockholm:ish :D -->
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- structures defining configuration -->
+
+  <xs:complexType name="configurationtype">
+    <xs:sequence>
+      <xs:element name="currentyearcutoffdate" type="xs:date"/>
+      <xs:element name="currentyeardataupdate" type="xs:date"/>
+      <xs:element name="currentyearapplicationson" type="xs:boolean"/>
+      <xs:element name="reelectionapplicationson" type="xs:boolean"/>
+      <xs:element name="birthyearforpreschoolclasschildren" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- structures defining child and application -->
+
+  <xs:complexType name="childtype">
+    <xs:complexContent>
+      <xs:extension base="persontype">
+        <xs:sequence>
+          <xs:element ref="applicationnextyear" minOccurs="0"/>
+          <xs:element ref="applicationcurrentyear" minOccurs="0"/>
+          <xs:element ref="applicationreelection" minOccurs="0"/>
+          <xs:element name="currentschool" type="schooltype" minOccurs="0"/>
+          <xs:element name="currentgrade" type="xs:int" minOccurs="0"/>
+          <xs:element name="hasappliedtonextyear" type="xs:boolean"/>
+          <xs:element name="hasappliedtocurrentyear" type="xs:boolean"/>
+          <xs:element name="hasappliedtoreelection" type="xs:boolean"/>
+          <xs:element name="existsindatabase" type="xs:boolean"/>
+          <xs:element name="childproficiencytest" type="childproficiencytesttype" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="notapplying" type="xs:boolean"/>
+          <xs:element name="notappliedtonextyearreason" type="notappliedreasontype"/>
+          <xs:element name="notappliedtonextyearreasontext" type="xs:string"/>
+          <xs:element name="legalguardiancount" type="xs:int"/>
+          <xs:element name="futureplacements" type="placementtype" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="applicationnextyear" type="applicationnextyeartype"/>
+  <xs:element name="applicationcurrentyear" type="applicationbasetype"/>
+  <xs:element name="applicationreelection" type="applicationbasetype"/>
+
+  <xs:complexType name="applicationbasetype">
+    <xs:sequence>
+      <xs:element name="childssn" type="xs:string"/>
+      <xs:element name="applicationid" type="xs:string" minOccurs="0"/>
+      <xs:element name="confirmationemail" type="xs:string"/>
+      <xs:element name="applicationtype" type="applicationtype"/>
+      <xs:element name="confirmationemail" type="xs:string"/>
+      <xs:element name="legalguardian1signedssn" type="xs:string"/>
+      <xs:element name="wantssiblingpriorityschool1" type="xs:boolean"/>
+      <xs:element name="wantssiblingpriorityschool2" type="xs:boolean"/>
+      <xs:element name="wantssiblingpriorityschool3" type="xs:boolean"/>
+      <xs:element name="phonenumber" type="xs:string"/>
+      <xs:element name="phonenumberissecret" type="xs:boolean"/>
+      <xs:element name="altphonenumber" type="xs:string"/>
+      <xs:element name="altphonenumberissecret" type="xs:boolean"/>
+      <xs:element name="updatedby" type="xs:string"/>
+      <xs:element name="updatedat" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="createdat" type="xs:dateTime"/>
+      <xs:element name="lastupdated" type="xs:dateTime"/>
+      <xs:element name="createdby" type="xs:string"/>
+      <xs:element name="firstschoolchoice" type="xs:int"/>
+      <xs:element name="secondschoolchoice" type="xs:int"/>
+      <xs:element name="thirdschoolchoice" type="xs:int"/>
+      <xs:element name="guaranteeschoolchoice" type="xs:int"/>
+      <xs:element name="firstschoolstatus" type="admissionstatustype"/>
+      <xs:element name="firstschoolname" type="xs:string"/>
+      <xs:element name="firstschoolnamewithgrades" type="xs:string"/>
+      <xs:element name="firstschoolprofilename" type="xs:string" minOccurs="0"/>
+      <!-- The name, grade from and grade to of the first school. E.g. Tempschool F-9 -->
+      <xs:element name="secondschoolstatus" type="admissionstatustype"/>
+      <xs:element name="secondschoolname" type="xs:string"/>
+      <xs:element name="secondschoolnamewithgrades" type="xs:string"/>
+      <xs:element name="secondschoolprofilename" type="xs:string" minOccurs="0"/>
+      <!-- The name, grade from and grade to of the first school. E.g. Tempschool F-9 -->
+      <xs:element name="thirdschoolstatus" type="admissionstatustype"/>
+      <xs:element name="thirdschoolname" type="xs:string"/>
+      <xs:element name="thirdschoolnamewithgrades" type="xs:string"/>
+      <xs:element name="thirdschoolprofilename" type="xs:string" minOccurs="0"/>
+      <!-- The name, grade from and grade to of the first school. E.g. Tempschool F-9 -->
+      <xs:element name="guaranteeschoolstatus" type="admissionstatustype"/>
+      <xs:element name="guaranteeschoolname" type="xs:string"/>
+      <xs:element name="guaranteeschoolnamewithgrades" type="xs:string"/>
+      <!-- The name, grade from and grade to of the first school. E.g. Tempschool F-9 -->
+      <xs:element name="searchedgrade" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="applicationnextyeartype">
+    <xs:complexContent>
+      <xs:extension base="applicationbasetype">
+        <xs:sequence>
+          <xs:element name="notapplying" type="xs:boolean"/>
+          <xs:element name="notappliedreasonid" type="notappliedreasontype"/>
+          <xs:element name="notappliedtreason" type="xs:string"/>
+          <xs:element name="hasappliedtootherschools" type="xs:boolean"/>
+          <xs:element name="otherschoolname" type="xs:string"/>
+          <xs:element name="wantssiblingpriorityschool4" type="xs:boolean"/>
+          <xs:element name="wantssiblingpriorityschool5" type="xs:boolean"/>
+          <xs:element name="fourthschoolchoice" type="xs:int"/>
+          <xs:element name="fifthschoolchoice" type="xs:int"/>
+          <xs:element name="fourthschoolstatus" type="admissionstatustype"/>
+          <xs:element name="fourthschoolname" type="xs:string"/>
+          <xs:element name="fourthschoolnamewithgrades" type="xs:string"/>
+          <!-- The name, grade from and grade to of the first school. E.g. Tempschool F-9 -->
+          <xs:element name="fifthschoolstatus" type="admissionstatustype"/>
+          <xs:element name="fifthschoolname" type="xs:string"/>
+          <xs:element name="fifthschoolnamewithgrades" type="xs:string"/>
+          <!-- The name, grade from and grade to of the first school. E.g. Tempschool F-9 -->
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="childproficiencytesttype">
+    <xs:sequence>
+      <xs:element name="childssn" type="xs:string"/>
+      <xs:element name="proficiencytestid" type="xs:string"/>
+      <xs:element name="priorityorder" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="placementtype">
+    <xs:sequence>
+      <xs:element name="schoolid" type="xs:int"/>
+      <xs:element name="schoolname" type="xs:string"/>
+      <xs:element name="startdate" type="xs:date"/>
+      <xs:element name="enddate" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="signaturetype">
+    <xs:sequence>
+      <xs:element name="childssn" type="xs:string"/>
+      <xs:element name="legalguardianssn" type="xs:string"/>
+      <xs:element name="legalguardianphonenumber" type="xs:string"/>
+      <xs:element name="acceptsschooloffer" type="xs:boolean"/>
+      <xs:element name="signaturephrase" type="xs:string"/>
+      <xs:element name="signedat" type="xs:dateTime"/>
+      <xs:element name="otherschoolname" type="xs:string"/>
+      <xs:element name="otherschoolphonenumber" type="xs:string"/>
+      <xs:element name="keepplaceinqueue" type="xs:boolean"/>
+      <xs:element name="applicationid" type="xs:string"/>
+      <xs:element name="numberoflegalguardians" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="applicationnotappliedtype">
+    <xs:sequence>
+      <xs:element name="childid" type="xs:string"/>
+      <xs:element name="reason" type="notappliedreasontype"/>
+      <xs:element name="reasontext" type="xs:string"/>
+      <xs:element name="createdby" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="admissionstatustype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotAnswered"/>
+      <xs:enumeration value="Approved"/>
+      <xs:enumeration value="Guarantee"/>
+      <xs:enumeration value="GuaranteeRegret"/>
+      <xs:enumeration value="Declined"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="applicationtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NextYear"/>
+      <xs:enumeration value="CurrentYear"/>
+      <xs:enumeration value="Reelection"/>
+      <xs:enumeration value="All"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="notappliedreasontype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="HasAppliedToSchoolInOtherMunicitality"/>
+      <xs:enumeration value="HasAppliedToIndependentSchool"/>
+      <xs:enumeration value="GradeSchoolNotWanted"/>
+      <xs:enumeration value="OtherReason"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- return values -->
+
+  <xs:element name="result" type="importresult"/>
+
+  <xs:complexType name="importresult">
+    <xs:sequence>
+      <xs:element name="errormessage" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="status" type="importstatus" use="required"/>
+  </xs:complexType>
+
+  <xs:simpleType name="importstatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
