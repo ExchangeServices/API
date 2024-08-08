@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 PERSONNEL API																		
-Version: 6.0.0
+Version: 8.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version, based on Employee API.
 	Compared with the Employee API following 
@@ -92,3 +92,7 @@ All versions:
     - Two new filtering parameters have been added for Delta export
       - MunicipalityCode
       - GovernedBy
+
+8.0     Following changes has been done:
+	- Endpoint UpdateEmployments is enabled for Finnish customers also
+	- Endpoint UpdateEmployments is enabled for all school types
