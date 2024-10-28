@@ -129,5 +129,12 @@ Version: 8.0.0
   - Added properties educationcoursetypepoints, extent, assessmenttext, assessmentdate and assessment lock date in studyplancourse
   - Added property typeofschoolplacement in schoolchoicestudent when importing school choices and school transfers
   - Added endpoint GetCompulsorySchoolSchoolChoicePeriods to retrieve basic period information
+
+(version 9 is not released)
+
+10.0.0 Following changes has been done:
+  - Added properties allocatedTime, allocatedExtraTime and hoursRemainingOffered in studyplancourse
+  - Added property commentstopurposeofeducation in studytime
+
  
 
