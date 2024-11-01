@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 PERSON API
-Version: 4.0.0
+Version: 4.0.1
 ————————————————————————————————————————————————————————
 
 1.0 Initial version
@@ -24,4 +24,5 @@ Version: 4.0.0
         - The person extension field for persons has been extended with a property
           extrainformation
 
-      
+4.0.1   Following changes has been done:
+        - A new endpoint for retrieving persons using email address
