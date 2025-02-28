@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/application/v1"
+            xmlns="http://open.tieto.com/edu/application/v1"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for Application API
+      Version: 1.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="applicantdocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="document" type="applicantdocumenttype"  minOccurs="1" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:simpleType name="applicanttypeofdocument">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ApplicantDocumentType_NotToBeUsed" /> <!-- Not to be used -->
+      <xs:enumeration value="ApplicationAppendix" />
+      <xs:enumeration value="IKE_In" />
+      <xs:enumeration value="IKE_Out" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="adultschooltypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AdultSchoolType_NotToBeUsed" /> <!-- Not to be used -->
+      <xs:enumeration value="KV" />                          <!--MunicipalAdultSchool -->
+      <xs:enumeration value="SV" />                          <!--AdultSchoolForLearningDisabilities -->
+      <xs:enumeration value="SF" />                          <!--SwedishForImmigrantsSchool -->
+      <xs:enumeration value="YH" />                          <!--HigherVocationalEducationSchool -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="applicantdocumenttype">
+    <xs:sequence>
+      <xs:element name="applicantid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="schooltype" type="adultschooltypes" minOccurs="1" maxOccurs="1" />
+      <xs:element name="typeofdocument" type="applicanttypeofdocument"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="filename" type="xs:string"  minOccurs="1" maxOccurs="1" />
+      <xs:element name="filecontent" type="xs:base64Binary"  minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
