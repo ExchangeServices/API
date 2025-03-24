@@ -96,3 +96,6 @@ All versions:
 8.0     Following changes has been done:
 	- Endpoint UpdateEmployments is enabled for Finnish customers also
 	- Endpoint UpdateEmployments is enabled for all school types
+
+8.1     Following changes has been done:
+	- Improved documentation regarding employments, i e specification of which attribues on entities that are mandatory at import.
