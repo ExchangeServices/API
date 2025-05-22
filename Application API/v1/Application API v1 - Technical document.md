@@ -14,9 +14,9 @@ Application API
 
 <img src="../../Shared/Images/Edlevo%20White%20on%20HB@2x-80.jpg" alt="Edlevo" width="100"/>
 
-Version 1.0.0
+Version 1.0.1
 
-2025-02-20
+2025-05-22
 
 </div>
 
@@ -42,6 +42,8 @@ Version 1.0.0
 [**1 Introduction**](#introduction)
 
 - [**1.1 Prerequisites**](#prerequisites) 
+
+- [**1.2 Endpoints**](#endpoints) 
 
 [**2 Supported school types**](#supported-school-types)
 
@@ -79,9 +81,12 @@ This document describes the following:
 - What types of applicant documents that user can store via the Application API.
 - How the information elements are structured
 
-<div id ="prerequisites">
-
 ---
+
+</div>
+
+
+<div id ="prerequisites">
 
 ### **1.1 Prerequisites**
 
@@ -91,7 +96,26 @@ Before you can get access of the Application API, you must request a license key
 
 <br/>
 
+
+<div style = "margin-bottom : 50px;">
 </div>
+
+
+<div id ="endpoints">
+
+### **1.2 Endpoints**
+
+</div>
+
+Application API is always hosted in Edlevo cloud environment. API url and path is: <br/>
+https://utbintegration-education.service.tieto.com/AdultApplication.Integration.Host/LES/Application/v1/Application/ <br>
+for our test environment and: <br/> 
+https://prodintegration-education.service.tieto.com/AdultApplication.Integration.Host/LES/Application/v1/Application/ <br/>
+for our production environment. 
+
+<br/>
+
+When calling a service, append the Service name to the appropriate path above, together with eventual query parameters, and your LicenseKey.
 
 
 <div style = "margin-bottom : 50px;">
