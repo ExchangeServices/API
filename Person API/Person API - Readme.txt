@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 PERSON API
-Version: 4.0.1
+Version: 4.1.1
 ————————————————————————————————————————————————————————
 
 1.0 Initial version
@@ -26,3 +26,6 @@ Version: 4.0.1
 
 4.0.1   Following changes has been done:
         - A new endpoint for retrieving persons using email address
+
+4.1.1   Following changes has been done:
+        - A new endpoint for retrieving alias persons
