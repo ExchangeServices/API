@@ -40,3 +40,8 @@ Version: 3.0.0
         - Parameters for GetCompulsorySchoolReportDocumentById
         - UpdateCompulsorySchoolReportDocument
 
+4.0.0   Following change has been done:
+	- Added new API service for saving documents for adult students
+		- UpdateAdultStudentDocument
+
+

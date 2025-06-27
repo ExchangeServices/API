@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/document/v4"
+            xmlns="http://open.tieto.com/edu/document/v4"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation>
+            Tieto Education - XML schema for Document API
+            Version: 4.0
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="documents">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="studentdocumentlinks"  minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="reportdocuments">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="documentreferencenumber"  minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="applicantdocument">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="document" type="applicantdocumenttype"  minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="properties">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="datetime" type="xs:dateTime" />
+                <xs:element name="datasource" type="xs:string" />
+                <xs:element minOccurs="0" maxOccurs="1" type="xs:string" name="comments" />
+                <xs:element minOccurs="1" maxOccurs="1" type="xs:string" name="schooltype" />
+                <xs:element type="timeframe" name="timeframe" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="timeframe">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="start" type="xs:dateTime"/>
+            <xs:element minOccurs="1" maxOccurs="1" name="end" type="xs:dateTime"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="studentdocumentlinks">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="studentid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+                <xs:element ref="documentlink"  minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="complete" type="xs:boolean" default="false"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="documentlink">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="href" type="xs:string"  minOccurs="1" maxOccurs="1" />
+                <xs:element name="name" type="xs:string"  minOccurs="1" maxOccurs="1" />
+                <xs:element type="documenttype" minOccurs="1" maxOccurs="1" name="type"/>
+                <xs:element name="unitid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+                <xs:element name="start" type="xs:date" minOccurs="1" maxOccurs="1"/>
+                <xs:element name="end" type="xs:date" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="documenttype">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="IndividualDevelopmentPlan" />
+            <xs:enumeration value="ActionPlan" />
+            <xs:enumeration value="PerformanceReview" />
+            <xs:enumeration value="OwnDocument" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="documentreferencenumber">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="documentid" type="xs:int"  minOccurs="1" maxOccurs="1" />
+                <xs:element name="referencenumber" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="compulsoryschoolreportdocuments">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+                <xs:element ref="documentids" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="documentids">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="documentid" type="xs:int"  minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="reportdocumentmetadata">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="properties"  minOccurs="1" maxOccurs="1"/>
+                <xs:element type="document" name="document" minOccurs="1" maxOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="document">
+        <xs:sequence>
+            <xs:element name="documentid" type="xs:int"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="reportname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="documenttitle" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="documentdate" type="xs:date"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="archivedby" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="archivedbyfirstname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="archivedbylastname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element type="metadata" name="metadata" minOccurs="1" maxOccurs="1" />
+            <xs:element name="documentcontent" type="xs:base64Binary"  minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="metadata">
+        <xs:sequence>
+            <xs:element type="person" name="person" minOccurs="0" maxOccurs="1" />
+            <xs:element type="unit" name ="unit" minOccurs="1" maxOccurs="1" />
+            <xs:element type="person" name="guardianone"  minOccurs="0" maxOccurs="1" />
+            <xs:element type="person" name="guardiantwo"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="archivereporttype" type="xs:string"  minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="unit">
+        <xs:sequence>
+            <xs:element name="unitid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="unitname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="unittype" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="period" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="municipality" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="organizationid" type="xs:int"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="schoolyear" type="xs:int"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="class" type="xs:string"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="classid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="groupid" type="xs:int"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="group" type="xs:string"  minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="person">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="personid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="firstname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="lastname" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="postaladdress" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="postalcode" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="streetaddress" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="phonehome" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="phonemobile" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="phonework" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="emailhome" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="emailwork" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:simpleType name="applicanttypeofdocument">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ApplicantType_NotToBeUsed" />
+            <xs:enumeration value="ApplicantType_1" />
+            <xs:enumeration value="ApplicantType_2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="applicantdocumenttype">
+        <xs:sequence>
+            <xs:element name="applicantid" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="unitid" type="xs:string"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="unitname" type="xs:string"  minOccurs="0" maxOccurs="1" />
+            <xs:element name="schooltype" type="xs:string" minOccurs="0" maxOccurs="1" />
+            <xs:element name="typeofdocument" type="applicanttypeofdocument"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="filename" type="xs:string"  minOccurs="1" maxOccurs="1" />
+            <xs:element name="filecontent" type="xs:base64Binary"  minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+
