@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 DOCUMENT API
-Version: 4.0.0
+Version: 4.0.1
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -44,4 +44,6 @@ Version: 4.0.0
 	- Added new API service for saving documents for adult students
 		- UpdateAdultStudentDocument
 
+4.0.1   Following change has been done:
+	- Added entity information about documents for adult students
 
