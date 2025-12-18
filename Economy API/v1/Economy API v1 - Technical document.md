@@ -14,9 +14,9 @@ Economy API
 
 <img src="../../Shared/Images/Edlevo%20White%20on%20HB@2x-80.jpg" alt="Edlevo" width="100"/>
 
-Version 1.0.0
+Version 1.1
 
-2025-11-25
+2025-12-11
 
 </div>
 
@@ -59,15 +59,19 @@ Version 1.0.0
 
   - [**3.2.3 economypreschool**](#preschool-entity)
 
-  - [**3.2.4 accountpart**](#accountpart-entity)
+  - [**3.2.4 economycompulsoryschool**](#compulsoryschool-entity)
 
-  - [**3.2.5 contraaccount**](#contraaccount-entity)
+  - [**3.2.5 accountpart**](#accountpart-entity)
+
+  - [**3.2.6 contraaccount**](#contraaccount-entity)
 
 [**4 Services**](#services)
 
 - [**4.1 Get Adult School Economy**](#get-adult-school-economy)
 
 - [**4.2 Get Preschool Economy**](#get-pre-school-economy)
+
+- [**4.3 Get Compulsory School Economy**](#get-compulsory-school-economy)
 
 <br/>
 
@@ -88,6 +92,8 @@ The Economy API provides services that:
 - allows users to fetch adult school economy information. You can specify a start and end date to retrieve data. The data will have a start date on or after the given start date and an end date on or before the given end date. Alternatively, you can use a calculation date to fetch data that matches the provided calculation date. This is applicable for each corresponding adult school type.
 
 - enables users to fetch preschool economy information for a specified year and month.
+
+- enables users to fetch compulsory school economy information for a specified year and month. This is applicable for each corresponding compulsory school type.
 
 The services in the Economy API are accessed via URIs.
 
@@ -152,6 +158,9 @@ This API handles economy information for the following school types:
 - Swedish for immigrants school
 - Higher vocational education school
 - Preschool
+- Compulsory school
+- Compulsory school for learning disabilities
+- Preschool class
 
 </div>
 
@@ -196,9 +205,10 @@ This chapter describes the Economy information document entities and their attri
 
 Attributes for economyinformation entity.
 
-| Attribute                               | Description                             |
-| ---------------------------------- | --------------------------------------- |
-| economyadultschool or <br/> economypreschool | The adult or preschool data |
+| Attribute | Description |
+| --------- | ----------- |
+| economyadultschool or <br/> economypreschool or <br/> economycompulsoryschool | The adult school, preschool or compulsory school data. |
+
 
 <br/>
 
@@ -260,7 +270,8 @@ Attributes for economypreschool entity
 | startdate | The start date |
 | enddate | The end date |
 | measurementdate | The measurement date |
-| amountconcerns | The amount concerns |
+| amountconcerns | The amount concerns code |
+| amountconcernstext | The amount concerns text |
 | integrationtimestamp | The integration timestamp |
 | additionalreimbursement | Additional amount |
 | managementid | The management id |
@@ -269,8 +280,46 @@ Attributes for economypreschool entity
 | processtype | The process type |
 | suppliernumber | The supplier number |
 | accountgroup | The account group |
-| unitdomaincode | The school domain code, 999180005 for preschool |
+| unitdomaincode | The school domain code |
 | carehours | The care hours or OMF-hours |
+| accountpart | Accounts 1 to 10 |
+| contraaccount | Contra accounts 1 to 10 |
+
+<br />
+
+<div id = "compulsoryschool-entity">
+
+#### **3.2.4 economycompulsoryschool**
+
+</div>
+
+Attributes for economycompulsoryschool entity
+
+| Attribute | Description |
+| --------- | ----------- |
+| placementarea | The placement area code |
+| livingarea | The living area code |
+| unitname | The unit name |
+| unitid | The unit id |
+| personid | The social security number of the student |
+| personfirstname | The first name of the student |
+| personlastname | The last name of the student |
+| schoolyear | The school year of the student |
+| childactivitytype | The activity type |
+| startdate | The start date |
+| enddate | The end date |
+| measurementdate | The measurement date |
+| amountconcerns | The amount concerns code |
+| amountconcernstext | The amount concerns text |
+| integrationtimestamp | The integration timestamp |
+| additionalreimbursement | Additional amount |
+| managementid | The management id |
+| calculationmonth | The calculation month, formatted as YYYYMM |
+| primaryadditionalinformationcode | Additional information code |
+| processtype | The process type |
+| suppliernumber | The supplier number |
+| accountgroup | The account group |
+| unitdomaincode | The school domain code |
 | accountpart | Accounts 1 to 10 |
 | contraaccount | Contra accounts 1 to 10 |
 
@@ -278,7 +327,7 @@ Attributes for economypreschool entity
 
 <div id = "accountpart-entity">
 
-#### **3.2.4 accountpart**
+#### **3.2.5 accountpart**
 
 </div>
 
@@ -301,7 +350,7 @@ Attributes for accountpart entity
 
 <div id = "contraaccount-entity">
 
-#### **3.2.5 contraaccount**
+#### **3.2.6 contraaccount**
 
 </div>
 
@@ -355,7 +404,7 @@ These services fetch economy information with either a start date and an end dat
 
 <br/>
 
-**Services :**
+**Services:**
 
 | Service| Description|
 | ------ | ---------- |
@@ -371,7 +420,7 @@ These services fetch economy information with either a start date and an end dat
 | HTTP Status Code | Description | Returned text |
 | ---------------- | ----------- | ------------- |
 | 200 | Request succeeded. | The economyinformation xml |
-| 401 | Not authorized. | API is not authenticated <br/> or <br/> API LicenseKey does not support this endpoint <br/> or <br/> Not licensed to use this API |
+| 403 | This feature is not permitted. | Not licensed to use current method |
 | 403 | LicenseKey is missing or wrong. | HTTP Error 403.0 - Forbidden |
 | 400 | Search date is missing or in wrong format. | Either start and end date or calculation date is required. |
 | 500 | Major fail. | \<Error message> |
@@ -395,7 +444,7 @@ This service fetch economy information for a calculation month that matches the 
 
 <br/>
 
-**Services :**
+**Services:**
 
 | Service| Description|
 | ------ | ---------- |
@@ -408,7 +457,45 @@ This service fetch economy information for a calculation month that matches the 
 | HTTP Status Code | Description | Returned text |
 | ---------------- | ----------- | ------------- |
 | 200 | Request succeeded. | The economyinformation xml |
-| 401 | Not authorized. | API is not authenticated <br/> or <br/> API LicenseKey does not support this endpoint <br/> or <br/> Not licensed to use this API |
+| 403 | This feature is not permitted. | Not licensed to use current method |
+| 403 | LicenseKey is missing or wrong. | HTTP Error 403.0 - Forbidden |
+| 400 | Calculation month is missing from query. | Calculation month is required |
+| 500 | Major fail. | \<Error message> |
+
+<br/>
+
+<div id="get-compulsory-school-economy">
+
+### **4.3 Get Compulsory School Economy**
+
+</div>
+
+This service fetch economy information for a calculation month that matches the specified calculation month.
+
+**Query parameter:**
+
+| Name | Description | Format |
+| ---- | ----------- | ------
+| calculationMonth | Get economy information for the calculation <br/> month given. | YYYYMM, e.g. 202502 |
+
+<br/>
+
+**Services:**
+
+| Service| Description|
+| ------ | ---------- |
+| GetCompulsorySchoolEconomy | Fetch economy information for compulsory school <br/> for the given calculation month. |
+| GetCompulsorySchoolForLearningDisabilitiesEconomy | Fetch economy information for compulsory school for <br/> learning disabilities for the given calculation month. |
+| GetPreSchoolClassEconomy | Fetch economy information for preschool class <br/> for the given calculation month. |
+
+<br/>
+
+**Return status and explanation:**
+
+| HTTP Status Code | Description | Returned text |
+| ---------------- | ----------- | ------------- |
+| 200 | Request succeeded. | The economyinformation xml |
+| 403 | This feature is not permitted. | Not licensed to use current method |
 | 403 | LicenseKey is missing or wrong. | HTTP Error 403.0 - Forbidden |
 | 400 | Calculation month is missing from query. | Calculation month is required |
 | 500 | Major fail. | \<Error message> |
