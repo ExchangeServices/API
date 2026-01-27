@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema  targetNamespace="http://open.tieto.com/edu/economy/v2"
+            xmlns="http://open.tieto.com/edu/economy/v2"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>
+      Tieto Education - XML schema for Economy API
+      Version: 2.0
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="economyinformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="1" maxOccurs="1">
+          <xs:element ref="economyadultschool" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="economypreschool" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="economycompulsoryschool" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element ref="economyuppersecondaryschool" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="economyadultschool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="commonforasandus" />
+        <xs:group ref="accounts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="economypreschool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="commonforpsandcs" />
+        <xs:element name="carehours" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:group ref="accounts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="economycompulsoryschool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="commonforpsandcs" />
+        <xs:group ref="accounts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="economyuppersecondaryschool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="commonforasandus" />
+        <xs:group ref="accounts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:group name="commonforpsandcs">
+    <xs:sequence>
+      <xs:element name="placementarea" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="livingarea" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="unitname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="personid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="personfirstname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="personlastname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="schoolyear" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="childactivitytype" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="startdate" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="enddate" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="measurementdate" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="amountconcerns" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="amountconcernstext" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="integrationtimestamp" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="additionalreimbursement" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="managementid" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="calculationmonth" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="primaryadditionalinformationcode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="processtype" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="suppliernumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="accountgroup" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitdomaincode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="amount" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="vat" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="protectedaddress" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="protectionlevel" type="xs:string" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:group>
+
+  <xs:group name="commonforasandus">
+    <xs:sequence>
+      <xs:element name="unitdomainid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="unitname" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="calculationtypecode" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="pricelistcode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="calculationdate" type="xs:date" minOccurs="0" maxOccurs="1" />
+      <xs:element name="unitid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="regard" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="pricecode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="personid" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="programcode" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="groupid" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="coursecode" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="period" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="startdate" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="enddate" type="xs:date" minOccurs="1" maxOccurs="1" />
+      <xs:element name="number" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="price" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="amount" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="totalamount" type="xs:string" minOccurs="0" maxOccurs="1" />
+      <xs:element name="suppliernumber" type="xs:string" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:group>
+
+  <xs:group name="accounts">
+    <xs:sequence>
+      <xs:element ref="accountpart" minOccurs="0" maxOccurs="1" />
+      <xs:element ref="contraaccount" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:group>
+
+  <xs:element name="accountpart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accountpart1" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart2" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart3" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart4" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart5" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart6" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart7" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart8" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart9" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="accountpart10" type="xs:string" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="contraaccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="contraaccount1" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount2" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount3" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount4" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount5" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount6" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount7" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount8" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount9" type="xs:string" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contraaccount10" type="xs:string" minOccurs="0" maxOccurs="1" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
