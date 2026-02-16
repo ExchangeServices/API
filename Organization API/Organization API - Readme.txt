@@ -285,3 +285,7 @@ All versions 5 and up:
       - MunicipalityCode
       - GovernedBy
 
+All versions:
+    Clarification of the attribute timestamp
+
+
