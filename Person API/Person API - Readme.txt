@@ -1,6 +1,6 @@
-﻿————————————————————————————————————————————————————————
+————————————————————————————————————————————————————————
 PERSON API
-Version: 4.1.1
+Version: 6.0.0
 ————————————————————————————————————————————————————————
 
 1.0 Initial version
@@ -29,3 +29,7 @@ Version: 4.1.1
 
 4.1.1   Following changes has been done:
         - A new endpoint for retrieving alias persons
+
+6.0.0   Following changes has been done:
+        - Created a new version of the API.
+        - Added newlyarrived in person extensions.
