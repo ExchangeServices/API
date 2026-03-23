@@ -1,6 +1,6 @@
 ————————————————————————————————————————————————————————
 STUDY INFORMATION API																					1
-Version: 8.0.0
+Version: 11.0.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -136,5 +136,7 @@ Version: 8.0.0
   - Added properties allocatedTime, allocatedExtraTime and hoursRemainingOffered in studyplancourse
   - Added property commentstopurposeofeducation in studytime
 
- 
+11.0.0 Following changes has been done:
+  - Created new version of the API
+  - Added properties studyassistance and mothertongueeducation in subjectplan 
 
