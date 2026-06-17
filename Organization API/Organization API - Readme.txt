@@ -288,4 +288,6 @@ All versions 5 and up:
 All versions:
     Clarification of the attribute timestamp
 
+12.0.0 Following changes has been done:
+    - Added officialprogramcode to membership extensions
 
