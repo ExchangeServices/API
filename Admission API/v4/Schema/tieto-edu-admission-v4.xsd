@@ -29,7 +29,16 @@
       <xs:element type="xs:boolean" minOccurs="1" maxOccurs="1" name="hasgraduated" />
       <xs:element type="xs:boolean" minOccurs="1" maxOccurs="1" name="hasstudycertificate" />
       <xs:element name="municipalitycode" type="xs:string" minOccurs="0" />
+      <xs:element name="privacy" type="privacyType" minOccurs="0" />
     </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="privacyType">
+    <xs:simpleContent>
+      <xs:extension base="xs:boolean">
+        <xs:attribute name="level" type="xs:int" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
   </xs:complexType>
 
   <xs:complexType name="program">

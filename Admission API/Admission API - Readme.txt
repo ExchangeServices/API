@@ -1,6 +1,6 @@
 ﻿————————————————————————————————————————————————————————
 ADMISSION API
-Version: 4.0.0
+Version: 4.2.0
 ————————————————————————————————————————————————————————
 1.0	Initial version
 
@@ -39,4 +39,10 @@ Version: 4.0.0
 
 4.0.0	Following changes has been done:
 	- Extended the GovernedBy enumerator 
+
+4.1.0	Following changes has been done:
+	- Added export endpoints
+
+4.2.0	Following changes has been done:
+	- Added export of privacy in student element
 
